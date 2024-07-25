@@ -1,0 +1,140 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <h2>Emergency Contacts</h2>
+  <p class="description">
+    Your list should include anyone who need to be notified of an emergency.
+    This list shouldn't be limited to other members.
+  </p>
+  <form [formGroup]="emergencyContactsForm" novalidate>
+    <div class="emergency-box">
+      <div class="input-text">
+        <ion-label class="label">Full Name</ion-label>
+        <ion-input
+          type="text"
+          maxlength="9" inputmode="numeric"
+          placeholder="Full Name"
+          formControlName="name"
+          [(ngModel)]="name"
+              (input)="showEditBtn = false"
+        ></ion-input>
+        <div
+          *ngIf="emergencyContactsForm.controls['name'].invalid && emergencyContactsForm.controls['name'].touched"
+          class="alert alert-danger"
+        >
+          <div
+            class="error-text"
+            *ngIf="emergencyContactsForm.controls['name'].errors.required"
+          >
+            Full Name is required.
+          </div>
+        </div>
+      </div>
+      <div class="input-text" class="phone-number">
+        <ion-label class="label">Phone Number</ion-label>
+        <ion-input
+          type="number"
+          placeholder="Phone Number"
+          formControlName="phone_number"
+          [(ngModel)]="cno"
+              (input)="showEditBtn = false"
+        ></ion-input>
+        <div
+          *ngIf="emergencyContactsForm.controls['phone_number'].invalid && emergencyContactsForm.controls['phone_number'].touched"
+          class="alert alert-danger"
+        >
+          <div
+            class="error-text"
+            *ngIf="emergencyContactsForm.controls['phone_number'].errors.required"
+          >
+            Phone Number is required.
+          </div>
+        </div>
+      </div>
+      <ion-list>
+        <div class="input-text2">
+          <ion-label class="label">Relation</ion-label>
+          <ion-select
+            interface="action-sheet"
+            formControlName="relationship"
+            placeholder="Relationship"
+            [(ngModel)]="relationship"
+            (click)="selectionChanged = true"
+            (ionChange)="onChangeDetails($event)"
+          >
+            <ion-select-option value="Wife">Wife</ion-select-option>
+            <ion-select-option value="Father">Father</ion-select-option>
+            <ion-select-option value="Mother">Mother</ion-select-option>
+            <ion-select-option value="Brother">Brother</ion-select-option>
+            <ion-select-option value="Sister">Sister</ion-select-option>
+            <ion-select-option value="Aunt">Aunt</ion-select-option>
+            <ion-select-option value="Uncle">Uncle</ion-select-option>
+            <ion-select-option value="Cousin">Cousin</ion-select-option>
+            <ion-select-option value="Friend">Friend</ion-select-option>
+            <ion-select-option value="Son">Son</ion-select-option>
+            <ion-select-option value="Daughter">Daughter</ion-select-option>
+            <ion-select-option value="Other">Other</ion-select-option>
+          </ion-select>
+          <div
+            *ngIf="emergencyContactsForm.controls['relationship'].invalid && emergencyContactsForm.controls['relationship'].touched"
+            class="alert alert-danger"
+          >
+            <div
+              class="error-text"
+              *ngIf="emergencyContactsForm.controls['relationship'].errors.required"
+            >
+              Relationship is required.
+            </div>
+          </div>
+        </div>
+        <!-- </ion-item> -->
+      </ion-list>
+    </div>
+  </form>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button
+          expand="block"
+          fill="outline"
+          color="primary"
+          (click)="deleteEmergencyContactById()"
+        >
+          <span> DELETE </span>
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button
+          expand="block"
+          fill="outline"
+          color="primary"
+          (click)="updateEmergencyContact()"
+        [disabled]="showEditBtn"
+        >
+          <span> Save Changes </span>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <div class="Group-3725">
+      <ion-button
+        expand="block"
+        color="primary"
+        [routerLink]="['/emergency-contacts-selected-state']"
+      >
+        <span> BACK </span>
+      </ion-button>
+    </div>
+
+    <div class="bg-text">
+      <span [routerLink]="['/invite-family']" class="Not-Right-Now">
+        Not Right Now
+      </span>
+    </div>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,156 @@
+ion-toolbar {
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+    ion-img {
+        height: 35px;
+    }
+}
+
+ion-datetime {
+    padding-left: 0;
+    border-bottom: 0.5px solid #80808061;
+}
+
+.bg {
+    text-align: center;
+    padding: 0 0px 0;
+    .Your-list-should-include-anyone-who-needs-to-be-notified-of-an-emergency-This-list-shouldnt-be-li {
+        font-size: 12px;
+        font-weight: 800;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 1px;
+        text-align: center;
+        color: black;
+        //font-family: Roboto-Thin !important;
+    }
+}
+
+.style-remove-1 {
+    padding-top: 13px
+}
+
+.style-remove-2 {
+    padding: 0 20px 0px 0;
+}
+
+.style-remove-3 {
+    padding: 0px 0 0px 18px;
+}
+
+// .bg-text {
+//     text-align: center;
+//     padding: 10px 0;
+//     background-color: var(--white);
+//     .Not-Right-Now {
+//         font-size: 12px;
+//         font-weight: normal;
+//         font-stretch: normal;
+//         font-style: normal;
+//         line-height: normal;
+//         letter-spacing: 0px;
+//         text-align: center;
+//         color: #0089ff;
+//     }
+// }
+
+.bg {
+    text-align: center;
+    padding: 0 0px 0;
+    .Rectangle-1914 {
+        margin-top: 18px;
+        padding: 32px 22px 29px 16px;
+        border-radius: 5px;
+        border: solid 1px #dbdbdb;
+    }
+    .home_contents_call_me_back {
+        height: 63px;
+        display: flex;
+    }
+    .You-have-no-emergency-contacts {
+        margin: 18px 0 0 5px;
+        font-size: 12px;
+        font-weight: 800;
+        font-stretch: normal;
+        font-style: normal;
+        //font-family: Roboto-Thin !important;
+        line-height: normal;
+        letter-spacing: 0.5px;
+        text-align: center;
+        color: var(--greyish-brown);
+    }
+    .Not-Right-Now {
+        margin: 14.1px 126px 0;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0px;
+        text-align: center;
+        color: #0089ff;
+    }
+}
+.ionrow {
+    color: #979797; 
+    border-radius: 6px;
+    margin-top: 10px;
+    padding: 0;
+    border-radius: 6px;
+    margin-top: 10px;
+    background: #EDEDED;
+    padding: 4px;
+    .end {
+        text-align: end;
+    }
+}
+.checkBox-vehicle {
+    height: 11.2px;
+    width: 12.2px;
+    padding:0px ;
+}
+.label{
+    font-size: 14px;
+    text-align: left;
+    color: #444;
+    }
+    .colend{
+        display: flex;
+        padding: 2px;
+    }
+    .style-remove-2 {
+        text-align: end;
+        margin: auto -5px auto auto;
+        border: 1px solid #0089ff;
+        border-radius: 4px;
+        font-size: 10px;
+        padding: 0px 8px;
+        height: 15px;
+        color: #0089ff;
+    }
+    .vexpiry{
+        font-family: Roboto !important;
+  font-size: 9px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #444;
+  padding: 0px;
+  margin-top: 5px;
+    }
+    .vreg{
+        font-family: Roboto !important;
+        font-size: 15px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        color: #0033a1;
+    }

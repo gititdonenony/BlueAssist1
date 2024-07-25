@@ -1,0 +1,51 @@
+
+
+
+<ion-header>
+  <ion-toolbar>
+      <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<!-- -----------------------------commented code for scanner---------------------------------------------------------------- -->
+<!-- <ion-content fullscreen="true" #content [style.visibility]="content_visibility"> -->
+<ion-content fullscreen="true" #content >
+  <div class="slider">
+    <ion-slides #slider [options]="slideOpts">
+      <ion-slide>
+        <div class="information-header">
+          Was the <strong>{{type}} injured?</strong>
+        </div>
+
+        <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label>
+
+        <app-icon-radio-list-component
+          [options]="driverInjuredOptions"
+          (selectionChanged)="saveSelection($event)"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
+
+<!-- -----------------------------commented code for scanner---------------------------------------------------------------- -->
+<!-- <app-page-footer [style.visibility]="content_visibility" -->
+<app-page-footer 
+  (back)="backClicked()"
+  (next)="nextClicked()"
+></app-page-footer>
+
+
+
+<!-- ----------------------------------------------commented code for scanner--------------------------------------------------------------------------- -->
+
+<!-- <div class='scan-box' *ngIf="content_visibility === 'hidden'"></div>
+<ion-row *ngIf="content_visibility === 'hidden'">
+  <ion-col>
+    <ion-button class="stop-btn" expand="block" color="primary" (click)="stop()">
+      <span> Stop </span>
+    </ion-button>
+  </ion-col>
+</ion-row> -->

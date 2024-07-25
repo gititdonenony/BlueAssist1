@@ -1,0 +1,24 @@
+
+<ion-header>
+  <ion-toolbar>
+      <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content class=" login-unlock-modal-class" fullscreen>
+  <div class="background"></div>
+  <!-- <app-location-search #locationComponent
+                      (openOverlay)="openOverlay()"
+                      (closeOverlay)="closeOverlay()"></app-location-search> -->
+  
+  <app-body></app-body>
+
+  <div class="overlay"
+      [ngClass]="{ 'expanded': showOverlay }"
+      (click)="toggleOverlay()"
+      id="overlay"></div>
+
+  <app-emergency-footer #emergencyFooterComponent
+                        (openOverlay)="openOverlay()"
+                        (closeOverlay)="closeOverlay()"></app-emergency-footer>
+</ion-content>

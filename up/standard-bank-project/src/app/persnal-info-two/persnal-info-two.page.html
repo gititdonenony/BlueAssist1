@@ -1,0 +1,145 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="name">
+    <span class="Personal-Information"> Personal Information </span>
+  </div>
+  <form novalidate [formGroup]="requiredForm">
+    <div class="profile-img">
+      <ion-row (click)="captureImage()">
+        <ion-col size="4">
+          <div class="circle" *ngIf="!showImage">
+            <ion-icon name="camera"></ion-icon>
+          </div>
+          <div *ngIf="showImage" class="profile-div">
+            <img [hidden]="loading" (load)="onLoad()" class="sidebar-profile-img" src="{{ profileImage }}" />
+            <img *ngIf="loading" alt="loading" style="width: 53px" class="sidebar-profile-img" src="assets/load.gif" />
+          </div>
+        </ion-col>
+        <ion-col size="8" class="cameratextdiv">
+          <span class="Add-a-profile-picture-so-our-emergency-responders-can-easily-identify-you">
+            Add a profile picture so our emergency responders can easily
+            identify you.
+          </span>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="Group-3725">
+      <div class="input-text">
+        <ion-label class="label">Full Name</ion-label>
+        <ion-input type="text" placeholder="Full name" formControlName="fullname" [(ngModel)]="fullName"
+          (input)="showEditBtn = false" class="text-capitalize"></ion-input>
+        <div *ngIf="requiredForm.controls['fullname'].invalid && requiredForm.controls['fullname'].touched"
+          class="alert alert-danger">
+          <div class="error-text" *ngIf="requiredForm.controls['fullname'].errors.required">
+            Full Name is required.
+          </div>
+        </div>
+      </div>
+      <!-- <div class="input-text">
+        <ion-label class="label">User Name</ion-label>
+        <ion-input type="text" placeholder="ID Number" readonly formControlName="idNo" [(ngModel)]="idNo"></ion-input>
+        <div *ngIf="requiredForm.controls['idNo'].invalid && requiredForm.controls['idNo'].touched"
+          class="alert alert-danger">
+          <div class="error-text" *ngIf="requiredForm.controls['idNo'].errors.required">
+            ID Number is required.
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="input-text">
+        <ion-label class="label">Phone Number</ion-label>
+        <ion-input type="number" placeholder="Phone Number" formControlName="contactNo" [(ngModel)]="phoneNumber"
+          (input)="showEditBtn = false"></ion-input>
+        <div *ngIf="requiredForm.controls['contactNo'].invalid && requiredForm.controls['contactNo'].touched"
+          class="alert alert-danger">
+          <div class="error-text" *ngIf="requiredForm.controls['contactNo'].errors.required">
+            Phone Number is required.
+          </div>
+        </div>
+      </div> -->
+
+
+      <div class="input-text">
+        <ion-label class="label">Phone Number</ion-label>
+        <ion-row>
+          <ion-col size="2" class="number-27">
+            <span>+27</span>
+          </ion-col>
+          <ion-col size="10" class="my-profile">
+            <ion-input (input)="showEditBtn = false" type="number" placeholder="Phone Number"
+              formControlName="contactNo" [(ngModel)]="phoneNumber"></ion-input>
+          </ion-col>
+        </ion-row>
+        <div *ngIf="requiredForm.controls['contactNo'].invalid && requiredForm.controls['contactNo'].touched"
+          class="alert alert-danger">
+          <div class="error-text" *ngIf="requiredForm.controls['contactNo'].errors.required">
+            Phone Number is required.
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <div class="input-text">
+        <ion-label class="label">E-mail</ion-label>
+        <ion-input type="email" placeholder="Email Address" readonly formControlName="email" [(ngModel)]="email">
+        </ion-input>
+        <div *ngIf="requiredForm.controls['email'].invalid && requiredForm.controls['email'].touched"
+          class="alert alert-danger">
+          <div class="error-text" *ngIf="requiredForm.controls['email'].errors.required">
+            Email Address is required.
+          </div>
+          <!-- <div class="error-text" *ngIf="requiredForm.controls['email'].errors.email">
+                        Email format is required.
+                    </div> -->
+        </div>
+      </div>
+      <div class="input-text">
+        <ion-label class="label">Home Address</ion-label>
+        <ion-input type="text" placeholder="Home Address" formControlName="address" class="text-capitalize"
+          [(ngModel)]="homeAddress" (input)="showEditBtn = false"></ion-input>
+        <div *ngIf="requiredForm.controls['address'].invalid && requiredForm.controls['address'].touched"
+          class="alert alert-danger">
+          <div class="error-text" *ngIf="requiredForm.controls['address'].errors.required">
+            Home Address is required.
+          </div>
+        </div>
+      </div>
+      <div class="input-text">
+        <ion-label class="label">Work Address</ion-label>
+        <ion-input type="text" placeholder="Work Address" formControlName="workAddress" class="text-capitalize"
+          [(ngModel)]="workAddress" (input)="showEditBtn = false"></ion-input>
+        <div *ngIf="requiredForm.controls['workAddress'].invalid && requiredForm.controls['workAddress'].touched"
+          class="alert alert-danger">
+          <div class="error-text" *ngIf="requiredForm.controls['workAddress'].errors.required">
+            Work Address is required.
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <div class="Group-3725">
+      <ion-button expand="block" fill="outline" color="primary" (click)="updateInfo()">
+        <span>
+          SAVE CHANGES
+        </span>
+      </ion-button>
+    </div>
+    <div class="Group-3725">
+      <ion-button expand="block" color="primary" (click)="profile()">
+        <span> BACK </span>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>

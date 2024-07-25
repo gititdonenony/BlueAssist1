@@ -1,0 +1,55 @@
+ <ion-content [style.visibility]="content_visibility">
+  <div class="body">
+
+    <div class="wrapper" #wrapper>
+      <div class="div-content-upper"> <ion-button iconOnly fill="clear" class="back-button" (click)="goBack()">
+          <img src="assets/icons/chevron-left.svg" />
+        </ion-button>
+        <div class="scroll-collapse">
+          <ion-label class="header"> Accident Information </ion-label>
+          <!-- <ion-label class="content">Scan all applicable sections.</ion-label> -->
+          <ion-label class="content">
+            Follow the steps below to quickly capture all <br> the information of all the parties involved
+          </ion-label>
+        </div>
+      </div>
+
+
+      <div class="buttons">
+        <div *ngFor="let button of buttons">
+          <ion-button class="button-div-snap" expand="block" (click)="navigateToPage(button.ButtonName)"
+            [fill]="button.State == 2 ? 'solid' : 'outline'" [ngClass]="{ incomplete: button.State != 2 }">
+            <ion-row style="width: 66%">
+              <!-- <ion-col size="2">
+                <img
+                  [src]="button.State == 2 ? button.Icon : button.IconInverse"
+                />
+              </ion-col> -->
+              <ion-col size="10" class="text-button">
+                {{ button.Text }}
+              </ion-col>
+            </ion-row>
+
+            <img *ngIf="button.State" class="progress-indication" [ngClass]="{ complete: button.State == 2 }" [src]="
+                'assets/icons/' +
+                (button.State == 1 ? 'autorenew-2.svg' : 'check-mark.svg')
+              " />
+          </ion-button>
+        </div>
+      </div>
+      <!-- <ion-item *ngIf="scannedResult">
+        <ion-label class="ion-text-wrap">Scanned Result: {{scannedResult}}</ion-label>
+      </ion-item> -->
+    </div>
+  </div>
+</ion-content>
+
+
+<div class='scan-box' *ngIf="content_visibility === 'hidden'"></div>
+<ion-row *ngIf="content_visibility === 'hidden'">
+  <ion-col>
+    <ion-button class="stop-btn" expand="block" color="primary" (click)="stop()">
+      <span> Stop </span>
+    </ion-button>
+  </ion-col>
+</ion-row>

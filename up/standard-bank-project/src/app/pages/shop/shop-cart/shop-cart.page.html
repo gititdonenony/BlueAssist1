@@ -1,0 +1,88 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-img src="assets/logo.png"></ion-img>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="bg">
+        <ion-icon name="arrow-back-outline" (click)="arrowBack()"></ion-icon>
+    </div>
+    <div class="TitleDesp" style="text-align: start">
+        <span class="My-Cart"> My Cart </span>
+    </div>
+    <div class="Title">
+        <ion-card style="margin: 5px;">
+            <ion-item>
+                <div style="text-align: start">
+                    <ion-img src="assets/img-t.png" style="height: 10vh; margin-right: 10px"></ion-img>
+                </div>
+                <ion-label>
+                    <ion-img src="assets/img-l.png" style="height: 5vh; margin-left: -145px"></ion-img>
+                    <span class="Special-19614045">Special 196/140/45 <br /> R1600 </span></ion-label>
+                <div>
+                    <ion-row>
+                        <div class="Plus">-</div>
+                    </ion-row>
+                    <ion-row style="margin-top: 11px">4</ion-row>
+                    <ion-row>
+                        <div class="Plus">+</div>
+                    </ion-row>
+                </div>
+
+            </ion-item>
+        </ion-card>
+        <div class="test-text">
+            <ion-row>
+                <ion-col size="6">
+                    <ion-icon name="location-outline"></ion-icon>
+                    <span class="shipping">
+            Shippi
+          </span>
+                </ion-col>
+                <ion-col size="6">
+                    <div style="text-align: end;padding-right: 15px;
+          font-size: 16px;">
+                        <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </div>
+        <div class="Group-3725">
+            <ion-button expand="block" fill="outline" color="secondary" (click)="upgrade()">
+                <span>
+         Back
+        </span>
+            </ion-button>
+        </div>
+
+        <div class="Group-3725 ">
+            <ion-button expand="block" fill="outline" color="secondary" (click)="upgrade()">
+                <span>
+         work
+        </span>
+            </ion-button>
+        </div>
+    </div>
+    <div class="test-text ">
+        <ion-row>
+            <ion-col size="6">
+                <ion-icon name="location-outline"></ion-icon>
+                <span class="shipping">
+          Total:
+        </span>
+            </ion-col>
+            <ion-col size="6">
+                <div style="text-align: end;padding-right: 15px;
+        font-size: 16px;">
+                    R 1,600
+                </div>
+            </ion-col>
+        </ion-row>
+    </div>
+    <div class="Group-3725 ">
+        <ion-button expand="block" class="footer" color="primary" [routerLink]="[ '/shop-confirmation']">
+            <span>Checkout</span>
+        </ion-button>
+    </div>
+</ion-content>

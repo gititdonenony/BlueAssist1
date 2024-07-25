@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <h2>Other Members</h2>
+
+    <p class="description">
+      Your subscription allows you to invite {{memberAllowed}} other members. <br />
+      Enter the details below.
+    </p>
+    <form [formGroup]="inviteFamilySecForm" novalidate>
+      <!-- style="padding-bottom: 20%;" -->
+
+      <div class="emergency-box">
+        <div class="input-text">
+          <ion-label class="label">Full Name</ion-label>
+          <ion-input type="text" placeholder="Full Name" formControlName="name" [(ngModel)]="name"
+            (input)="showEditBtn = false"></ion-input>
+          <div *ngIf="inviteFamilySecForm.controls['name'].invalid && inviteFamilySecForm.controls['name'].touched"
+            class="alert alert-danger">
+            <div class="error-text" *ngIf="inviteFamilySecForm.controls['name'].errors.required">
+              Full Name is required.
+            </div>
+          </div>
+        </div>
+        <div class="input-text">
+          <ion-label class="label">Phone Number</ion-label>
+          <ion-input  maxlength="9" inputmode="numeric"type="number" placeholder="+27 Phone Number" formControlName="cno" [(ngModel)]="cno"
+            (input)="showEditBtn = false"></ion-input>
+          <div *ngIf="inviteFamilySecForm.controls['cno'].invalid && inviteFamilySecForm.controls['cno'].touched"
+            class="alert alert-danger">
+            <div class="error-text" *ngIf="inviteFamilySecForm.controls['cno'].errors.required">
+              Phone Number is required.
+            </div>
+          </div>
+        </div>
+        <ion-list>
+          <div class="input-text">
+            <ion-label class="label">Relation</ion-label>
+            <ion-select interface="action-sheet" formControlName="relationship" placeholder="Relationship"
+              [(ngModel)]="relationship" (ionChange)="onChangeDetails($event)" (click)="selectionChanged = true">
+              <ion-select-option value="Wife">Wife</ion-select-option>
+              <ion-select-option value="Father">Father</ion-select-option>
+              <ion-select-option value="Mother">Mother</ion-select-option>
+              <ion-select-option value="Brother">Brother</ion-select-option>
+              <ion-select-option value="Sister">Sister</ion-select-option>
+              <ion-select-option value="Aunt">Aunt</ion-select-option>
+              <ion-select-option value="Uncle">Uncle</ion-select-option>
+              <ion-select-option value="Cousin">Cousin</ion-select-option>
+              <ion-select-option value="Friend">Friend</ion-select-option>
+              <ion-select-option value="Son">Son</ion-select-option>
+              <ion-select-option value="Daughter">Daughter</ion-select-option>
+              <ion-select-option value="Daughter">Other</ion-select-option>
+            </ion-select>
+            <div
+              *ngIf="inviteFamilySecForm.controls['relationship'].invalid && inviteFamilySecForm.controls['relationship'].touched"
+              class="alert alert-danger">
+              <div class="error-text" *ngIf="inviteFamilySecForm.controls['relationship'].errors.required">
+                Relationship is required.
+              </div>
+            </div>
+          </div>
+          <!-- </ion-item> -->
+        </ion-list>
+      </div>
+    </form>
+
+    <div class="input-text">
+      <ion-label class="label">Email</ion-label>
+      <ion-input type="email" placeholder="email" [(ngModel)]="email" readonly></ion-input>
+    </div>
+    
+  </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <div class="Group-3725">
+      <ion-row>
+        <ion-col size="6">
+          <ion-button expand="block" fill="outline" color="primary" (click)="deleteInviteFamilyById()">
+            <span> DELETE </span>
+          </ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button expand="block" fill="outline" color="primary" (click)="updateInviteFamily()"
+            [disabled]="showEditBtn">
+            <span> Save Changes </span>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-button expand="block" color="primary" [routerLink]="['/fmaily-members-two']">
+        <span> BACK </span>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>

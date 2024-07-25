@@ -1,0 +1,68 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-img src="assets/logo.png"></ion-img>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="name">
+        <span class="Personal-Information"> Vehicle Information </span>
+    </div>
+
+    <div class="Group-3739">
+        <div>
+            <ion-label class="label">Registration No </ion-label>
+            <ion-input type="text " placeholder="Registration No "></ion-input>
+
+            <ion-row>
+                <ion-col size="5">
+                    <ion-label class="label">Vehicle Type</ion-label>
+                    <ion-input type="text " placeholder="Vehicle Type"></ion-input>
+                </ion-col>
+                <ion-col size="2"></ion-col>
+                <ion-col size="5">
+                    <ion-label class="label">Tare</ion-label>
+                    <ion-input type="number " placeholder="Tare"> </ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-label class="label">Delivery Address</ion-label>
+            <ion-input type="text " placeholder="Delivery Address"></ion-input>
+
+            <ion-row>
+                <ion-col size="5">
+                    <ion-label class="label">Province</ion-label>
+                    <ion-input type="text" placeholder="Province"></ion-input>
+                </ion-col>
+                <ion-col size="2"></ion-col>
+                <ion-col size="5">
+                    <ion-label class="label">Postal code</ion-label>
+                    <ion-input type="number " placeholder="Postal code"> </ion-input>
+                </ion-col>
+            </ion-row>
+
+            <ion-label class="label">Contact  No</ion-label>
+            <ion-input type="number " placeholder="Contact  No"></ion-input>
+            <ion-label class="label">Email Address</ion-label>
+            <ion-input class="style-remove-1" type="email " placeholder="Email Address"></ion-input>
+
+        </div>
+        <!-- <ion-input style="--padding-start: 0;"  type="text " placeholder="Work Address "></ion-input> -->
+    </div>
+
+</ion-content>
+<ion-footer class="ion-no-border">
+    <ion-toolbar>
+     
+
+        <div class="Group-3725">
+            <ion-button expand="block" color="primary" [routerLink]="['/cart']">
+                <span> NEXT </span>
+            </ion-button>
+        </div>
+        <div class="Group-3725">
+            <ion-button expand="block" fill="outline" color="primary" (click)="goBack()">
+                <span> Back </span>
+            </ion-button>
+        </div>
+    </ion-toolbar>
+</ion-footer>

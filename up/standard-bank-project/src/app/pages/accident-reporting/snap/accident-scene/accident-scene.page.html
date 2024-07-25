@@ -1,0 +1,184 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen="true" #content>
+  <app-custom-slides-pager
+    [slider]="slider"
+    [content]="content"
+  ></app-custom-slides-pager>
+
+  <div class="slider">
+    <ion-slides #slider [options]="slideOpts">
+      <ion-slide>
+        <div class="information-header">Snap Accident Scene</div>
+
+        <div class="information-subheader">
+          Please turn your phone and snap the scene
+        </div>
+
+        <div class="image-captures">
+          <div class="image-capture">
+            <ion-label class="instructions">
+              Capture the image from the front
+            </ion-label>
+            <div
+              class="image-capture-block ion-activatable"
+              (click)="captureImage('Front')"
+            >
+              <div [@zoom]="frontImage ? 'closed' : 'open'">
+                <ion-label class="image-name">Front</ion-label>
+                <img class="image-action" src="assets/icons/add-circle.svg" />
+                <ion-label class="image-details">
+                  Front of the scene. Choose what side you want your front to
+                  be, and take other pictures accordingly
+                </ion-label>
+              </div>
+
+              <img
+                decoding="async"
+                class="background-image"
+                [@zoom]="frontImage ? 'open' : 'closed'"
+                [src]="frontImage"
+              />
+              <ion-ripple-effect></ion-ripple-effect>
+            </div>
+          </div>
+          <div class="image-capture">
+            <ion-label class="instructions">
+              Capture the image from the right
+            </ion-label>
+            <div
+              class="image-capture-block ion-activatable"
+              (click)="captureImage('Right')"
+            >
+              <div [@zoom]="rightImage ? 'closed' : 'open'">
+                <ion-label class="image-name"
+                  >Right <img src="assets/icons/arrow-right.svg"
+                /></ion-label>
+                <img class="image-action" src="assets/icons/add-circle.svg" />
+                <ion-label class="image-details">
+                  Stand by your front of scene then move right of the scene.
+                  Snap the right side.
+                </ion-label>
+              </div>
+
+              <img
+                decoding="async"
+                class="background-image"
+                [@zoom]="rightImage ? 'open' : 'closed'"
+                [src]="rightImage"
+              />
+
+              <ion-ripple-effect></ion-ripple-effect>
+            </div>
+          </div>
+          <div class="image-capture">
+            <ion-label class="instructions">
+              Capture the image from the back
+            </ion-label>
+            <div
+              class="image-capture-block ion-activatable"
+              (click)="captureImage('Back')"
+            >
+              <div [@zoom]="backImage ? 'closed' : 'open'">
+                <ion-label class="image-name">Back</ion-label>
+                <img class="image-action" src="assets/icons/add-circle.svg" />
+                <ion-label class="image-details">
+                  Stand by your front of scene then move across the scene. Snap
+                  the back.
+                </ion-label>
+              </div>
+
+              <img
+                decoding="async"
+                class="background-image"
+                [@zoom]="backImage ? 'open' : 'closed'"
+                [src]="backImage"
+              />
+
+              <ion-ripple-effect></ion-ripple-effect>
+            </div>
+          </div>
+          <div class="image-capture">
+            <ion-label class="instructions">
+              Capture the image from the left
+            </ion-label>
+            <div
+              class="image-capture-block ion-activatable"
+              (click)="captureImage('Left')"
+            >
+              <div [@zoom]="leftImage ? 'closed' : 'open'">
+                <ion-label class="image-name"
+                  ><img src="assets/icons/arrow-left.svg" /> Left</ion-label
+                >
+                <img class="image-action" src="assets/icons/add-circle.svg" />
+                <ion-label class="image-details">
+                  Stand by your front of scene then move left of the scene. Snap
+                  the Left.
+                </ion-label>
+              </div>
+
+              <img
+                decoding="async"
+                class="background-image"
+                [@zoom]="leftImage ? 'open' : 'closed'"
+                [src]="leftImage"
+              />
+
+              <ion-ripple-effect></ion-ripple-effect>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">Accident Type</div>
+
+        <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label>
+
+        <app-icon-radio-list-component
+          [options]="accidentTypeOptions"
+          (selectionChanged)="saveAccidentType($event)"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header" style="font-size: 27px">
+          Description of Accident
+        </div>
+
+        <ion-label class="information-subheader" style="font-size: 18px">
+          Please give us a short <br />description of Accident Scene
+        </ion-label>
+        <ion-label
+          style="font-size: 15px; margin-bottom: 10px;"
+        >
+          Please explain what happened
+        </ion-label>
+        <ion-card class="input-card">
+          <ion-textarea
+            autoGrow="true"
+            class="text-description"
+            autocapitalize="true"
+            placeholder="e.g I drove into the robot and the other driver drove into the dustbins"
+            [(ngModel)]="descriptionOfAccident"
+            (ionChange)="adjustSlideHeight()"
+            (ionBlur)="saveChanges()"
+          ></ion-textarea>
+        </ion-card>
+        <br />
+        <br />
+        <br />
+        <br />
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
+
+<app-page-footer
+  (back)="backClicked()"
+  (next)="nextClicked()"
+></app-page-footer>

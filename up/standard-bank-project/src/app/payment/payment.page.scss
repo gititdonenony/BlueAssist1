@@ -1,0 +1,16 @@
+ion-toolbar {
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+    ion-img {
+        height: 35px;
+    }
+}
+
+ion-content {
+    --padding-bottom: 10px;
+    --padding-end: 10px;
+    --padding-start: 20px;
+    --padding-top: 20px;
+}

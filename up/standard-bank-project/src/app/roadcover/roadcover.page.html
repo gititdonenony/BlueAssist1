@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-img src="assets/logo.png"></ion-img>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div class="name">
+        <span class="Personal-Information"> Claim for road injuries </span>
+    </div>
+
+    <div>
+        <span class="Processed-by"> Processed by </span>
+    </div>
+
+    <ion-row style="width: 490px; height: 76px; align-items: center">
+        <ion-col size="2">
+            <img src="assets/Road-Accident-Fund-300x300.jpg" />
+        </ion-col>
+        <ion-col size="10">
+            <img src="assets/RoadCover-Logo-letterbox-option-scaled.jpg" />
+        </ion-col>
+    </ion-row>
+
+    <div class="Rectangle-1805">
+        <span class="You-will-received-confirmation-via-email-Shortly-Please-verify-you-email-address-using-the-link-pr">
+      In order to Speed up the claim process,<br />
+      we suggest using the accident reporting tool, or <br />
+      alternatively select from one of your previous <br />
+      reports
+    </span>
+    </div>
+
+    <div class="Group-3725">
+        <ion-button expand="block" fill="outline" color="secondary" (click)="upgrade()">
+            <span class="UPGRADE-PACKAGE"> REPORT ACCIDENT </span>
+        </ion-button>
+    </div>
+    <div class="two-buttons">
+        <div class="Group-3725">
+            <ion-button expand="block" fill="outline" color="primary" (click)="login()">
+                <span class="UPGRADE-PACKAGE"> Back </span>
+            </ion-button>
+        </div>
+
+        <div class="Group-3725">
+            <ion-button expand="block" color="primary" (click)=" goBack()">
+                <span class="UPDATE-INFORMATION"> GET STARTED </span>
+            </ion-button>
+        </div>
+    </div>
+</ion-content>

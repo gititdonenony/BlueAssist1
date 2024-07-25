@@ -1,0 +1,39 @@
+<ion-tabs #tabs (ionTabsDidChange)="setCurrentTab($event)">
+    <!-- -------------------Custom Tabs with fab button------------------------------- -->
+    <!-- <ion-fab vertical="bottom" horizontal="center" translucent="true">
+    <ion-fab-button routerLink="/tabs/add-post">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> -->
+    <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="" (click)="shophome()">
+            <ion-icon [name]="selectTab === 'home' ? 'gift' : 'gift-outline'"></ion-icon>
+            <ion-label *ngIf="selectTab !== 'home' ">Shop</ion-label>
+        </ion-tab-button>
+      <ion-tab-button tab="profile" (click)="presentAlertConfirm()">
+          <img src="assets/accidenticon.svg" class="ionimg" *ngIf="selectTab === 'profile'">
+          <img src="assets/accidenticonactive.svg" class="ionimg" *ngIf="selectTab !== 'profile'">
+          <ion-label class= "motar-text" *ngIf="selectTab == 'profile' ">AR Form</ion-label>
+          </ion-tab-button>
+
+        <ion-tab-button tab="profile" class="add-post-1">
+            <ion-icon [name]="selectTab === 'profile' ? 'home' : 'home-outline'"></ion-icon>
+            <ion-label *ngIf="selectTab !== 'profile' ">Home</ion-label>
+        </ion-tab-button>
+
+        <!-- <svg height="50" viewBox="0 0 100 50" width="100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100 0v50H0V0c.543 27.153 22.72 49 50 49S99.457 27.153 99.99 0h.01z"
+        fill="red" fill-rule="evenodd">
+      </path>
+    </svg> -->
+
+        <ion-tab-button tab="" class="wishlist" (click)="licencerenewalhome()">
+            <ion-icon [name]="selectTab === 'wishlist' ? 'card' : 'card-outline'"></ion-icon>
+            <ion-label *ngIf="selectTab !== 'wishlist' ">License</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="" (click)="trafficFineshome()">
+            <ion-icon [name]="selectTab === 'add-post' ? 'reader' : 'reader-outline'"></ion-icon>
+            <ion-label *ngIf="selectTab !== 'add-post' ">Fines</ion-label>
+        </ion-tab-button>
+    </ion-tab-bar>
+</ion-tabs>

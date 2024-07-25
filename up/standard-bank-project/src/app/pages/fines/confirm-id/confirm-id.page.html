@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <h2>Traffic Fines</h2>
+  <div class="bg style-remove-1">
+    <span class="description">
+      Please enter the ID number below to check your traffic fines.
+    </span>
+  </div>
+
+  <form [formGroup]="confirmFinesIdForm" novalidate>
+    <div class="Group-3739">
+      <div class="input-text">
+        <ion-input type="text" placeholder="ID Number" formControlName="id"></ion-input>
+      </div>
+      </div>
+  </form>
+  <h4 class="why-use-service">Why use this service?</h4>
+  <div class="bg style-remove-1">
+    <span class="description">
+      No queues or administrative nightmares in dealing with the 
+Traffic Department. Our secure fines payment facility ensures 
+you receive proof of settlement and peace of mind that your 
+name is clear! 100% of all discounts or reductions are passed 
+back to you
+    </span>
+  </div>
+
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <div class="Group-3725">
+      <ion-button expand="block"  (click)="fetchFines(id)" color="primary">
+        <span> GET STARTED </span>
+      </ion-button>
+    </div>
+    <div class="Group-3725">
+      <ion-button
+        expand="block"
+        fill="outline"
+        color="primary"
+        (click)=" goBack()"
+      >
+        <span> Back </span>
+      </ion-button>
+    </div>
+
+  
+  </ion-toolbar>
+</ion-footer>

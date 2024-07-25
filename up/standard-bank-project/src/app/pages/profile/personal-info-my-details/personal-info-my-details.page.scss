@@ -1,0 +1,97 @@
+ion-toolbar {
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+    ion-img {
+        height: 35px;
+    }
+}
+.profile-img{
+    border: 0.5px solid rgb(0 0 0 / 14%);
+    border-radius: 3px;
+    padding: 10px;
+
+    .circle{
+        height: 65px;
+        color: #0035a8;
+        font-size: 30px;
+        width: 65px;
+        background: #5edfd936;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-content: stretch;
+        align-items: center;
+    }
+    .Add-a-profile-picture-so-our-emergency-responders-can-easily-identify-you {
+        // width: 160px;
+        // height: 45px;
+        // margin: 11px 0 15px 26px;
+        // font-family: Roboto;
+        font-size: 12px;
+        // font-weight: normal;
+        // font-stretch: normal;
+        // font-style: normal;
+        // line-height: normal;
+        // letter-spacing: 0.01px;
+        text-align: left;
+        color: #444;
+        margin: auto;
+    }
+    .profile-image {
+        height: 65px;
+        width: 65px;
+        border-radius: 50%;
+        margin: auto;
+    }
+}
+
+
+.name {
+    text-align: center;
+    padding: 35px 0 18px;
+    .Personal-Information {
+        font-size: 32px;
+        font-weight: 550;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.62;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--cobalt-blue);
+    }
+}
+
+.Group-3725 {
+      
+    .UPGRADE-PACKAGE {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: (--cobalt-blue);
+    }
+    .UPDATE-INFORMATION {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--white);
+    }
+    .label{
+    font-size: 14px;
+    text-align: left;
+    color: #444;
+    }
+  
+}
+.profile-div{
+    display: flex;
+}

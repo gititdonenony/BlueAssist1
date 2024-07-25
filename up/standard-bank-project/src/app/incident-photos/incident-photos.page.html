@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-img src="assets/logo.png"></ion-img>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <h2>Incident Photos</h2>
+
+    <div class="bg">
+        <span class="description">
+            Please ensure you take the required photos, whilst
+            ensuring you are safe at all times.
+        </span>
+    </div>
+    <div class="mrg-top"></div>
+    <div class="Rectangle-1766">
+        <ion-row (click)="getIncident()">
+            <ion-col size="4" class="ion-text-start Group-4503-1"><img src="assets/Group 4503.png" /></ion-col>
+            <ion-col size="7" class="Personal-Details" style="padding: 0px">Incident scene</ion-col>
+            <ion-col size="1" class="green-check-box">
+                <ion-checkbox color="success" mode="ios" [disabled]="true" style="opacity: 1;"
+                    checked={{incidentScence}}></ion-checkbox>
+            </ion-col>
+            <!-- <ion-col size="1" class="ion-text-end">
+                <ion-checkbox checked="true" color="success" mode="ios"></ion-checkbox>
+            </ion-col> -->
+        </ion-row>
+    </div>
+
+    <div class="Rectangle-1766">
+        <ion-row (click)="roadScene()">
+            <ion-col size="4" class="ion-text-start Group-4503-1"><img src="assets/Group 4501.png" /></ion-col>
+            <ion-col size="7" class="Personal-Details" style="padding: 0px">Pothole & road condition</ion-col>
+            <ion-col size="1" class="green-check-box">
+                <ion-checkbox color="success" mode="ios" [disabled]="true" style="opacity: 1;"
+                    checked={{potholeRoadScence}}></ion-checkbox>
+            </ion-col>
+        </ion-row>
+    </div>
+    <div class="Rectangle-1766">
+        <ion-row (click)="vehicleDamage()">
+            <ion-col size="4" class="ion-text-start Group-4503-1"><img src="assets/Group 4502.png" /></ion-col>
+            <ion-col size="7" class="Personal-Details" style="padding: 0px">Vehicle damage</ion-col>
+            <ion-col size="1" class="green-check-box">
+                <ion-checkbox color="success" mode="ios" [disabled]="true" style="opacity: 1;"
+                    checked={{potholeVehicleDamageScence}}></ion-checkbox>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+    <ion-toolbar>
+        <div class="Group-3725">
+            <ion-button expand="block" color="primary" (click)="tc()">
+                <span> BACK </span>
+            </ion-button>
+        </div>
+    </ion-toolbar>
+</ion-footer>

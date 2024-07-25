@@ -1,0 +1,75 @@
+<ion-content class="wrapper">
+  <div class="header">
+    <ion-label class="title">Welcome to Renault,</ion-label>
+    <ion-label class="sub-title">Stay Calm We Got You!</ion-label>
+    <ion-label class="content">You are able to take care of all your accident related needs on Renault.</ion-label>
+  </div>
+  
+  <!-- <div class="card-slides" *ngIf="!isKeyboardOpen">
+    <div class="wrapper"> -->
+      <!-- <ion-card class="card-slide ion-activatable"
+                (click)="continueForm()"
+                *ngIf="hasExistingForm">
+        <ion-card-header>
+          <img src="assets/logos/Renault-logo-dark.svg" />
+        </ion-card-header>
+        <ion-card-content>
+          <ion-label class="heading dark">
+            Continue Accident Form
+          </ion-label>
+        </ion-card-content>
+    
+        <ion-ripple-effect></ion-ripple-effect>
+        <ion-button fill="clear" iconOnly color="dark" class="delete" (click)="deleteCurrentForm($event)">
+          <img src="assets/icons/delete.svg" />
+        </ion-button>
+      </ion-card> -->
+    
+      <!-- <ion-card class="card-slide ion-activatable"
+                color="primary"
+                (click)="startNewForm()">
+        <ion-card-header>
+          <img src="assets/logos/Renault-logo-light.svg" />
+        </ion-card-header>
+        <ion-card-content>
+          <ion-label class="heading">
+            <ion-icon name="add"></ion-icon>
+            Report an Accident
+          </ion-label>
+          <ion-label class="description">
+            Renault will guide you through filling out the AR form digitally, print and take to the police station on
+            completion
+          </ion-label>
+        </ion-card-content>
+    
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-card> -->
+    
+      <!-- <ion-card class="card-slide ion-activatable"
+                color="tertiary"
+                (click)="goToHistory()">
+        <ion-label class="history-count" *ngIf="historyCount">{{historyCount}}</ion-label>
+        <ion-card-header>
+          <img src="assets/logos/Renault-logo-light.svg" />
+        </ion-card-header>
+        <ion-card-content>
+          <ion-label class="heading">
+            <img src="assets/icons/history.svg" />
+            Renault History</ion-label>
+          <ion-label class="description">
+            View all your reported Accident Report forms
+          </ion-label>
+        </ion-card-content>
+    
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-card> -->
+    <!-- </div>
+  </div> -->
+</ion-content>
+<ion-footer class="ion-no-border" *ngIf="!isKeyboardOpen">
+  <ion-label>Require emergency services?</ion-label>
+  <ion-button color="danger" fill="solid" expand="block" (click)="toggleEmergencyFooter()">
+    <img src="assets/icons/phone.svg" />
+    CALL EMERGENCY SERVICES
+  </ion-button>
+</ion-footer>

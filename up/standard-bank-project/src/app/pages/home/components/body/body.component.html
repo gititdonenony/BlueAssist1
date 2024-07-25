@@ -1,0 +1,28 @@
+<ion-content >
+    <ion-card [ngClass]="{ 'has-footer': showBottomBar }">
+        <ion-router-outlet [ngClass]="{ 'ios' : isIPhone }" mode="md" #router></ion-router-outlet>
+        <div class="card-footer">
+            <div class="segment-wrapper">
+                <div class="selected-bar"></div>
+                <!-- <div class="segment ion-activatable" (click)="goToPage('snap')">
+                    <img src="assets/icons/snap-dark.svg" />
+                    <ion-label>1. Snap</ion-label>
+
+                    <ion-ripple-effect></ion-ripple-effect>
+                </div> -->
+                <!-- <div class="segment ion-activatable" (click)="goToPage('scan')">
+                    <img src="assets/icons/scan-dark.svg" />
+                    <ion-label>2. Scan</ion-label>
+
+                    <ion-ripple-effect></ion-ripple-effect>
+                </div> -->
+                <!-- <div class="segment ion-activatable" (click)="goToPage('submit')">
+                    <img src="assets/icons/submit-dark.svg" />
+                    <ion-label>3. Submit</ion-label>
+
+                    <ion-ripple-effect></ion-ripple-effect>
+                </div> -->
+            </div>
+        </div>
+    </ion-card>
+</ion-content>

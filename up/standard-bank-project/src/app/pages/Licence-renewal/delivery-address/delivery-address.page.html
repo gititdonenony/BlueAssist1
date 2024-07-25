@@ -1,0 +1,168 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2>Delivery Address</h2>
+  <div class="bg">
+    <span class="Your-list-should-include-anyone-who-needs-to-be-notified-of-an-emergency-This-list-shouldnt-be-li">
+      Please select the address where the licence disk should be delivered.
+    </span>
+  </div>
+  <form [formGroup]="deliveryAddFrom" novalidate>
+    <div class="Group-3739">
+      <div *ngIf="userAddresses.length > 0">
+        <ion-row *ngFor="let add of userAddresses" class="ionrow text-capitalize" (click)="checkBoxClick(add)">
+          <ion-col size="11" class="address_name">{{add.Add_RecipientName}},
+            {{add.Add_RecipientMobileNumber}}</ion-col>
+          <ion-col size="1" class="end">
+            <ion-checkbox color="success" [checked]="add.isChecked" mode="ios"></ion-checkbox>
+          </ion-col>
+          <ion-col size="11" class="ioncol">
+            {{add.Add_StreetAddress}}, {{add.Add_Suburb}},
+            {{add.Add_CityOrTown}}, {{add.Add_Province}}, {{add.Add_PostalCode}}
+          </ion-col>
+        </ion-row>
+      </div>
+      <!-- <form [formGroup]="deliveryAddFrom" novalidate> -->
+      <div class="where-did-it">
+        <div class="input-text">
+          <ion-label class="label">Recipient Name</ion-label>
+          <ion-input type="text" placeholder="Recipient Name" formControlName="address_rec_name"></ion-input>
+          <div class="alert alert-danger">
+            <div
+              *ngIf="deliveryAddFrom.controls['address_rec_name'].invalid && deliveryAddFrom.controls['address_rec_name'].touched"
+              class="alert alert-danger">
+              <div class="error-text" *ngIf="deliveryAddFrom.controls['address_rec_name'].errors.required">
+                Recipient Name is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="input-text">
+          <ion-label class="label">Street Address</ion-label>
+          <ion-input type="email " placeholder="Street Address" formControlName="address_full_address"></ion-input>
+          <div class="alert alert-danger">
+            <div
+              *ngIf="deliveryAddFrom.controls['address_full_address'].invalid && deliveryAddFrom.controls['address_full_address'].touched"
+              class="alert alert-danger">
+              <div class="error-text" *ngIf="deliveryAddFrom.controls['address_full_address'].errors.required">
+                Street Address is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <ion-row>
+          <ion-col size="6">
+            <div class="input-text">
+              <ion-label class="label">Suburb</ion-label>
+              <ion-input type="text " placeholder="Suburb" formControlName="address_suburb"></ion-input>
+              <div class="alert alert-danger">
+                <div
+                  *ngIf="deliveryAddFrom.controls['address_suburb'].invalid && deliveryAddFrom.controls['address_suburb'].touched"
+                  class="alert alert-danger">
+                  <div class="error-text" *ngIf="deliveryAddFrom.controls['address_suburb'].errors.required">
+                    Suburb is required.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col size="6">
+            <div class="input-text">
+              <ion-label class="label">City/Town</ion-label>
+              <ion-input type="text " placeholder="City/town" formControlName="address_city"></ion-input>
+              <div class="alert alert-danger">
+                <div
+                  *ngIf="deliveryAddFrom.controls['address_city'].invalid && deliveryAddFrom.controls['address_city'].touched"
+                  class="alert alert-danger">
+                  <div class="error-text" *ngIf="deliveryAddFrom.controls['address_city'].errors.required">
+                    City/Town is required.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6 " class="where-did-it">
+            <div class="input-text">
+              <ion-label class="label">Province</ion-label>
+              <ion-input type="text " placeholder="Province" formControlName="address_province"></ion-input>
+              <div class="alert alert-danger">
+                <div
+                  *ngIf="deliveryAddFrom.controls['address_province'].invalid && deliveryAddFrom.controls['address_province'].touched"
+                  class="alert alert-danger">
+                  <div class="error-text" *ngIf="deliveryAddFrom.controls['address_province'].errors.required">
+                    Province is required.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col size="6 " class="where-did-it">
+            <div class="input-text">
+              <ion-label class="label">Postal Code</ion-label>
+              <ion-input type="text " placeholder="Postal code" formControlName="address_postalcode"></ion-input>
+              <div class="alert alert-danger">
+                <div
+                  *ngIf="deliveryAddFrom.controls['address_postalcode'].invalid && deliveryAddFrom.controls['address_postalcode'].touched"
+                  class="alert alert-danger">
+                  <div class="error-text" *ngIf="deliveryAddFrom.controls['address_postalcode'].errors.required">
+                    Postal Code is required.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+        <div class="input-text">
+          <ion-label class="label">Contact No</ion-label>
+          <ion-input type="text"    maxlength="9" inputmode="numeric"  placeholder="Contact No" formControlName="address_contact"></ion-input>
+          <div class="alert alert-danger">
+            <div
+              *ngIf="deliveryAddFrom.controls['address_contact'].invalid && deliveryAddFrom.controls['address_contact'].touched"
+              class="alert alert-danger">
+              <div class="error-text" *ngIf="deliveryAddFrom.controls['address_contact'].errors.required">
+                Contact No is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="input-text">
+          <ion-label class="label">Email Address</ion-label>
+          <ion-input type="email " placeholder="Email Address" formControlName="address_email"></ion-input>
+          <div class="alert alert-danger">
+            <div
+              *ngIf="deliveryAddFrom.controls['address_email'].invalid && deliveryAddFrom.controls['address_email'].touched"
+              class="alert alert-danger">
+              <div class="error-text" *ngIf="deliveryAddFrom.controls['address_email'].errors.required">
+                Email Address is required.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <div class="Group-3725">
+      <ion-button (click)="addAddress()" [disabled]="!deliveryAddFrom.valid" expand="block " fill="outline"
+        color="primary">
+        <span class="UPGRADE-PACKAGE"> ADD ADDRESS </span>
+      </ion-button>
+    </div>
+    <div class="Group-3725">
+      <ion-button [disabled]="selectedAddress.length === 0" expand="block " color="primary" (click)="gotoCart()">
+        <span class="UPDATE-INFORMATION"> Next </span>
+      </ion-button>
+      <div class="bg-text">
+        <span class="Not-Right-Now" (click)="goBack()"> Go Back </span>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>

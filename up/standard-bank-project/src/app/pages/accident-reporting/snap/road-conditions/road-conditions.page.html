@@ -1,0 +1,307 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true" #content>
+  <app-custom-slides-pager
+    [slider]="slider"
+    [content]="content"
+    (slideIndexChange)="sliderChanged($event)"
+  ></app-custom-slides-pager>
+
+  <div class="slider">
+    <ion-slides #slider [options]="slideOpts">
+      <ion-slide>
+        <div class="information-header">
+          What was the <strong>road surface type?</strong>
+        </div>
+
+        <div class="information-subheader">
+          Please tap the options best suited
+        </div>
+
+        <app-icon-radio-list-component
+          [options]="roadSurfaceTypeOptions"
+          [evidenceRequired]="true"
+          (selectionChanged)="uploadEvidence($event, 'Road_Surface_Type')"
+          (doubleClick)="openEvidenceCapture($event, 'Road_Surface_Type')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          The <strong>Road Type was a/an:</strong>
+        </div>
+
+        <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label>
+
+        <app-icon-radio-list-component
+          [options]="roadTypeOptions"
+          [evidenceRequired]="true"
+          (selectionChanged)="uploadEvidence($event, 'Road_Type')"
+          (doubleClick)="openEvidenceCapture($event, 'Road_Type')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          The <strong>road surface was:</strong>
+        </div>
+
+        <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label>
+
+        <app-icon-radio-list-component
+          [options]="roadSurfaceConditionOptions"
+          [evidenceRequired]="true"
+          (selectionChanged)="uploadEvidence($event, 'Road_Surface_Condition')"
+          (doubleClick)="openEvidenceCapture($event, 'Road_Surface_Condition')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          What was the <strong>Road Quality?</strong>
+        </div>
+
+        <!-- <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label> -->
+
+        <app-icon-radio-list-component
+          [options]="roadQualityOptions"
+          [evidenceRequired]="true"
+          (selectionChanged)="uploadEvidence($event, 'Road_Quality')"
+          (doubleClick)="openEvidenceCapture($event, 'Road_Quality')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          What was the <strong>Road Direction?</strong>
+        </div>
+
+        <!-- <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label> -->
+
+        <app-icon-radio-list-component
+          [options]="directionOfRoadOptions"
+          [evidenceRequired]="true"
+          (selectionChanged)="uploadEvidence($event, 'Road_Direction')"
+          (doubleClick)="openEvidenceCapture($event, 'Road_Direction')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          What was the <strong>Junction Type?</strong>
+        </div>
+
+        <!-- <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label> -->
+
+        <app-icon-radio-list-component
+          [options]="juntionTypeOptions"
+          [evidenceRequired]="true"
+          (selectionChanged)="uploadEvidence($event, 'Junction_Type')"
+          (doubleClick)="openEvidenceCapture($event, 'Junction_Type')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          Were there any <strong>Traffic Controls?</strong>
+        </div>
+
+        <!-- <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label> -->
+
+        <app-icon-radio-list-component
+          [options]="trafficControlTypeOptions"
+          [evidenceRequired]="true"
+          (selectionChanged)="uploadEvidence($event, 'Traffic_Controls')"
+          (doubleClick)="openEvidenceCapture($event, 'Traffic_Controls')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          What was the <strong>Visibility of the <br />road markings:</strong>
+        </div>
+
+        <ion-label class="information-subheader" style="margin-top: -20px">
+          Please tap the options best suited
+        </ion-label>
+
+        <app-icon-radio-list-component
+          [options]="roadMarkingVisibilityOptions"
+          [evidenceRequired]="true"
+          (selectionChanged)="uploadEvidence($event, 'Road_Marking_Visibility')"
+          (doubleClick)="openEvidenceCapture($event, 'Road_Marking_Visibility')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          Were the <strong>Road <br />Signs Visible?</strong>
+        </div>
+
+        <!-- <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label> -->
+
+        <app-icon-radio-list-component
+          [options]="roadSignsVisibleOptions"
+          [evidenceRequired]="true"
+          (selectionChanged)="uploadEvidence($event, 'Road_Sign_Visibility')"
+          (doubleClick)="openEvidenceCapture($event, 'Road_Sign_Visibility')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          What was the <strong>Conditions of the Road Signs?</strong>
+        </div>
+
+        <!-- <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label> -->
+
+        <app-icon-radio-list-component
+          [options]="roadSignConditionOptions"
+          [evidenceRequired]="true"
+          (selectionChanged)="uploadEvidence($event, 'Road_Sign_Condition')"
+          (doubleClick)="openEvidenceCapture($event, 'Road_Sign_Condition')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          Were there any <strong>Overtaking <br />controls?</strong>
+        </div>
+
+        <!-- <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label> -->
+
+        <app-icon-radio-list-component
+          [options]="overtakingControlOptions"
+          [evidenceRequired]="true"
+          (selectionChanged)="uploadEvidence($event, 'Overtaking_Control')"
+          (doubleClick)="openEvidenceCapture($event, 'Overtaking_Control')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          Were there any <strong>Obstructions?</strong>
+        </div>
+
+        <!-- <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label> -->
+
+        <app-icon-radio-list-component
+          [options]="obstructionOptions"
+          [evidenceRequired]="true"
+          (selectionChanged)="uploadEvidence($event, 'Obstruction')"
+          (doubleClick)="openEvidenceCapture($event, 'Obstruction')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          What was the <strong>Light Conditions?</strong>
+        </div>
+
+        <!-- <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label> -->
+
+        <app-icon-radio-list-component
+          [options]="lightConditionOptions"
+          [evidenceRequired]="true"
+          (selectionChanged)="uploadEvidence($event, 'Light_Condition')"
+          (doubleClick)="openEvidenceCapture($event, 'Light_Condition')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          what was the <strong>Weather <br />Conditions?</strong>
+        </div>
+
+        <!-- <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label> -->
+
+        <app-icon-radio-list-component
+          [options]="weatherConditionOptions"
+          [evidenceRequired]="true"
+          (selectionChanged)="uploadEvidence($event, 'Weather_Condition')"
+          (doubleClick)="openEvidenceCapture($event, 'Weather_Condition')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
+
+<app-page-footer
+  (back)="backClicked()"
+  (next)="nextClicked()"
+></app-page-footer>
+
+<div
+  class="evidence-backdrop"
+  [@evidence]="evidenceOpen ? 'backdropVisible' : 'backdropHidden'"
+  (click)="closeEvidence()"
+></div>
+<div
+  class="evidence"
+  [@evidence]="evidenceOpen ? 'visible' : 'hidden'"
+  [ngClass]="{ 'is-ios': isIOS }"
+>
+  <div class="header-top-border">
+    <div class="part"></div>
+    <div class="part"></div>
+    <div class="part"></div>
+    <div class="part"></div>
+  </div>
+  <div class="selected-block">
+    <app-icon-radio-list-component
+      #evidenceIcon
+      disabled="true"
+    ></app-icon-radio-list-component>
+    <ion-button
+      iconOnly
+      fill="clear"
+      size="small"
+      class="close-btn"
+      (click)="closeEvidence()"
+    >
+      <!-- <img src="assets/icons/close.svg" /> -->
+      <ion-icon name="close" style="color: #2e3094"></ion-icon>
+    </ion-button>
+  </div>
+  <div style="text-align: center">
+    <div class="image-capture">
+      <ion-label class="instructions ion-activatable">
+        Capture the evidence (not compulsory)
+      </ion-label>
+      <div class="image-capture-block ion-activatable" (click)="captureImage()">
+        <div [@zoom]="evidenceBase64 ? 'closed' : 'open'">
+          <ion-label class="image-name">Capture Picture</ion-label>
+          <img class="image-action" src="assets/icons/add-circle.svg" />
+          <ion-label class="image-details">
+            Front of the scene.choose what side you want your front to be and
+            take other pictures accodingly.
+          </ion-label>
+        </div>
+
+        <div
+          class="background-image"
+          [@zoom]="evidenceBase64 ? 'open' : 'closed'"
+          [ngStyle]="{ 'background-image': 'url(' + evidenceBase64 + ')' }"
+        ></div>
+
+        <ion-ripple-effect></ion-ripple-effect>
+      </div>
+    </div>
+  </div>
+</div>

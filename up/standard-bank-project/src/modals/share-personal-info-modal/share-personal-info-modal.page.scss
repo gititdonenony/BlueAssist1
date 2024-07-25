@@ -1,0 +1,13 @@
+.qr-container {
+    height: 340px;
+    width: 340px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+
+    img {
+        height: 300px;
+        width: 300px;
+    }
+}

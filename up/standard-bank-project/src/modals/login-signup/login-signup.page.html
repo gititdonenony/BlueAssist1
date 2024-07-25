@@ -1,0 +1,85 @@
+<!--<ion-header class="ion-no-border">
+  <div class="header-top-border">
+    <div class="part"></div>
+    <div class="part"></div>
+    <div class="part"></div>
+    <div class="part"></div>
+  </div>
+
+</ion-header>-->
+
+<ion-content>
+
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button iconOnly fill="clear" size="small" (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-label class="header" color="dark">
+    {{isLogin ? 'Login' : 'Sign Up'}}
+  </ion-label>
+
+  <div class="content">
+    <ion-label class="title">
+      Please enter ID Number and Passport Number To verify Your Account
+    </ion-label>
+
+    <form [formGroup]="loginForm">
+    <!--  <ion-label class="instructions">
+        Email
+      </ion-label>-->
+
+
+
+    <!--  <ion-label class="instructions">
+        ID Number
+      </ion-label>-->
+<ion-item>
+        <ion-input placeholder="ID or Passport Number" type="tel" formControlName="IDNumber"></ion-input>
+</ion-item>
+<ion-item>
+<ion-input placeholder="Email" formControlName="Email"type="email"></ion-input>
+</ion-item>
+    </form>
+
+    <form [formGroup]="signupForm" class="signup-form" *ngIf="!isLogin">
+    <!--  <ion-label class="instructions">
+        Name
+      </ion-label>-->
+<ion-item>
+        <ion-input placeholder="Name"  formControlName="Name"></ion-input>
+</ion-item>
+    <!--  <ion-label class="instructions">
+        Surname
+      </ion-label>-->
+<ion-item>
+        <ion-input placeholder="Surname" formControlName="Surname"></ion-input>
+</ion-item>
+    </form>
+
+    <!-------------------->
+
+    <!----------------------->
+
+    <div class="action-buttons  ion-padding">
+     <ion-button size="large" shape="round" class="login-button" (click)="login()">  {{isLogin ? 'Login' : 'Sign Up'}} </ion-button>
+     </div>
+
+    <!-- <div class="action-buttons  ion-padding">
+      <ion-button size="large" shape="round" class="login-button" (click)="signUp()">  {{isLogin ? 'Login' : 'Sign Up'}} </ion-button>
+      </div>-->
+
+    <div class="buttons-footer">
+    <!--  <ion-button  (click)="login()" size="large" shape="round">
+        Login
+      </ion-button>-->
+
+       <p>Don't have an Account?<a (click)="signUp()">{{isLogin ? 'Signup now' : 'Login'}}</a></p>
+    <!--  <ion-button fill="outline" color="dark" (click)="signUp()" size="large" shape="round">
+        Signup
+      </ion-button>-->
+    </div>
+  </div>
+</ion-content>

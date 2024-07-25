@@ -1,0 +1,126 @@
+ion-toolbar {
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+    ion-img {
+        height: 35px;
+    }
+}
+
+.divicon {
+    padding: 55px 0;
+    margin-left: 38%;
+    .Ellipse-355 {
+        width: 80.5px;
+        border-radius: 50px;
+        border: 1px solid;
+        height: 80.5px;
+        text-align: center;
+        color: #0e8a00;
+        ion-icon {
+            font-size: 50px;
+            padding: 12px;
+        }
+    }
+}
+
+.center-text {
+    text-align: center;
+    .Welcome-to-247-Assist {
+        font-size: 25px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--greyish-brown);
+    }
+}
+
+.Rectangle-1805 {
+    text-align: center;
+    padding: 19px 0;
+    .You-have-successfully-logged-in {
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        color: var(--greyish-brown);
+    }
+}
+
+.Rectangle-1805 {
+    text-align: center;
+    background-color: var(--white);
+    .You-will-received-confirmation-via-email-Shortly-Please-verify-you-email-address-using-the-link-pr {
+        font-size: 15px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--greyish-brown);
+    }
+}
+
+.Rectangle-1804 {
+    padding: 10px 0;
+    text-align: center;
+    background-color: var(--white);
+    .Did-you-know-you-could-get-more {
+        font-size: 9px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0px;
+        text-align: center;
+        color: #0033a1;
+    }
+}
+
+.Group-3725 {
+    // padding: 0 20px 15px;
+    .UPGRADE-PACKAGE {
+        font-size: 15px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: #0089ff;
+    }
+    .UPDATE-INFORMATION {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--white);
+    }
+ 
+}
+.Ref-STRC001 {
+   
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #0089ff;
+  }
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,87 @@
+ion-content{
+    // --background: #00000021;
+        --padding-bottom: 0px !important;
+        --padding-end: 0px !important;
+        --padding-start: 0px !important;
+        --padding-top: 0px !important;
+}
+.modal-border-css{
+    height: 100%;
+    display: flex;
+}
+.EMERGENCY {
+    font-size: 33px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--cobalt-blue);
+}
+
+.Group {
+    margin-top: 20px;
+    .We-will-call-you-shortly {
+        font-size: 18px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #444;
+    }
+}
+
+.Group-2714 {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    .Please-be-sure-to-answer-your-phone-And-do-your-best-to-ensure-your-safety {
+        font-size: 15px;
+        font-weight: 500;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #444;
+    }
+}
+
+.Group-3725 {
+    padding: 0 5px 15px;
+    text-transform: uppercase;
+    .UPGRADE-PACKAGE {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: (--cobalt-blue);
+    }
+    .UPDATE-INFORMATION {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--white);
+    }
+}
+
+.all {
+    background: white;
+    border-radius: 30px 30px 0px 0px;
+    padding: 23px 23px 17px 23px;
+    text-align: center;
+}
+
+ion-content {
+    --background: transparent;
+}

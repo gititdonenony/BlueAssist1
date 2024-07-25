@@ -1,0 +1,60 @@
+
+.style-remove-1 {
+    padding: 10px 0;
+}
+.style-remove-2 {
+    text-align: end;
+}
+.style-remove-3 {
+    height: 40px;
+    padding: 0 0 8px;
+}
+ion-content {
+    --ion-background-color: black;
+}
+ion-toolbar {
+    --background: black;
+}
+ion-card {
+    height: auto;
+    --ion-background-color: #fcfcfc;
+    border-radius: 15px;
+}
+.are-you{
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    font-weight: 500;
+    padding: 10px 3px 10px 3px;
+}
+ion-row{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+ion-toolbar {
+    --background: black;
+}
+.button {
+    --background:linear-gradient(96.1deg, #1176c9 -7.66%, #1176c9 113.34%);
+    border-radius: 15px;
+    font-size: 12px;
+}
+ion-button {
+    background:linear-gradient(96.1deg, #1176c9 -7.66%, #1176c9 113.34%);
+    --border-radius: 25px;
+    height: 30px;
+    text-transform: capitalize ;
+    font-size: 14px;
+    font-family: open sans, sans-serif;
+    color: white;
+    width: 66%;
+    justify-content: space-between;
+}
+
+.camera-icon{
+    color: white;
+    background: linear-gradient(96.1deg, #1176c9 -7.66%, #1176c9 113.34%);
+    padding: 8px;
+    font-size: 28px;
+    border-radius: 50%;
+}

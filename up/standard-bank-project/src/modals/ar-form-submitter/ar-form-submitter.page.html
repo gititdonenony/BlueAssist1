@@ -1,0 +1,35 @@
+<ion-header class="ion-no-border">
+  <div class="header-top-border">
+    <div class="part"></div>
+    <div class="part"></div>
+    <div class="part"></div>
+    <div class="part"></div>
+  </div>
+</ion-header>
+
+<ion-content>
+  <ion-label class="header" color="dark">
+    {{progressStage == 'Building' ? 'Building Form' : 'Sending Email'}}
+  </ion-label>
+
+  <div class="content">
+    <ion-label class="title">
+      This might take a few minutes. Please don't lock your phone or close the Renault app.
+    </ion-label>
+  </div>
+
+  <div class="progress-indication">
+    <svg class="progress-ring" style="opacity: 0;">
+      <circle class="progress-ring-circle" />
+    </svg>
+    <div class="progress-bar"></div>
+    <lottie-animation-view [options]="buildingLottieConfig"
+                            [width]="150"
+                            [height]="150"
+                            *ngIf="progressStage == 'Building'"
+                            (animCreated)="modifyBuildAnimation($event)">
+    </lottie-animation-view>
+    <lottie-animation-view [options]="emailingLottieConfig" [width]="150" [height]="150" *ngIf="progressStage == 'Emailing'">
+    </lottie-animation-view>
+  </div>
+</ion-content>

@@ -1,0 +1,498 @@
+ion-toolbar {
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+    ion-img {
+        height: 35px;
+    }
+}
+
+ion-input {
+    color: #000000;
+}
+
+ion-datetime {
+    padding-left: 0;
+    border-bottom: 0.5px solid #80808061;
+}
+
+.ionrow {
+    color: #979797;
+    padding: 5px;
+    
+    border-radius: 6px;
+    .end {
+        text-align: end;
+    }
+}
+
+.style-remove-1 {
+    padding-bottom: 33%;
+}
+
+.style-remove-2 {
+    margin-top: 17px;
+}
+
+.style-remove-3 {
+    margin-top: 10px;
+}
+
+.style-remove-4 {
+    padding: 0 20px 0px 0;
+}
+
+.style-remove-5 {
+    padding: 0px 0 0px 18px;
+}
+
+.emergency-box {
+    padding-top: 40px;
+}
+
+ion-checkbox {
+    height: 17px;
+    width: 17px;
+}
+
+.logo {
+    margin: auto;
+    color: white;
+    width: 132px;
+    height: 85px;
+}
+
+.logo1 {
+    margin: auto;
+    color: white;
+    width: 29px;
+    height: 33px;
+}
+
+.Login-box {
+    width: 365px;
+    height: 437px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 80px auto 12px;
+}
+
+.logged-in-text {
+    margin: auto;
+    padding-top: 30px;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 0.01px;
+    color: #4a4a4a;
+    text-align: center;
+}
+
+.login-contant {
+    width: 335px;
+    margin: 10px auto;
+}
+
+.input {
+    margin: 16px auto;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #dbdbdb;
+    font-size: 15px;
+    text-align: left;
+    color: #444444;
+}
+
+.Work-Address-text {
+    font-size: 15px;
+    text-align: left;
+    color: #4a4a4a;
+    font-weight: 300;
+}
+
+.blue-button {
+    display: block;
+    width: 328px;
+    height: 40px;
+    margin: 50px auto 10px;
+    background-color: #0033a9;
+    border-radius: 5px;
+}
+
+.blue-button-text {
+    font-size: 14px;
+    // font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.01px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+
+.Forgetpassword {
+    margin: 30px auto 0px;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #0089ff;
+}
+
+.white-button {
+    display: block;
+    width: 328px;
+    height: 40px;
+    margin: 15px auto -24px;
+    background-color: white;
+    border: 1px solid #0033aa;
+    border-radius: 5px;
+}
+
+.white-button-text {
+    font-size: 14px;
+    // font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: 0.01px;
+    text-align: center;
+    color: #0033aa;
+}
+
+.no-id {
+    margin: auto;
+    color: #ffffff;
+    text-align: center;
+}
+
+a {
+    color: #ffffff;
+}
+
+
+/* login success page */
+
+.Welcome-Assist {
+    margin: 26px auto;
+    font-size: 25px;
+    letter-spacing: 0.01px;
+    text-align: center;
+    color: #4a4a4a;
+}
+
+.border {
+    margin: auto;
+    width: 328px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #dbdbdb;
+    text-align: center;
+}
+
+ion-icon {
+    height: 138px;
+    width: 159px;
+    margin: 50px auto 25px;
+    justify-content: center;
+    color: #0e8a00;
+    font-size: 200px;
+    text-align: center;
+}
+
+.header {
+    --ion-background-color: #0033aa;
+    text-align: center;
+    margin: auto;
+}
+
+.confermation {
+    margin: 58px auto;
+    padding-top: 30px;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 0.01px;
+    color: #4a4a4a;
+    text-align: center;
+}
+
+.Did-you-know {
+    margin: 85px auto 5px;
+    font-size: 9px;
+    font-weight: normal;
+    letter-spacing: 0.01px;
+    color: #0033a1;
+    text-align: center;
+}
+
+.white-button2 {
+    display: block;
+    width: 328px;
+    height: 40px;
+    margin: 15px auto -24px;
+    background-color: white;
+    border: 1px solid #0089ff;
+    border-radius: 5px;
+}
+
+.white-button-text2 {
+    font-size: 14px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: 0.01px;
+    text-align: center;
+    color: #0089ff;
+}
+
+
+/* personal information */
+
+.personal-info {
+    margin: 25px auto;
+    padding-top: 30px;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 0.62;
+    letter-spacing: 0.01px;
+    color: #0033aa;
+    text-align: center;
+}
+
+.personal-info-box {
+    height: 408px;
+    width: 333px;
+    margin: auto;
+}
+
+.personal-info-box-input {
+    margin: 24px auto 5px;
+}
+
+
+/* emergancy contacts */
+
+// p {
+//     font-size: 12px;
+//     font-weight: 800;
+//     font-stretch: normal;
+//     font-style: normal;
+//     line-height: normal;
+//     letter-spacing: 1px;
+//     margin-bottom: 40px;
+//     text-align: center;
+//     color: black;
+//     //font-family: Roboto-Thin !important;
+// }
+
+.input2 {
+    width: 328px;
+    height: 40px;
+    margin: 15px auto;
+    font-size: 15px;
+    font-weight: 500;
+    color: #4a4a4a;
+    background: transparent;
+    border: none;
+    border: 1px solid #dbdbdb;
+    text-align: left;
+}
+
+.emergency-box1 {
+    height: 100px;
+    width: 331px;
+    margin: auto;
+}
+
+.emergency-box2 {
+    border: 1px solid #dbdbdb;
+    height: 40px;
+    width: 328px;
+    margin: auto;
+    border: none;
+}
+
+.emergency-box {
+    height: 177px;
+    width: 331px;
+    margin: auto;
+}
+
+.brother {
+    margin: 20px auto;
+    background: transparent;
+    border: none;
+    font-size: 15px;
+    border-bottom: 1px solid #0089ff;
+    color: #444444;
+    text-align: left;
+}
+
+.not-now {
+    margin: auto;
+    padding-top: 10px;
+    font-size: 12px;
+    line-height: 0.62;
+    letter-spacing: 0.01px;
+    color: #0089ff;
+    text-align: center;
+}
+
+
+/* Add vehicle */
+
+.input3 {
+    float: left;
+    margin: 10px auto 30px;
+    width: 139px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #dbdbdb;
+    text-align: left;
+    color: #444444;
+}
+
+
+/* update success */
+
+.update-button {
+    display: block;
+    width: 328px;
+    height: 40px;
+    margin: 160px auto 10px;
+    background-color: #0033a9;
+    border-radius: 5px;
+}
+
+
+/* My details */
+
+.Rectangle {
+    width: 328px;
+    height: 44px;
+    margin: 50px auto;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+    font-size: 15px;
+    letter-spacing: 0.01px;
+    color: #444444;
+    text-align: center;
+}
+
+.my-details-box {
+    margin: 240px auto 5px;
+}
+ion-toolbar {
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+    ion-img {
+        height: 35px;
+    }
+}
+
+ion-datetime {
+    padding-left: 0;
+    border-bottom: 0.5px solid #80808061;
+}
+
+.bg {
+    text-align: center;
+    padding: 0 0px 0;
+    .Your-list-should-include-anyone-who-needs-to-be-notified-of-an-emergency-This-list-shouldnt-be-li {
+        font-size: 12px;
+        font-weight: 800;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 1px;
+        text-align: center;
+        color: black;
+        //font-family: Roboto-Thin !important;
+    }
+}
+
+.style-remove-1 {
+    padding-top: 13px
+}
+
+.style-remove-2 {
+    padding: 0 20px 0px 0;
+}
+
+.style-remove-3 {
+    padding: 0px 0 0px 18px;
+}
+
+.bg-text {
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--white);
+    .Not-Right-Now {
+        font-size: 10px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0px;
+        text-align: center;
+        color: #0089ff;
+    }
+}
+
+.bg {
+    text-align: center;
+    padding: 0 0px 0;
+    .Rectangle-1914 {
+        margin-top: 18px;
+        padding: 32px 22px 29px 16px;
+        border-radius: 5px;
+        border: solid 1px #dbdbdb;
+    }
+    .home_contents_call_me_back {
+        height: 63px;
+        display: flex;
+    }
+    .You-have-no-emergency-contacts {
+        margin: 18px 0 0 5px;
+        font-size: 12px;
+        font-weight: 800;
+        font-stretch: normal;
+        font-style: normal;
+        //font-family: Roboto-Thin !important;
+        line-height: normal;
+        letter-spacing: 0.5px;
+        text-align: center;
+        color: var(--greyish-brown);
+    }
+    .Not-Right-Now {
+        margin: 14.1px 126px 0;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0px;
+        text-align: center;
+        color: #0089ff;
+    }
+}
+
+.checkBox-vehicle {
+    height: 18px;
+    width: 18px;
+}
+.label{
+    font-size: 14px;
+    text-align: left;
+    color: #444;
+    }
+    .Group-3725{
+        text-transform: capitalize;
+    }
+    .registration-number{
+        text-transform: uppercase;
+    }
+   

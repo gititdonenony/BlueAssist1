@@ -1,0 +1,202 @@
+ion-header {
+  ion-toolbar {
+    --background: #0034a9;
+    ion-img {
+      height: 35px;
+    }
+    ion-icon {
+      color: #fff;
+    }
+    ion-title {
+      font-size: 1rem;
+      ion-icon {
+        margin-bottom: -3px;
+      }
+    }
+  }
+}
+.pacakge-d {
+  font-size: 10px;
+  text-transform: uppercase !important;
+  display: inline-block;
+  white-space: pre-wrap;
+}
+.fullname {
+  font-size: 15px !important;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.cross {
+  text-align: right;
+  .icon-cross-1 {
+    color: white;
+    font-size: 27px;
+  }
+}
+.button-1 {
+  padding-top: 20px;
+}
+.style-remove-1 {
+  color: white;
+  z-index: 1000;
+}
+
+ion-icon {
+  color: #fff;
+}
+
+.app-logo {
+  //background-image: url(https://www.freakyjolly.com/wp-content/uploads/2020/04/fj-logo-1.png);
+  height: 150px;
+  width: 150px;
+  background-repeat: no-repeat;
+  border-radius: 320px;
+  background-position: center;
+  background-size: contain;
+  background-color: #e3f8ff;
+  margin: 30px auto;
+}
+
+ion-content {
+  background: #0034a9;
+  // --background: #0034A9;
+  // --color: #fff;
+}
+ion-router-outlet ion-spinner {
+  --ion-spinner-name: circles;
+  --ion-spinner-stroke-width: 3px;
+  --ion-spinner-size: 3px;
+  --ion-spinner-width: 5px;
+}
+ion-menu {
+  --width: 250px;
+  color: #fff;
+  margin-top: 58px;
+  --background: #0035a8;
+
+  ion-menu-button {
+    // --background : var(--ion-color-primary);
+    color: var(--ion-color-light);
+  }
+}
+.box-size {
+  padding: 12px;
+}
+
+ion-note {
+  font-size: 12px;
+  padding-left: 20px;
+}
+
+ion-item {
+  --background: #0034a9;
+  color: white;
+  --min-height: 34px;
+  // width: 85%;
+  ion-label {
+    margin: 0;
+    font-size: 14px;
+  }
+}
+
+.list-ios {
+  --background: #0035a8;
+}
+ion-menu:host {
+  --width: 238px;
+  --min-width: auto;
+  --max-width: auto;
+  --height: 100%;
+  --min-height: auto;
+  --max-height: auto;
+  --background: #0035a8;
+  inset: 0px;
+
+  position: absolute;
+  contain: strict;
+}
+
+.linecss {
+  height: 0px;
+  /* margin-top: 40px; */
+  margin-left: 20px;
+  border: 0.5px solid #fff;
+  width: 60%;
+  margin-bottom: 15px;
+}
+
+ion-content {
+  --padding-bottom: 10px;
+  --padding-end: 10px;
+  --padding-start: 10px;
+  --padding-top: 1;
+}
+
+//   ion-toggle {
+// //--background: ;
+//     --background-checked: #fff;
+//     --handle-background: #fff;
+//     --handle-background-checked: #fff;
+//     width: 40px;
+//     height: 15px;
+//     --handle-spacing: 0px;
+//     --handle-height: 100%;
+//     --handle-border-radius: 14px 4px 4px 14px;
+//   }
+ion-toggle::before {
+  position: absolute;
+  top: 16px;
+  left: 10px;
+  // content: "ON";
+  color: white;
+  font-size: 8px;
+  z-index: 1;
+}
+
+ion-button {
+  padding-left: 14px;
+  // padding-top: 13px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+ion-footer ion-toolbar:last-of-type {
+  padding-bottom: 58px !important;
+  --background: transparent;
+}
+.sidebar-profile-img {
+  border-radius: 999px;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+}
+.add-icon-div {
+  display: flex;
+  .add-icon {
+    position: absolute;
+    bottom: 9px;
+    left: 45px;
+    font-size: 26px;
+    font-weight: 900;
+  }
+}
+.camera-icon {
+  font-size: 45px;
+  border-radius: 999px;
+  border: 1px solid;
+  padding: 8px;
+  width: 65px;
+  height: 65px;
+  --border-radius: 0%;
+}
+.cross-icon {
+  text-align: end;
+  font-size: 30px;
+}
+.menudiv {
+  display: flex;
+  .menubtn {
+    margin: auto;
+    margin-left: 0px;
+  }
+}

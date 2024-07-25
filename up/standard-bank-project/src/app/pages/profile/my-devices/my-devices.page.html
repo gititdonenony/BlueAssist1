@@ -1,0 +1,89 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-img src="assets/logo.png"></ion-img>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="name"><span class="Personal-Information"> My Devices </span></div>
+    <div class="bg">
+        <span class="Your-list-should-include-anyone-who-needs-to-be-notified-of-an-emergency-This-list-shouldnt-be-li">
+      Please add your device information below
+    </span>
+    </div>
+    <form [formGroup]="requiredForm" novalidate>
+        <div class="Group-3739">
+            <div class="Path-6243" style="text-align: end"><span>Key Tag</span>
+                <span>Serial :DFH0021</span>
+                <ion-toggle slot="start" name="apple" mode="md" color="secondary" checked></ion-toggle>
+            </div>
+            <div class="Path-6243" style="text-align: end"><span>Cycle tag</span>
+                <span>Serial: FLIC0049</span>
+                <ion-toggle slot="start" name="apple" mode="md" color="secondary"></ion-toggle>
+            </div>
+        </div>
+        <div class="Group-3725">
+            <div class="input-text" style="margin-top: 10px;">
+                <ion-label class="label">Name of device</ion-label>
+                <ion-input style="--padding-start: 0;" type="text" placeholder="Name of device " formControlName="vmake"></ion-input>
+                <div *ngIf="requiredForm.controls['vmake'].invalid && requiredForm.controls['vmake'].touched" class="alert alert-danger">
+                    <div class="error-text" *ngIf="requiredForm.controls['vmake'].errors.required">
+                        Name of device is required.
+                    </div>
+                </div>
+            </div>
+            <ion-row>
+                <ion-col size="6" style="padding: 0 20px 0px 0;">
+                    <div class="input-text">
+                        <ion-label class="label">Make</ion-label>
+                        <ion-input style="--padding-start: 0;" type="text" placeholder="Make " formControlName="model"></ion-input>
+                        <div *ngIf="requiredForm.controls['model'].invalid && requiredForm.controls['model'].touched" class="alert alert-danger">
+                            <div class="error-text" *ngIf="requiredForm.controls['model'].errors.required">
+                                Make is required.
+                            </div>
+                        </div>
+                    </div>
+                </ion-col>
+                <ion-col size="6" style="padding:  0px 0 0px 18px;">
+                    <div class="input-text">
+                        <ion-label class="label">Alias Name</ion-label>
+                        <ion-input style="--padding-start: 0;" type="text" placeholder="Alias Name" formControlName="year"></ion-input>
+                        <div *ngIf="requiredForm.controls['year'].invalid && requiredForm.controls['year'].touched" class="alert alert-danger">
+                            <div class="error-text" *ngIf="requiredForm.controls['year'].errors.required">
+                                Alias Name is required.
+                            </div>
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+            <div class="input-text">
+                <ion-label class="label">Serial Number</ion-label>
+                <ion-input style="--padding-start: 0;" type="text" placeholder="Serial Number" formControlName="registration"></ion-input>
+                <div *ngIf="requiredForm.controls['registration'].invalid && requiredForm.controls['registration'].touched" class="alert alert-danger">
+                    <div class="error-text" *ngIf="requiredForm.controls['registration'].errors.required">
+
+                        Serial Number is required.
+                    </div>
+                </div>
+            </div>
+
+            <!-- <ion-input style="--padding-start: 0;"  type="text" placeholder="Work Address"></ion-input> -->
+
+        </div>
+    </form>
+
+</ion-content>
+<ion-footer class="ion-no-border">
+    <ion-toolbar>
+        <div class="Group-3725">
+            <ion-button expand="block" fill="outline" color="primary">
+                <span> ADD DEVICE </span>
+            </ion-button>
+        </div>
+        <div class="Group-3725">
+            <ion-button expand="block" color="primary" (click)="  nextBtn()">
+                <span> Back </span>
+            </ion-button>
+        </div>
+    </ion-toolbar>
+</ion-footer>

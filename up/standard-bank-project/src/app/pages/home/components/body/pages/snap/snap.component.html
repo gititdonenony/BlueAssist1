@@ -1,0 +1,38 @@
+<ion-content>
+  <div class="body">
+    <div class="wrapper">
+      <ion-button iconOnly
+                  fill="clear"
+                  class="back-button"
+                  (click)="goBack()">
+        <img src="assets/icons/chevron-left.svg" />
+      </ion-button>
+      <ion-label class="header">
+        Accident Scene
+      </ion-label>
+      <ion-label class="content">
+        Follow the steps below to quickly capture all 
+         <br>the damages and the photo evidence of the accident scene.</ion-label>
+    
+      <div *ngFor="let button of buttons">
+        <ion-button class="button-div-snap" expand="block"
+                   
+                    (click)="navigateToPage(button.ButtonName)"
+                    [fill]="button.State == 2 ? 'solid' : 'outline'"
+                    [ngClass]="{ 'incomplete': button.State != 2 }" >
+                    <ion-row style="width: 66%;">
+                      <!-- <ion-col size="2">
+                        <img [src]="button.State == 2 ? button.Icon : button.IconInverse" />
+                      </ion-col> -->
+                      <ion-col size="10" class="text-button">
+                        {{button.Text}}
+                      </ion-col>
+                    </ion-row>
+          
+          
+          <img *ngIf="button.State" class="progress-indication" [ngClass]="{ 'complete': button.State == 2 }" [src]="'assets/icons/' + (button.State == 1 ? 'autorenew.svg' : 'check-mark.svg')" />
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,70 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-img src="assets/logo.png"></ion-img>
+
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+    <div class="name"><span class="Personal-Information">
+      Accident details ye
+  </span></div>
+    <div class="bg">
+        <span class="Your-list-should-include-anyone-who-needs-to-be-notified-of-an-emergency-This-list-shouldnt-be-li">
+          Please select an accident report or enter the <br>
+          details of the accident reported.
+    </span>
+    </div>
+    <div class="Group-3739">
+        <div class="Path-6243" style="text-align:start;">AR12012201 - 12-01-2022<span>123 ABC GP</span>
+            <ion-checkbox [(ngModel)]="cucumber" (ionChange)="updateCucumber()"></ion-checkbox>
+        </div>
+        <div class="Path-6243" style="text-align:start;">AR18052201 - 18-05-2022<span>123 ABC GP</span>
+
+        </div>
+        <!-- <ion-input style="--padding-start: 0;"   type="text" placeholder="Last Name"></ion-input> -->
+        <div>
+            <ion-label class="label">Where did it happen?</ion-label>
+            <ion-input style="--padding-start: 0;" type="text " placeholder="Where did it happen? "></ion-input>
+
+            <ion-row>
+                <ion-col size="5">
+                    <ion-label class="label">Date of incident</ion-label>
+                    <ion-input style="--padding-start: 0;" type="text " placeholder="Date of incident"></ion-input>
+                </ion-col>
+                <ion-col size="2"></ion-col>
+                <ion-col size="5">
+                    <ion-label class="label">SAPS No</ion-label>
+                    <ion-input style="--padding-start: 0;" type="number " placeholder="SAPS No"> </ion-input>
+                </ion-col>
+            </ion-row>
+
+            <ion-label class="label">Tell us what happened</ion-label>
+            <ion-input style="--padding-start: 0;" type="text " placeholder="Tell us what happened"></ion-input>
+        </div>
+        <!-- <ion-input style="--padding-start: 0;"  type="text " placeholder="Work Address "></ion-input> -->
+
+    </div>
+
+</ion-content>
+<ion-footer class="ion-no-border">
+    <ion-toolbar>
+        <div class="Group-3725 ">
+            <ion-button expand="block " fill="outline " color="primary " [routerLink]="[ '/add-vehicle'] ">
+                <span class="UPGRADE-PACKAGE ">
+    
+      ADD DEVICE
+
+    </span>
+            </ion-button>
+        </div>
+        <div class="Group-3725 ">
+            <ion-button expand="block " color="primary " (click)=" goBack() ">
+                <span class="UPDATE-INFORMATION ">
+ Back
+    </span>
+            </ion-button>
+        </div>
+    </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,68 @@
+.top-section {
+    padding: 5px;
+    // background: #0035a8;
+    text-align: end;
+    border-radius: 10px;
+    height: 18%;
+    ion-icon {
+        font-size: 30px;
+    }
+    .Terms-and-Conditions {
+        font-size: 20px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #0033a1;
+    }
+}
+
+.center-section {
+    margin: 25px;
+    font-size: 15px;
+    color: gray;
+    line-height: 1.5;
+}
+
+.Group-3725 {
+    padding: 0 0px 15px;
+    .UPGRADE-PACKAGE {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: (--cobalt-blue);
+    }
+    .UPDATE-INFORMATION {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--white);
+    }
+}
+
+ion-card {
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 14px;
+    margin: 5px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #444;
+
+}

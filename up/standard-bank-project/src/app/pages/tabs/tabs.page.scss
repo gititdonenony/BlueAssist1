@@ -1,0 +1,98 @@
+ion-tabs {
+    background: none;
+    z-index: 0;
+    // --------------Custom Semi Transparent & Rounded Tabs----------------------
+    ion-tab-bar {
+        bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 9;
+    width: 100%;
+    --background: #0034A9;
+    --border: 0;
+    margin-bottom: 6px;
+    margin: auto;
+        ion-tab-button {
+         //background: #0034A9;
+          //  text-align: center;
+           // border: 1px solid #fff;
+            --background: #0034A9;
+            --color: #fff;
+            --color-selected: #0034A9;
+            ion-icon {
+                font-size: 1.5rem;
+            }
+        }
+
+    }
+      ion-tab-bar.ios{
+        padding-bottom: 15px !important;
+        }
+    svg {
+        width: 78px;
+        margin-top: 16px;
+        path {
+            fill: var(--ion-color-white);
+        }
+    }
+
+    // ion-tab-button.search {
+    //     margin-right: -1px;
+    //     margin-left: -2px;
+    //     border-top-right-radius: 20px;
+    // }
+    // ion-tab-button.wishlist {
+    //     margin-left: -1px;
+    //     margin-right: -2px;
+    //     border-top-left-radius: 20px;
+    // }
+    ion-fab {
+        ion-fab-button {
+            --background: rgb(16, 12, 211);
+            ion-icon {
+                font-size: 2rem;
+                --color: #fff;
+
+            }
+        }
+    }
+}
+.span{
+    font-size: 12px;
+    color: #fff;
+}
+.add-post-1[aria-selected=true] {
+    background-color: #fff;
+    --ripple-color: #fff;
+    border-radius: 5px;
+    margin: 15px;
+    height: 46px;
+    ion-icon{
+        font-size: 32px;
+    }
+ }
+ion-label{
+     font-size: 11px;
+    color: #fff;
+    display: inline-block;
+    text-overflow: ellipsis;
+overflow:auto;
+white-space: nowrap;
+
+}
+.accident{
+    font-size: 12px;
+    color: #fff;
+}
+.ionimg{
+      height: 23px;
+}
+.motar-text{
+ font-size: 11px;
+    color: #fff;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: auto;
+    white-space: nowrap;
+    padding-top: 7px;
+}

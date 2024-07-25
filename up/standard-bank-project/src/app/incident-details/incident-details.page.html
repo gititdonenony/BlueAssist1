@@ -1,0 +1,143 @@
+<ion-header>
+<ion-toolbar>
+<ion-img src="assets/logo.png"></ion-img>
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+<h2>Incident Details</h2>
+<div class="bg">
+<span class="description">
+Please select a vehicle that this claim relates to.
+</span>
+</div>
+<div class="Group-3739" style="margin-top: 20px">
+<ion-radio-group>
+<div *ngFor="let vehicleData of getVehicleData">
+  <ion-row
+  class="ionrow text-capitalize datatext"
+  (click)="selectVehicle(vehicleData)"
+>
+  <ion-col size="6" class="col-center">{{vehicleData.vehicle_make}} </ion-col>
+  <ion-col size="5" class="end  registration-number col-center">{{vehicleData.vehicle_registration}}</ion-col>
+  <ion-col size="1" class="end col-center">
+    <ion-checkbox
+      class="checkBox-vehicle"
+      color="success"
+      mode="ios"
+      [checked]="vehicleData.isChecked"
+    ></ion-checkbox>
+  </ion-col>
+</ion-row>
+</div>
+</ion-radio-group>
+<form [formGroup]="incidentdetailform" novalidate>
+<div>
+  <ion-label class="label">Where did it happen?</ion-label>
+  <ion-input
+    style="--padding-start: 0"
+    type="text"
+    formControlName="place"
+    placeholder="Where did it happen?"
+  ></ion-input>
+  <div
+    *ngIf="incidentdetailform.controls['place'].invalid && incidentdetailform.controls['place'].touched"
+    class="alert alert-danger"
+  >
+    <div
+      class="error-text"
+      *ngIf="incidentdetailform.controls['place'].errors.required"
+    >
+      This field is required
+    </div>
+  </div>
+
+  <ion-row>
+    <ion-col size="5" style="padding: 0">
+      <ion-label class="label">Date of incident</ion-label>
+      <ion-input
+        style="--padding-start: 0"
+        type="date"
+
+        formControlName="doi"
+        placeholder="dd-mm-yyyy"
+      ></ion-input>
+      <div
+        *ngIf="incidentdetailform.controls['doi'].invalid && incidentdetailform.controls['doi'].touched"
+        class="alert alert-danger"
+      >
+        <div
+          class="error-text"
+          *ngIf="incidentdetailform.controls['doi'].errors.required"
+        >
+          This field is required.
+        </div>
+      </div>
+    </ion-col>
+    <ion-col size="2"></ion-col>
+    <ion-col size="5" style="padding: 0">
+      <ion-label class="label">SAPS No</ion-label>
+      <ion-input
+        style="--padding-start: 0"
+        type="number"
+        formControlName="sapsno"
+        placeholder="SAPS No"
+      >
+      </ion-input>
+      <div
+        *ngIf="incidentdetailform.controls['sapsno'].invalid && incidentdetailform.controls['sapsno'].touched"
+        class="alert alert-danger"
+      >
+        <div
+          class="error-text"
+          *ngIf="incidentdetailform.controls['sapsno'].errors.required"
+        >
+          This field is required.
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-label class="label">Tell us what happened</ion-label>
+  <ion-input no-lines
+  class="ion-no-border"
+    style="--padding-start: 0"
+    type="text"
+    formControlName="describe"
+    placeholder="Tell us what happened"
+  ></ion-input>
+  <div
+    *ngIf="incidentdetailform.controls['describe'].invalid && incidentdetailform.controls['describe'].touched"
+    class="alert alert-danger"
+  >
+    <div
+      class="error-text"
+      *ngIf="incidentdetailform.controls['describe'].errors.required"
+    >
+      This field is required.
+    </div>
+  </div>
+  <div class="Path-6251"></div>
+</div>
+</form>
+<!-- <ion-input style="--padding-start: 0;"  type="text " placeholder="Work Address "></ion-input> -->
+</div>
+</ion-content>
+<ion-footer class="ion-no-border">
+<ion-toolbar>
+<div class="Group-3725">
+<ion-button
+  expand="block"
+  fill="outline"
+  color="primary"
+  (click)="incidenDetail()"
+>
+  <span> UPDATE </span>
+</ion-button>
+</div>
+<div class="Group-3725">
+<ion-button expand="block " color="primary" (click)="goBack()">
+  <span> BACK </span>
+</ion-button>
+</div>
+</ion-toolbar>
+</ion-footer>

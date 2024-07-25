@@ -1,0 +1,126 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="name"><span class="Personal-Information">
+      Emergency Contacts
+    </span></div>
+  <div class="bg">
+    <h5 class="description">
+      Your list should include anyone who needs to be notified of an emergency. This list shouldn’t be limited to
+      Other members.
+    </h5>
+  </div>
+
+  <div class="bg" *ngIf="noContact">
+    <ion-row class="Rectangle-1914">
+      <div class="home_contents_call_me_back"><img src="assets/contents_call_me_back.png"> <span
+          class="You-have-no-emergency-contacts"> You have no emergency contacts</span>
+      </div>
+    </ion-row>
+  </div>
+  <div *ngIf="!noContact">
+    <div *ngFor="let contactData of getEmergencyContactData">
+      <ion-row class="tommy-stone text-capitalize datatext"
+        (click)="viewDetailsOfEmergencyContact(contactData.user_id, contactData.contact_id)">
+        <ion-col size="5" class="ioncol col-center">{{contactData.contact_fullname}}</ion-col>
+        <ion-col size="6" class="ioncol end col-center">{{contactData.contact_phone_number}}</ion-col>
+        <ion-col size="1" class="end col-center">
+          <ion-checkbox color="success" mode="ios" checked="true"></ion-checkbox>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+  <form [formGroup]="emergencyContactsSelectedStateForm" novalidate>
+    <div class="Group-3739">
+      <div class="input-text">
+        <ion-label class="label">Full Name</ion-label>
+        <ion-input type="text" placeholder="Full Name" formControlName="name"></ion-input>
+        <div
+          *ngIf="emergencyContactsSelectedStateForm.controls['name'].invalid && emergencyContactsSelectedStateForm.controls['name'].touched"
+          class="alert alert-danger">
+          <div class="error-text" *ngIf="emergencyContactsSelectedStateForm.controls['name'].errors.required">
+            Full Name is required.
+          </div>
+        </div>
+      </div>
+      <div class="input-text">
+        <ion-label class="label">Phone Number</ion-label>
+
+        <ion-row>
+          <ion-col size="2" class="number-27">
+            <span>+27</span>
+          </ion-col>
+          <ion-col size="10" class="my-profile">
+
+            <ion-input type="text"  placeholder="Phone number" formControlName="phone_number"
+            maxlength="9" inputmode="numeric"></ion-input>
+            <!-- <ion-input  inputmode="numeric" type="text" maxLenght="9" placeholder="Phone Number" formControlName="phone_number"></ion-input> -->
+          </ion-col>
+        </ion-row>
+
+        <div
+          *ngIf="emergencyContactsSelectedStateForm.controls['phone_number'].invalid && emergencyContactsSelectedStateForm.controls['phone_number'].touched"
+          class="alert alert-danger">
+          <div class="error-text" *ngIf="emergencyContactsSelectedStateForm.controls['phone_number'].errors.required">
+            Phone Number is required.
+          </div>
+        </div>
+      </div>
+      <div class="input-text2">
+        <ion-label class="label">Relation</ion-label>
+        <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet"
+          formControlName="relationship" placeholder="Relationship">
+          <ion-select-option value="Wife">Wife</ion-select-option>
+          <ion-select-option value="Father">Father</ion-select-option>
+          <ion-select-option value="Mother">Mother</ion-select-option>
+          <ion-select-option value="Brother">Brother</ion-select-option>
+          <ion-select-option value="Sister">Sister</ion-select-option>
+          <ion-select-option value="Aunt">Aunt</ion-select-option>
+          <ion-select-option value="Uncle">Uncle</ion-select-option>
+          <ion-select-option value="Cousin">Cousin</ion-select-option>
+          <ion-select-option value="Friend">Friend</ion-select-option>
+          <ion-select-option value="Son">Son</ion-select-option>
+          <ion-select-option value="Daughter">Daughter</ion-select-option>
+          <ion-select-option value="Other">Other</ion-select-option>
+        </ion-select>
+        <div
+          *ngIf="emergencyContactsSelectedStateForm.controls['relationship'].invalid && emergencyContactsSelectedStateForm.controls['relationship'].touched"
+          class="alert alert-danger">
+          <div class="error-text" *ngIf="emergencyContactsSelectedStateForm.controls['relationship'].errors.required">
+            Relationship is required.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar no-padding>
+
+    <div class="Group-3725">
+      <ion-button expand="block" fill="outline" color="primary" (click)="addEmergencyContact()">
+        <span>
+
+          ADD CONTACT
+
+        </span>
+      </ion-button>
+    </div>
+    <div class="Group-3725">
+      <ion-button expand="block" color="primary" [routerLink]="[ '/my-details'] ">
+        <span>
+          BACK
+        </span>
+      </ion-button>
+
+    </div>
+
+
+  </ion-toolbar>
+</ion-footer>

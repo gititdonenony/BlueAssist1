@@ -1,0 +1,231 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="4">
+        <ion-buttons>
+          <ion-button fill="clear" color="white">
+            <ion-menu-button auto-hide="true" class="style-remove-1" ion-button></ion-menu-button>
+          </ion-button>
+
+          <div class="cross-icon">
+            <ion-icon name="close-outline" (click)="sideMenuClose()"></ion-icon>
+          </div>
+        </ion-buttons>
+      </ion-col>
+      <ion-col size="4">
+        <ion-img src="assets/logo.png"></ion-img>
+      </ion-col>
+      <ion-col size="4">
+
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+<div class="location">
+  <span class='span-location'>My Location<br />{{userAddress}}</span>
+
+
+  <br *ngIf="isAnyResponseArea"><br *ngIf="isAnyResponseArea">
+  <span class="response-zone-text" *ngIf="isAnyResponseArea">{{responseText1}}</span>
+
+  <br *ngIf="!isAnyResponseArea"><br *ngIf="!isAnyResponseArea">
+  <span class="response-zone-text" *ngIf="!isAnyResponseArea">{{responseText2}}</span><br>
+
+
+</div>
+<ion-content scroll-y="false" class="class-name">
+  <!-- <button (click)="open()">open</button> -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="locate">
+        <ion-icon name=" locate "></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <google-map height="100vh" width="100vw" [center]="center" [zoom]="zoom" [options]="mapOptions"
+    style="position: relative">
+    <map-marker [position]="markerPosition" [options]="markerOptions" #marker="mapMarker"
+      (mapClick)="openInfoWindow(marker)">
+    </map-marker>
+    <map-info-window>
+      <ion-item lines="none">
+        <ion-text>{{userAddress}}</ion-text>
+      </ion-item>
+    </map-info-window>
+
+
+    <br><br>
+    <map-kml-layer [url]="kmlUrl1" *ngIf="isKml1"></map-kml-layer>
+    <map-kml-layer [url]="kmlUrl2" *ngIf="isKml2"></map-kml-layer>
+    <map-kml-layer [url]="kmlUrl3" *ngIf="isKml3"></map-kml-layer>
+    <map-kml-layer [url]="kmlUrl4" *ngIf="isKml4"></map-kml-layer>
+  </google-map>
+  <!--
+  <div>Latitude: {{display?.lat}}</div>
+  <div>Longitude: {{display?.lng}}</div> -->
+  <!-- <ion-row>
+        <ion-col size="12" class="location-icon">
+            <ion-icon name="location"></ion-icon>
+        </ion-col>
+    </ion-row> -->
+
+  <div>
+    <ion-list class="list-kml" lines="none">
+      <ion-select class="kml-button-text" aria-label="zone"  placeholder="Response"
+        (ionChange)="handleChange($event)">
+        <ion-select-option class="kml-res" value="CASICoverage" selected>Armed Response</ion-select-option>
+        <ion-select-option class="kml-res" value="AirAmbulanceSupport">Medical Air Support</ion-select-option>
+        <ion-select-option class="kml-res" value="PrivateMedical">Private Ambulance</ion-select-option>
+        <ion-select-option class="kml-res" value="SAPSPublicAmbulance">Public Ambulance</ion-select-option>
+        <ion-select-option class="kml-res" value="nothing">No coverage</ion-select-option>
+      </ion-select>
+    </ion-list>
+  </div>
+  <div class="press1" *ngIf="isPanicActivated">
+    <div class="Path-4556">
+      <div class="round-container2">
+        <div class="container" (click)="lockCall()">
+          <div class="circle">
+            <div class="textdiv">
+              <h1 class="press">PANIC</h1>
+              <span class="ASSISTANCE">IN PROGESS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->
+  <div class="press1" *ngIf="!isPanicActivated">
+    <div class="Path-4556">
+
+      <div class="round-container2">
+        <div class="container" (click)="lockCall()">
+          <div class="circle1">
+            <div class="textdiv">
+              <h1 class="press"> HELP </h1>
+              <br />
+              <span class="ASSISTANCE-1"> Medical & Armed Response</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ion-grid>
+    <ion-row class="assistmenuback">
+      <ion-col size="3 ">
+        <div class="Ellipse" (click)="lockshop() ">
+          <div class="Pothole-icon-4">
+            <ion-img class="ion-image-icon" src="assets/Pothole icon.png "></ion-img>
+            <div class="Rectangle-1234">
+              <span class="Pothole-Assist"> POTHOLE </span>
+            </div>
+          </div>
+        </div>
+
+      </ion-col>
+      <ion-col size="3 ">
+        <div class="Ellipse" (click)="lock() ">
+          <div class="Pothole-icon-4">
+            <ion-img class="ion-image-icon" src="assets/Vector.png "></ion-img>
+            <div class="Rectangle-1234">
+              <span class="Pothole-Assist"> HOME </span>
+            </div>
+          </div>
+        </div>
+
+      </ion-col>
+      <ion-col size="3 ">
+        <div class="Ellipse" (click)="roadside() ">
+          <div class="Pothole-icon-4">
+            <ion-img class="ion-image-icon" src="assets/new-icon.png "></ion-img>
+            <div class="Rectangle-1234">
+              <span class="Pothole-Assist"> ROADSIDE </span>
+            </div>
+          </div>
+        </div>
+
+      </ion-col>
+      <ion-col size="3 ">
+        <div class="Ellipse">
+          <!-- <div class="Pothole-icon-4" [routerLink]="[ '/roadcove'] " (click)="rafRoute()"> -->
+          <div class="Pothole-icon-4" (click)="rafRoute()">
+            <ion-img class="ion-image-icon" src="assets/Flattened-1.png "></ion-img>
+            <div class="Rectangle-1234">
+              <span class="Pothole-Assist"> RAF </span>
+            </div>
+          </div>
+        </div>
+
+      </ion-col>
+      <!-- <ion-col size="3 ">
+        <div class="Ellipse">
+          <div class="Pothole-icon-4" (click)="scanBarcode()">
+            <ion-icon name="scan" class="ion-image-icon"></ion-icon>
+            <div class="Rectangle-1234">
+              <span class="Pothole-Assist"> Scanner </span>
+            </div>
+          </div>
+        </div>
+
+      </ion-col> -->
+
+      <!-- <div style="margin-left: 145px;">
+        <ion-button [routerLink]="['/kml-layer']">kml</ion-button>
+      </div> -->
+      <!-- <ion-slides [options]="slideOpts ">
+        <ion-slide *ngFor="let item of stories; let i=i ndex ">
+          <ion-col>
+            <ion-thumbnail>
+              <ion-icon *ngIf="i==0 " name="add " color="dark "></ion-icon>
+              <img *ngIf="i> 0" [src]="item?.src" />
+            </ion-thumbnail>
+            <p>
+                <ion-text color="dark">{{item?.name}}</ion-text>
+            </p>
+        </ion-col>
+        </ion-slide>
+        </ion-slides> -->
+    </ion-row>
+    <!-- <ion-row class="images" (ionChange)="buttonsChanged($event)">
+      <ion-segment mode="md" [value]="buttonValue">
+        <ion-segment-button [value]="item?.value" *ngFor="let item of buttonItems">
+          <ion-icon [name]="buttonValue == item?.value ? item?.icon : item?.icon + '-outline'"></ion-icon>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-row>     -->
+  </ion-grid>
+
+  <!-- <div [ngSwitch]="buttonValue">
+    <ion-list lines="none" *ngSwitchCase="'grid'" class="photo-grid">
+      <div *ngFor="let item of posts; let i = index">
+        <ion-grid *ngIf="i%3 == 0" class="noPadding">
+          <ion-row *ngIf="i%9 == 0">
+            <ion-col size="8">
+              <div class="image-container image-container1" [style.background-image]="'url(' + item?.url + ')'"></div>
+            </ion-col>
+            <ion-col size="4">
+              <div *ngIf="posts[i + 1]" class="image-container ct1" [style.background-image]="'url(' + posts[i + 1]?.url + ')'"></div>
+              <div *ngIf="posts[i + 2]" class="image-container ct2" [style.background-image]="'url(' + posts[i + 2]?.url + ')'"></div>
+            </ion-col>
+          </ion-row>
+
+          <ion-row *ngIf="i%9 > 2">
+            <ion-col size="4">
+              <div class="image-container" [style.background-image]="'url(' + item?.url + ')'"></div>
+            </ion-col>
+            <ion-col size="4">
+              <div *ngIf="posts[i + 1]" class="image-container" [style.background-image]="'url(' + posts[i + 1]?.url + ')'"></div>
+            </ion-col>
+            <ion-col size="4">
+              <div *ngIf="posts[i + 2]" class="image-container" [style.background-image]="'url(' + posts[i + 2]?.url + ')'"></div>
+            </ion-col>
+          </ion-row>
+
+        </ion-grid>
+      </div>
+    </ion-list>
+  </div> -->
+</ion-content>

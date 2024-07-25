@@ -1,0 +1,14 @@
+<ion-footer *ngIf="!isKeyBoardOpen">
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-button iconOnly fill="clear" color="dark" (click)="goBack()">
+        Back
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button iconOnly fill="clear" color="dark" (click)="goNext()">
+        Continue
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

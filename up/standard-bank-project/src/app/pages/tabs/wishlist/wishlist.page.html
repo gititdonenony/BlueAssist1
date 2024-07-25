@@ -1,0 +1,236 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button fill="clear" color="white">
+        <ion-menu-button style="color: white"></ion-menu-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-img src="assets/logo.png"></ion-img>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" color="dark" style="color: white">
+        <b>cart</b>
+        <ion-icon name="cart-outline">
+          <ion-img src="assets/no-location.png"></ion-img>
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="class-name">
+  <div class="location">
+    <span>My Location:<br />{{userAddress}}</span>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3">
+        <div class="Ellipse" (click)="lockshop()">
+          <div class="Pothole-icon-4">
+            <ion-img src="assets/Pothole icon.png"></ion-img>
+          </div>
+        </div>
+        <div class="Rectangle-1234" [routerLink]="['/roadcove']">
+          <span class="Pothole-Assist"> Pothole Assist </span>
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div class="Ellipse" (click)=" lock()">
+          <div class="Pothole-icon-4">
+            <ion-img src="assets/Vector.png"></ion-img>
+          </div>
+        </div>
+        <div class="Rectangle-1234" [routerLink]="['/roadcove']">
+          <span class="Pothole-Assist"> Home assist </span>
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div class="Ellipse" (click)="roadside()">
+          <div class="Pothole-icon-4">
+            <ion-img src="assets/Pothole icon.png"></ion-img>
+          </div>
+        </div>
+        <div class="Rectangle-1234" [routerLink]="['/roadcove']">
+          <span class="Pothole-Assist"> Roadside Assist </span>
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div class="Ellipse">
+          <div class="Pothole-icon-4">
+            <ion-img src="assets/Flattened-1.png"></ion-img>
+          </div>
+        </div>
+        <div class="Rectangle-1234" [routerLink]="['/roadcove']">
+          <span class="Pothole-Assist"> RAF Claim </span>
+        </div>
+      </ion-col>
+      <!-- <ion-slides [options]="slideOpts">
+          <ion-slide *ngFor="let item of stories; let i = index">
+            <ion-col>
+              <ion-thumbnail>
+                <ion-icon *ngIf="i == 0" name="add" color="dark"></ion-icon>
+                <img *ngIf="i > 0" [src]="item?.src" />
+              </ion-thumbnail>
+              <p>
+                <ion-text color="dark">{{item?.name}}</ion-text>
+              </p>
+            </ion-col>
+          </ion-slide>
+        </ion-slides> -->
+    </ion-row>
+    <!-- <ion-row class="images" (ionChange)="buttonsChanged($event)">
+        <ion-segment mode="md" [value]="buttonValue">
+          <ion-segment-button [value]="item?.value" *ngFor="let item of buttonItems">
+            <ion-icon [name]="buttonValue == item?.value ? item?.icon : item?.icon + '-outline'"></ion-icon>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-row>     -->
+  </ion-grid>
+
+  <!-- <div [ngSwitch]="buttonValue">
+      <ion-list lines="none" *ngSwitchCase="'grid'" class="photo-grid">
+        <div *ngFor="let item of posts; let i = index">
+          <ion-grid *ngIf="i%3 == 0" class="noPadding">
+            <ion-row *ngIf="i%9 == 0">
+              <ion-col size="8">
+                <div class="image-container image-container1" [style.background-image]="'url(' + item?.url + ')'"></div>
+              </ion-col>
+              <ion-col size="4">
+                <div *ngIf="posts[i + 1]" class="image-container ct1" [style.background-image]="'url(' + posts[i + 1]?.url + ')'"></div>
+                <div *ngIf="posts[i + 2]" class="image-container ct2" [style.background-image]="'url(' + posts[i + 2]?.url + ')'"></div>
+              </ion-col>
+            </ion-row>
+  
+            <ion-row *ngIf="i%9 > 2">
+              <ion-col size="4">
+                <div class="image-container" [style.background-image]="'url(' + item?.url + ')'"></div>
+              </ion-col>
+              <ion-col size="4">
+                <div *ngIf="posts[i + 1]" class="image-container" [style.background-image]="'url(' + posts[i + 1]?.url + ')'"></div>
+              </ion-col>
+              <ion-col size="4">
+                <div *ngIf="posts[i + 2]" class="image-container" [style.background-image]="'url(' + posts[i + 2]?.url + ')'"></div>
+              </ion-col>
+            </ion-row>
+  
+          </ion-grid>
+        </div>
+      </ion-list>
+    </div> -->
+</ion-content>
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button fill="clear" color="white">
+        <ion-menu-button style="color: white"></ion-menu-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-img src="assets/logo.png"></ion-img>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" color="dark" style="color: white">
+        <b>cart</b>
+        <ion-icon name="cart-outline">
+          <ion-img src="assets/no-location.png"></ion-img>
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="class-name">
+  <div class="location">
+    <span>My Location:<br />{{userAddress}}</span>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3">
+        <div class="Ellipse" (click)="lockshop()">
+          <div class="Pothole-icon-4">
+            <ion-img src="assets/Pothole icon.png"></ion-img>
+          </div>
+        </div>
+        <div class="Rectangle-1234" [routerLink]="['/roadcove']">
+          <span class="Pothole-Assist"> Pothole Assist </span>
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div class="Ellipse" (click)=" lock()">
+          <div class="Pothole-icon-4">
+            <ion-img src="assets/Vector.png"></ion-img>
+          </div>
+        </div>
+        <div class="Rectangle-1234" [routerLink]="['/roadcove']">
+          <span class="Pothole-Assist"> Home assist </span>
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div class="Ellipse" (click)="roadside()">
+          <div class="Pothole-icon-4">
+            <ion-img src="assets/Pothole icon.png"></ion-img>
+          </div>
+        </div>
+        <div class="Rectangle-1234" [routerLink]="['/roadcove']">
+          <span class="Pothole-Assist"> Roadside Assist </span>
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div class="Ellipse">
+          <div class="Pothole-icon-4">
+            <ion-img src="assets/Flattened-1.png"></ion-img>
+          </div>
+        </div>
+        <div class="Rectangle-1234" [routerLink]="['/roadcove']">
+          <span class="Pothole-Assist"> RAF Claim </span>
+        </div>
+      </ion-col>
+      <!-- <ion-slides [options]="slideOpts">
+            <ion-slide *ngFor="let item of stories; let i = index">
+              <ion-col>
+                <ion-thumbnail>
+                  <ion-icon *ngIf="i == 0" name="add" color="dark"></ion-icon>
+                  <img *ngIf="i > 0" [src]="item?.src" />
+                </ion-thumbnail>
+                <p>
+                  <ion-text color="dark">{{item?.name}}</ion-text>
+                </p>
+              </ion-col>
+            </ion-slide>
+          </ion-slides> -->
+    </ion-row>
+    <!-- <ion-row class="images" (ionChange)="buttonsChanged($event)">
+          <ion-segment mode="md" [value]="buttonValue">
+            <ion-segment-button [value]="item?.value" *ngFor="let item of buttonItems">
+              <ion-icon [name]="buttonValue == item?.value ? item?.icon : item?.icon + '-outline'"></ion-icon>
+            </ion-segment-button>
+          </ion-segment>
+        </ion-row>     -->
+  </ion-grid>
+
+  <!-- <div [ngSwitch]="buttonValue">
+        <ion-list lines="none" *ngSwitchCase="'grid'" class="photo-grid">
+          <div *ngFor="let item of posts; let i = index">
+            <ion-grid *ngIf="i%3 == 0" class="noPadding">
+              <ion-row *ngIf="i%9 == 0">
+                <ion-col size="8">
+                  <div class="image-container image-container1" [style.background-image]="'url(' + item?.url + ')'"></div>
+                </ion-col>
+                <ion-col size="4">
+                  <div *ngIf="posts[i + 1]" class="image-container ct1" [style.background-image]="'url(' + posts[i + 1]?.url + ')'"></div>
+                  <div *ngIf="posts[i + 2]" class="image-container ct2" [style.background-image]="'url(' + posts[i + 2]?.url + ')'"></div>
+                </ion-col>
+              </ion-row>
+    
+              <ion-row *ngIf="i%9 > 2">
+                <ion-col size="4">
+                  <div class="image-container" [style.background-image]="'url(' + item?.url + ')'"></div>
+                </ion-col>
+                <ion-col size="4">
+                  <div *ngIf="posts[i + 1]" class="image-container" [style.background-image]="'url(' + posts[i + 1]?.url + ')'"></div>
+                </ion-col>
+                <ion-col size="4">
+                  <div *ngIf="posts[i + 2]" class="image-container" [style.background-image]="'url(' + posts[i + 2]?.url + ')'"></div>
+                </ion-col>
+              </ion-row>
+    
+            </ion-grid>
+          </div>
+        </ion-list>
+      </div> -->
+</ion-content>

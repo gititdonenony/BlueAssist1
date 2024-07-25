@@ -1,0 +1,93 @@
+<ion-header class="ion-no-border">
+  <div class="header-top-border">
+    <div class="part"></div>
+    <div class="part"></div>
+    <div class="part"></div>
+    <div class="part"></div>
+  </div>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button iconOnly fill="clear" size="small" (click)="close()">
+        <ion-icon name="close" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-label class="header"
+              color="dark" [innerHTML]="header">
+    
+  </ion-label> -->
+
+  <div class="content">
+    <!-- <ion-label class="title" [innerHTML]="title"> -->
+      <h1 class="title">Please Link AR No.</h1>
+    <!-- </ion-label> -->
+<p class="text">Please make sure you link your AR form <br/> by filling in your signed AR Number and <br/> snapping the AR Form</p>
+   
+
+  <ion-input placeholder="AR Number" [(ngModel)]="arnolink" class="detail-txt"></ion-input>
+<p class="text">Please take a photo of the signed form</p>
+<div class="image-capture">
+<!-- <div class="image-capture-block ion-activatable"
+                  (click)="captureImage('Front')"> -->
+
+                  <div class="image-capture-block ion-activatable"
+                  (click)="captureImage()">
+              <div [@zoom]="image ? 'closed' : 'open'" style="margin: auto;">
+                
+                <img class="image-action" src="assets/icons/add-circle.svg" />
+                <ion-label class="image-details">
+                  Please take a photo of page 6 of the AR <br/> form after it has been signed by an Officer
+                </ion-label>
+              </div>
+
+              <img *ngIf="image"
+                decoding="async"
+                class="background-image"
+                [@zoom]="image ? 'open' : 'closed'"
+                [src]="image"
+              />
+
+            </div>
+          </div>
+    <!-- <img [src]="image" *ngIf="!isLottie" class="gif"/>
+    <img [src]="layoverImage" class="layover" *ngIf="layoverImage" />
+    <lottie-animation-view *ngIf="isLottie"
+                [options]="lottieConfig"
+                [width]="210"
+                [height]="210">
+    </lottie-animation-view>
+    <br />
+    <br />
+    <br /> -->
+    <!-- <ion-label class="text" [innerHTML]="description"> -->
+      
+    <!-- </ion-label> -->
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border" style=" padding-left: 15px;
+padding-right: 15px;">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button iconOnly 
+                  [fill]="buttonsAreActions ? 'outline' : 'clear'"
+                  color="dark"
+                  (click)="fail()"
+                  [ngClass]="{ 'is-action': buttonsAreActions }">
+        {{backButtonText}}
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button iconOnly
+                  [fill]="buttonsAreActions ? 'solid' : 'clear'"
+                  [color]="buttonsAreActions ? 'primary' : ''"
+                  (click)="continue()"
+                  [ngClass]="{ 'is-action': buttonsAreActions }">
+        {{continueButtonText}}
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

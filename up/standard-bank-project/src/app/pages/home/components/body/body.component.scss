@@ -1,0 +1,86 @@
+ion-content {
+ 
+  position: relative;
+  
+            --padding-end: 20px;
+            --padding-start: 20px;
+            
+  ion-card {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    min-height: 445px;
+    height: 80%;
+    position: initial;
+
+    
+
+    @media screen and (max-height: 680px) {
+      min-height: 100%;
+    }
+
+    &.ios {
+      // top: calc(50% + var(--ion-safe-area-top, 0));
+      min-height: 20px;
+    }
+
+    ion-router-outlet {
+      height: 100%;
+      top: 0;
+      position: absolute;
+    }
+
+    .card-footer {
+      height: 0;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      background-color: var(--ion-color-light);
+      overflow: hidden;
+
+      .segment-wrapper {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .segment {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 19px;
+          width: 70px;
+          position: relative;
+          overflow: hidden;
+
+          ion-label {
+            font-size: 10px;
+            margin-left: 5px;
+          }
+        }
+
+        .selected-bar {
+          position: absolute;
+          height: 3px;
+          width: 70px;
+          background-color:#D7262A;
+          bottom: 5px;
+          left: 0;
+          transition: transform 0.2s ease-in-out;
+          transform: translateX(-70px);
+        }
+      }
+    }
+
+    &.has-footer {
+      ion-router-outlet {
+        // height: calc(100% - 46px);
+      }
+      .card-footer {
+        // height: 46px;
+        // margin-bottom: 10px;
+      }
+    }
+  }
+}

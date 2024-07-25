@@ -1,0 +1,71 @@
+<div class="modal-color">
+  <div>
+    <span class="EMERGENCY"> Roadside assist </span>
+
+    <div class="Group-2714">
+      <span class="Please-be-sure-to-answer-your-phone-And-do-your-best-to-ensure-your-safety">
+        This will notify us instantly of your incident<br />
+        and help us provide you with assistance.
+      </span>
+    </div>
+    <div>
+      <ion-radio-group (ionChange)="subType($event)">
+        <ion-row>
+          <ion-col size="4">
+            <ion-item class="item-card" no-lines>
+              <ion-card style="box-shadow: none !important; --inner-border: none !important;">
+                <div class="style-remove-2">
+                  <!-- <ion-radio color="success" mode="ios"></ion-radio> -->
+                  <ion-radio value="fuel" color="light" mode="ios"></ion-radio>
+                </div>
+                <ion-img src="assets/svg/fuel - image.svg" class="style-remove-3"></ion-img>
+                <ion-label class="NEED-FUEL"><span class="NEED-FUEL"> NEED FUEL </span></ion-label>
+              </ion-card>
+            </ion-item>
+          </ion-col>
+
+          <ion-col size="4">
+            <ion-item class="item-card" no-lines>
+              <ion-card class="card-item">
+                <div class="style-remove-2">
+                  <!-- <ion-radio color="success" mode="ios"></ion-radio> -->
+                  <ion-radio value="tyre_bust" color="light" mode="ios"></ion-radio>
+                </div>
+                <ion-img src="assets/svg/flat-tire.svg" class="style-remove-3"></ion-img>
+                <ion-label class="NEED-FUEL"><span class="NEED-FUEL"> FLAT TYRE </span></ion-label>
+              </ion-card>
+            </ion-item>
+          </ion-col>
+
+
+          <ion-col size="4">
+            <ion-item class="item-card" no-lines>
+              <ion-card class="card-item">
+                <div class="style-remove-2">
+                  <!-- <ion-radio color="success" mode="ios"></ion-radio> -->
+                  <ion-radio value="engine" color="light" mode="ios"></ion-radio>
+                </div>
+                <ion-img src="assets/svg/breakdown.svg" class="style-remove-3"></ion-img>
+                <ion-label class="NEED-FUEL"><span class="NEED-FUEL"> ENGINE </span></ion-label>
+              </ion-card>
+            </ion-item>
+          </ion-col>
+
+        </ion-row>
+      </ion-radio-group>
+    </div>
+    <div class="Group-3725">
+      <ion-button expand="block" fill="outline" color="primary" (click)="close()">
+        <span> Cancel </span>
+      </ion-button>
+    </div>
+    <div class="Group-3725" (click)="lockshop()">
+      <ion-button expand="block " (click)="lockshop()"
+        [ngStyle]="isPanicActivated ? {'--background': 'linear-gradient(to right, #FD8B4E , #FF000F)'} : {'--background': '#0033AA'}">
+        <span class="UPDATE-INFORMATION">
+          {{ isPanicActivated ? "Panic in progress" : "Assist me" }}
+        </span>
+      </ion-button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,135 @@
+ion-content {
+    // --background: transparent;
+    --padding-start: 20px;
+    --padding-end: 20px;
+}
+.text-button{
+    letter-spacing: 0.1px;
+    font-size: 12px;
+    margin: auto;
+    text-align: center;
+ }
+
+
+   
+.body {
+    
+    width: 100%;
+    background-color: var(--transparent-background);
+    border-radius: var(--border-radius);
+    padding-right: 0px;
+    max-height: 100%;
+    height: 100%;
+    margin: 0;
+
+}
+
+.wrapper {
+    padding: 15px 10px;
+    position: relative;
+    top: 0;
+    left:0;
+    max-height: 100%;
+    overflow: auto;
+
+    &.hidden {
+        height: 0vh;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .back-button {
+        padding: 0px 7px 4px 11px;
+        background-color: transparent;
+        z-index: 2;
+    }
+
+    .header {
+        white-space: normal;
+        font-size: 25px;
+        width: 100%;
+        font-weight: 500;
+        text-align: center;
+        display: block;
+        line-height: 30px;
+
+    }
+    .content {
+        font-size: 12px;
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        /* padding-left: 10px; */
+        /* padding-right: 10px; */
+        font-weight: 600;
+     
+    }
+
+    ion-button {
+        margin-bottom: 10px;
+        --padding-start: 0;
+        --padding-end: 0;
+        text-transform: capitalize;
+        font-weight: bolder;
+        font-size: 15px;
+        letter-spacing: 0.1px;
+
+        &.incomplete {
+            --box-shadow: none;
+        }
+
+        .state-overlay {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: var(--border-radius);
+            background-color: var(--ion-color-secondary);
+            transform: translateX(-100%);
+        }
+        .progress-indication {
+            position: absolute;
+            /* top: 15px; */
+            right: 9px;
+            height: 15px;
+            width: auto;
+        
+                
+            &.complete {
+                height: 10px;
+                right: 9px;
+                margin: auto;
+            }
+        }
+    }
+
+    .buttons {
+        position: relative;
+        max-height: calc(100% - 125px);
+        overflow-y: scroll;
+        ion-button {
+            margin-top: 10px;
+
+            ion-icon {
+                display: inline-block;
+                z-index: 1;
+            }
+            // .button-inner {
+            //     display: contents;
+            //     position: relative;
+            //     flex-flow: row nowrap;
+            //     flex-shrink: 0;
+            //     align-items: center;
+            //     justify-content: center;
+            //     width: 100%;
+            //     height: 100%;
+            //     z-index: 1;
+            // }
+        }
+    }
+    
+}

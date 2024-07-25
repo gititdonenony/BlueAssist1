@@ -1,0 +1,116 @@
+ion-toolbar {
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+    ion-img {
+        height: 35px;
+    }
+}
+form{
+    width: 100%;
+}
+
+.Group-3739 {
+    padding: 20px 0px 20px;
+}
+.ionrow{
+    
+    font-size: 14px;
+    color: gray;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    .ioncol{
+        padding-top: 6px;
+    // color: #a3a3a3;
+    padding-left: 12px;
+    }
+}
+
+.name {
+    text-align: center;
+    padding: 35px 0 18px;
+    .Personal-Information {
+        font-size: 32px;
+        font-weight: 550;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.62;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--cobalt-blue);
+    }
+}
+
+.Group-3725 {
+    .UPGRADE-PACKAGE {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: (--cobalt-blue);
+    }
+    .UPDATE-INFORMATION {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--white);
+    }
+}
+
+.bg {
+    text-align: center;
+    padding: 0 30px 0;
+    .Your-list-should-include-anyone-who-needs-to-be-notified-of-an-emergency-This-list-shouldnt-be-li {
+        font-size: 12px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0px;
+        text-align: center;
+        color: var(--greyish-brown);
+    }
+}
+
+.Path-6243 {
+    color: gray;
+    /* height: 35px; */
+    border-radius: 6px;
+    /* margin: 14px 1px 0px 0px; */
+    /* border: solid 1px #dbdbdb; */
+    /* background-color: var(--white); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-radius: 6px;
+    margin-top: 10px;
+    background: #EDEDED;
+    padding: 4px;
+}
+
+.Simon-Stone {
+    font-size: 15px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.01px;
+    text-align: center;
+    color: var(--greyish-brown);
+}
+.label{
+    font-size: 14px;
+    text-align: left;
+    color: #444;
+    }
+    

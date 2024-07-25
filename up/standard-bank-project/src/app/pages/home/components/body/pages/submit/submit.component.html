@@ -1,0 +1,38 @@
+<ion-content>
+  <div class="body">
+    <div class="wrapper">
+      <ion-button iconOnly
+                  fill="clear"
+                  class="back-button"
+                  (click)="goBack()">
+        <img src="assets/icons/chevron-left.svg" />
+      </ion-button>
+      <ion-label class="header">
+        GENERATE REPORT
+      </ion-label>
+      <ion-label class="content">Once you have captured all the required information, 
+        <br>The System will email you a complete AR form to <br> 
+        be printed and submitted to your local police station.</ion-label>
+    
+      <div *ngFor="let button of buttons">
+        <ion-button expand="block" class="button-inner"
+                    color="primary"
+                    (click)="navigateToPage(button.ButtonName)"
+                    [fill]="button.State == 2 ? 'solid' : 'outline'"
+                    [ngClass]="{ 'incomplete': button.State != 2 }">
+                    <ion-row style="width: 66%;">
+                      <!-- <ion-col size="2" left > 
+                        <img [src]="button.State == 2 ? button.Icon : button.IconInverse" />
+                      </ion-col> -->
+                      <ion-col size="10" right class="text-button" >
+                        {{button.Text}}
+                      </ion-col>
+                    </ion-row>
+          
+         
+          <img *ngIf="button.State" class="progress-indication" [ngClass]="{ 'complete': button.State == 2 }" [src]="'assets/icons/' + (button.State == 1 ? 'autorenew-2.svg' : 'check-mark.svg')" />
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

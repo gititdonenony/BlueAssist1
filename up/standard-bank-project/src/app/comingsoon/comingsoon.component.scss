@@ -1,0 +1,148 @@
+.EMERGENCY {
+    font-size: 30px;
+
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    text-transform: capitalize;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--cobalt-blue);
+}
+
+ion-checkbox {
+    height: 17px;
+    width: 17px;
+}
+
+.Group {
+    margin-top: 20px;
+
+    .We-will-call-you-shortly {
+        font-size: 18px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #444;
+    }
+}
+.cancel-text{
+    font-size: 15px;
+    font-family: 400;
+}
+.Group-2714 {
+   
+    margin-top: 10px;
+    padding: 0px 0px 10px 0px;
+
+
+  
+    .Please-be-sure-to-answer-your-phone-And-do-your-best-to-ensure-your-safety {
+        font-size: 12.3px;
+        font-weight: 500;
+        color: #444;
+    }
+}
+
+.Group-3725 {
+    padding: 0 0px 5px;
+    text-transform: uppercase;
+
+    .UPGRADE-PACKAGE {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: (--cobalt-blue);
+    }
+
+    .UPDATE-INFORMATION {
+        // font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--white);
+    }
+}.car-div
+{display: flex;}
+.car-image{
+    min-height: 200px;
+    max-height: 200px;
+    width: 100%;
+    margin: auto;
+}
+ion-card {
+    margin: 0;
+    padding: 5px;
+    font-size: 10px;
+    width: 100%;
+}
+
+ion-row {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.style-remove-1 {
+    padding: 10px 0;
+}
+
+ion-radio {
+    border: 1px solid rgba(128, 128, 128, 0.3803921569);
+    border-radius: 50%;
+    width: 16px;
+    padding-left: 1px;
+    padding-bottom: 1px;
+    height: 16px;
+    margin: 0px 0px 0px auto;
+
+ 
+}
+
+ion-radio:focus {
+    background-color: rgb(115, 223, 88);
+}
+
+.style-remove-2 {
+    text-align: end;
+}
+
+.style-remove-3 {
+    height: 40px;
+    padding: 0 0 8px;
+}
+
+.radio-btn {
+    margin-left: auto;
+    margin-bottom: auto;
+}
+
+ion-item {
+    border-radius: 8px;
+    height: 100%;
+    box-shadow: rgb(0 0 0 / 12%) 0px 4px 16px;
+    margin: 0;
+    padding: 0px;
+    font-size: 10px;
+    --inner-border-width: 0px 0px 0px 0px;
+    --inner-padding-end: 0px !important;
+    --padding-start: 0px !important;
+}
+
+.card-item {
+    box-shadow: none !important;
+    --inner-border: none !important;
+}
+
+.NEED-FUEL {
+    text-align: center;
+}

@@ -1,0 +1,114 @@
+ion-toolbar {
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+    ion-img {
+        height: 35px;
+    }
+}
+
+ion-content {
+    .slider {
+        min-height: 100%;
+
+        ion-slide {
+            flex-direction: column;
+    
+            .information-header {
+                display: block;
+                text-align: center;
+                margin-top: 57px;
+                margin-bottom: 24px;
+                font-size: 30px;
+                line-height: 30px;
+            }
+    
+            .information-subheader {
+                font-size: 17px;
+                line-height: 30px;
+                display: block;
+                text-align: center;
+                margin-bottom: 24px;
+                position: relative;
+            }
+    
+            .instructions {
+                display: block;
+                margin-bottom: 8px;
+                width: 100%;
+                text-align: left;
+                position: relative;
+                overflow: hidden;
+
+                img {
+                    position: absolute;
+                    right: 15px;
+                    top: 10px;
+                }
+            }
+    
+            .input-card {
+                width: calc(100% - 20px);
+                display: block;
+                margin-left: 10px;
+                margin-top: 0px;
+                text-align: left;
+            }
+        }
+    }
+    
+
+    .image-captures {
+        .image-capture {
+            margin-bottom: 8px;
+
+            .image-capture-block {
+                border-radius: var(--border-radius);
+                border:  1px solid var(--ion-color-primary);
+                padding-left: 24px;
+                padding-right: 24px;
+                padding-top: 11px;
+                padding-bottom: 11px;
+                position: relative;
+                overflow: hidden;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+    
+                .image-name {
+                    font-size: 24px;
+                    line-height: 35px;
+                    margin-bottom: 5px;
+                    display: block;
+                    text-align: center;
+                }
+    
+                .image-action {
+                    display: block;
+                    margin: auto;
+                    margin-bottom: 0px;
+                }
+    
+                .image-details {
+                    display: block;
+                    text-align: center;
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+
+                .background-image {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: var(--border-radius);
+                    object-fit: cover;
+                    object-position: center;
+                    border: none;
+                }
+            }
+        }
+    }
+}

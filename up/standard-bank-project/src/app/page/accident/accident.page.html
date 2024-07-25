@@ -1,0 +1,53 @@
+<ion-content>
+  <div class="body">
+    <div class="wrapper">
+      <!-- <ion-button iconOnly
+                  fill="clear"
+                  class="back-button"
+                  (click)="goBack()">
+        <img src="assets/icons/chevron-left.svg" />
+      </ion-button> -->
+      <ion-label class="header">
+      Collect info
+      </ion-label>
+      <ion-label class="content">Our 3 step process will help quickly collect<br> all
+        required information, start this process on <br>the accident scene.</ion-label>
+    
+      <ion-button expand="block"
+                  color="primary"
+                  (click)="changeBodyPage('snap')">
+        <ion-label class="text">
+          <img src="assets/icons/snap.svg" />
+         
+          1. SNAP
+        </ion-label>
+        <img class="icon snap" src="assets/imgs/snap.png" />
+        <p>1</p>
+      </ion-button>
+      <ion-button expand="block"
+                  color="primary"
+                  (click)="changeBodyPage('scan')">
+        <ion-label class="text">
+          <img src="assets/icons/scan.svg" />
+          2. SCAN
+        </ion-label>
+        <div class="icon scan">
+          <img src="assets/icons/scanner.svg" />&emsp;
+        <img src="assets/icons/vehicle-disk-black.svg" />
+        </div>
+        <p>2</p>
+      </ion-button>
+      <ion-button expand="block"
+                  color="primary"
+                  (click)="changeBodyPage('submit')">
+        <ion-label class="text">
+          <img src="assets/icons/submit.svg" />
+          3. SUBMIT
+        </ion-label>
+        <img class="icon submit" src="assets/imgs/submit1.svg" />
+        <p>3</p>
+      </ion-button>
+    </div>
+  </div>
+</ion-content>
+

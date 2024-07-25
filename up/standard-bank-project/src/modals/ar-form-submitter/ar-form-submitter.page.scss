@@ -1,0 +1,95 @@
+ion-content {
+    --padding-start: 10px;
+    --padding-end: 10px;
+}
+.header {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.content {
+    position: relative;
+    overflow: auto;
+    margin-top: 10px;
+
+    .title {
+        font-size: 12px;
+        display: block;
+        text-align: center;
+    }
+}
+
+.progress-indication {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding-top: 80%;
+
+    .progress-ring {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        .progress-ring-circle {
+            transition: 0.2s stroke-dashoffset;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+            stroke: var(--ion-color-primary);
+            stroke-width: 6px;
+            fill: transparent;
+        }
+    }
+
+    @keyframes zoomIn {
+        from {
+            transform: translate(-50%, -50%) scale(0);
+        }
+        to {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+    lottie-animation-view {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        animation: zoomIn 0.3s forwards;
+    }
+}
+
+ion-header {
+    .header-top-border {
+        height: 5px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 11;
+
+        // .part {
+        //     width: 25%;
+        //     height: 100%;
+        //     float: left;
+
+        //     &:nth-of-type(1) {
+        //         background-color: #665EFF;
+        //         border-top-left-radius: var(--border-radius);
+        //     }
+        //     &:nth-of-type(2) {
+        //         background-color: #5773FF;
+        //     }
+        //     &:nth-of-type(3) {
+        //         background-color: #3497FD;
+        //     }
+        //     &:nth-of-type(4) {
+        //         background-color: #3ACCE1;
+        //         border-top-right-radius: var(--border-radius);
+        //     }
+        // }
+    }
+}

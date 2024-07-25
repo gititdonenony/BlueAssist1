@@ -1,0 +1,93 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-img src="assets/logo.png"></ion-img>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <h2>Other Members</h2>
+    <div class="bg">
+        <span class="Your-list-should-include-anyone-who-needs-to-be-notified-of-an-emergency-This-list-shouldnt-be-li">
+      Your subscription allows you to invite 4 Other members.<br />
+      Enter the details below.
+    </span>
+    </div>
+    <form [formGroup]="requiredForm" novalidate>
+        <div class="Group-3739">
+            <div class="Path-6243" style="text-align: end"><span>Simon Stone</span>
+                <span>0832945020</span>
+                <ion-toggle slot="start" name="apple" mode="md" color="secondary" checked></ion-toggle>
+            </div>
+            <div class="Path-6243" style="text-align: end">
+                <span>Tammy Stone</span>
+                <span>0832944020</span>
+
+                <ion-toggle slot="start" name="apple" mode="md" color="secondary" checked></ion-toggle>
+            </div>
+            <div style="margin-top: 40px;">
+                <div class="input-text">
+                    <ion-input style="--padding-start: 0;" type="text" placeholder="Sylvester Stone" formControlName="name"></ion-input>
+                    <!-- <div *ngIf="requiredForm.controls['name'].invalid && requiredForm.controls['name'].touched" class="alert alert-danger">
+                    <div class="error-text" *ngIf="requiredForm.controls['name'].errors.required">
+                        Email is required.
+                    </div>
+                </div> -->
+                </div>
+                <div class="input-text">
+                    <ion-input style="--padding-start: 0;" type="number" placeholder="0832944020" formControlName="cno"></ion-input>
+                    <!-- <div *ngIf="requiredForm.controls['cno'].invalid && requiredForm.controls['cno'].touched" class="alert alert-danger">
+                    <div class="error-text" *ngIf="requiredForm.controls['cno'].errors.required">
+                        Phone Number is required.
+                    </div>
+                </div> -->
+                </div>
+                <div class="input-text2">
+                    <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" formControlName="relationship" placeholder="Relationship">
+                        <ion-select-option value="Wife">Wife</ion-select-option>
+                        <ion-select-option value="Father">Father</ion-select-option>
+                        <ion-select-option value="Mother">Mother</ion-select-option>
+                        <ion-select-option value="Brother">Brother</ion-select-option>
+                        <ion-select-option value="Sister">Sister</ion-select-option>
+                        <ion-select-option value="Aunt">Aunt</ion-select-option>
+                        <ion-select-option value="Uncle">Uncle</ion-select-option>
+                        <ion-select-option value="Cousin">Cousin</ion-select-option>
+                        <ion-select-option value="Friend">Friend</ion-select-option>
+                        <ion-select-option value="Son">Son</ion-select-option>
+                        <ion-select-option value="Daughter">Daughter</ion-select-option>
+                        <ion-select-option value="Other">Other</ion-select-option>
+                    </ion-select>
+                    <div *ngIf="requiredForm.controls['relationship'].invalid && requiredForm.controls['relationship'].touched" class="alert alert-danger">
+                        <div class="error-text" *ngIf="requiredForm.controls['relationship'].errors.required">
+                            Relationship is required.
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="input-text">
+                <ion-input style="--padding-start: 0;" type="text" placeholder="Relationship" formControlName="relationship"></ion-input>
+                <div *ngIf="requiredForm.controls['relationship'].invalid && requiredForm.controls['relationship'].touched" class="alert alert-danger">
+                    <div class="error-text" *ngIf="requiredForm.controls['relationship'].errors.required">
+                        Sylvester Stone is required.
+                    </div>
+                </div>
+            </div> -->
+            </div>
+        </div>
+
+    </form>
+
+
+</ion-content>
+<ion-footer class="ion-no-border">
+    <ion-toolbar>
+        <div class="Group-3725">
+            <ion-button expand="block" fill="outline" color="primary" [routerLink]="['/my-devices']">
+                <span> INVITE OTHER MEMBER </span>
+            </ion-button>
+        </div>
+        <div class="Group-3725">
+            <ion-button expand="block" color="primary" [routerLink]="['/my-details']">
+                <span> Back </span>
+            </ion-button>
+        </div>
+    </ion-toolbar>
+</ion-footer>

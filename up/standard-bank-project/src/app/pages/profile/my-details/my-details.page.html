@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-img src="assets/logo.png"></ion-img>
+
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div class="name"><span class="Personal-Information">
+            My Details
+        </span></div>
+    <div class="Rectangle-1766" [routerLink]="['/personal-info-my-details']">
+        <p>
+            Personal Details
+        </p>
+    </div>
+    <div class="Rectangle-1766">
+        <p [routerLink]="['/emergency-contact-two']">
+            Emergency Contacts
+        </p>
+    </div>
+    <div class="Rectangle-1766">
+        <p [routerLink]="['/medical-two']">
+            Medical
+        </p>
+    </div>
+    <div class="Rectangle-1766" *ngIf="isDependent" (click)="addOtherMembers()">
+        <p>
+            Other Members
+        </p>
+    </div>
+
+</ion-content>
+<ion-footer class="ion-no-border">
+    <ion-toolbar>
+
+        <div class="Group-3725">
+            <ion-button expand="block" color="primary" (click)="nextBtn()">
+                <span>
+                    Back
+                </span>
+            </ion-button>
+        </div>
+
+    </ion-toolbar>
+</ion-footer>

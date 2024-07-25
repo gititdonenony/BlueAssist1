@@ -1,0 +1,64 @@
+
+<ion-header>
+  <ion-toolbar>
+      <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header><ion-content fullscreen="true" #content>
+  <div class="slider">
+    <ion-slides #slider [options]="slideOpts">
+      <ion-slide>
+        <div class="information-header">
+          Add <strong>Witness personal info</strong>
+        </div>
+        <form [formGroup]="personalInfoform">
+          <ion-label class="instructions">
+            Witness Type
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-select placeholder="Witness Type"
+                        formControlName="WitnessType"
+                        
+                        class="ion-selct"
+                        [interfaceOptions]="selectPopoverOptions">
+              <ion-select-option value="1">Independant eye witness</ion-select-option>
+              <ion-select-option value="2">Passenger of vehicle</ion-select-option>
+            </ion-select>
+          </ion-card>
+          <ion-label class="instructions">
+            Surname and Initials
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-input placeholder="Surname and Initials"
+                        formControlName="Surname"></ion-input>
+          </ion-card>
+          <ion-label class="instructions">
+            Home Address
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-input placeholder="Home Address"
+                        formControlName="HomeAddress"></ion-input>
+          </ion-card>
+          <ion-label class="instructions">
+            Post Code
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-input placeholder="Post Code"
+                        maxlength="4"
+                        formControlName="PostCode"></ion-input>
+          </ion-card>
+          <ion-label class="instructions">
+            Cell Number
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-input placeholder="Cell Number"
+                        type="tel"
+                        formControlName="CellNumber"></ion-input>
+          </ion-card>
+        </form>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
+
+<app-page-footer (back)="backClicked()"
+                  (next)="nextClicked()"></app-page-footer>

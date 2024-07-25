@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2>Pothole Assist</h2>
+
+  <div class="bg">
+    <span class="description">
+      Pothole Assist is a RoadCover service where one of our dedicated
+      consultants manages your claim with the relevant roads authority if you
+      damage your vehicle (tyres, mags/rims) after hitting a pothole on South
+      African roads.
+    </span>
+  </div>
+  <div class="bg">
+    <br />
+    <span class="Your-list-should-include-anyone-who-needs-to-be-notified-of-an-emergency-This-list-shouldnt-be-li">
+      Please complete each section below
+    </span>
+  </div>
+
+  <div class="Rectangle-1766">
+    <ion-row (click)="incidentphotos()">
+      <ion-col size="4" class="ion-text-start Group-4503-1"><img src="assets/claims_upload d.png" /></ion-col>
+      <ion-col size="7" class="Personal-Details" style="padding: 0px">Photo of Damages</ion-col>
+      <ion-col size="1" class="green-check-box">
+        <ion-checkbox color="success" mode="ios" [disabled]="true" style="opacity: 1;"
+          checked={{photoOfDamage}}></ion-checkbox>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div class="Rectangle-1766">
+    <ion-row (click)="incidentdetails()">
+      <ion-col size="4" class="ion-text-start Group-4503-1"><img src="assets/claims_instruct.png" /></ion-col>
+      <ion-col size="7" class="Personal-Details" style="padding: 0px">Incident Details</ion-col>
+      <ion-col size="1" class="green-check-box">
+        <ion-checkbox color="success" mode="ios" [disabled]="true" style="opacity: 1;"
+          checked={{IncidentDetails}}></ion-checkbox>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <div class="Group-3725">
+
+      <ion-button [disabled]="!isEnable" expand="block" color="primary" (click)="submit()">
+        <span> SUBMIT CLAIM </span>
+      </ion-button>
+      <ion-button expand="block" fill="outline" color="primary" class="back-btn" [routerLink]="['/tabs/profile']">
+        <span> Back </span>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>

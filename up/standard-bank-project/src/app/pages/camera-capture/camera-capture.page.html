@@ -1,0 +1,53 @@
+<ion-content [ngClass]="{ 'invisible': cameraStarted }"
+              (tap)="tapFocus($event)">
+            </ion-content>
+            
+<ion-spinner name="crescent" class="warmin-up" *ngIf="!cameraStarted"></ion-spinner>
+
+<ion-button iconOnly fill="clear"
+            class="back-button"
+            [@rotate]="correctOrientation ? 'landscape': 'portrait'"
+            (click)="goBack()">
+  <ion-icon name="arrow-back" [color]="cameraStarted ? 'light' : 'primary'"></ion-icon>
+</ion-button>
+
+<div *ngIf="!isGalleryUpload && cameraStarted">
+  <div class="blurred-background" *ngIf="!correctOrientation"></div>
+  <lottie-animation-view [options]="lottieConfig"
+                          [width]="300"
+                          [height]="300"
+                          *ngIf="!correctOrientation"
+                          class="lottie">
+  </lottie-animation-view>
+  
+  <div class="image-frame">
+    <div class="corner"></div>
+    <div class="corner"></div>
+    <div class="corner"></div>
+    <div class="corner"></div>
+  </div>
+  
+  <ion-label color="light"
+              class="helper-text"
+              *ngIf="correctOrientation"><strong>Please tap to focus</strong></ion-label>
+  
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button size="large"
+                    (click)="toggleFlash()"
+                    [@rotate]="correctOrientation ? 'landscape': 'portrait'">
+      <ion-icon [name]="flashOn ? 'flash' : 'flash-off'" color="light"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+  <ion-fab vertical="bottom"
+            horizontal="center"
+            slot="fixed"
+            class="camera-button">
+    <ion-fab-button size="large"
+                    (click)="takePicture()"
+                    [@rotate]="correctOrientation ? 'landscape': 'portrait'">
+      <ion-icon name="camera" color="light"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</div>
+

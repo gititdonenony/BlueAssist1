@@ -1,0 +1,72 @@
+ion-toolbar {
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+    ion-img {
+        height: 35px;
+    }
+}
+ion-content {
+    --padding-bottom: 20px;
+    --padding-end: 20px;
+    --padding-start: 20px;
+    --padding-top: 20px;
+  }
+.TitleDesp {
+    text-align: center;
+    padding: 50% 0 15px;
+    .The-Right-Address-For-Your-Online-Shopping {
+   
+        font-size: 28px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.31;
+        letter-spacing: normal;
+        text-align: center;
+        color: var(--black);
+      }
+  }
+  .It-is-now-very-easy-to-reach-the-best-quality-among-all-the-products-on-the-internet {
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: center;
+    color: #666;
+  }
+  .textcenter{
+    text-align: center;
+    // text-align: center;
+    padding: 0px 0 28%;
+    
+  }
+  
+.Group-3725 {
+    padding: 0px 0px 15px;
+    text-align: center;
+    .UPGRADE-PACKAGE {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: (--cobalt-blue);
+    }
+    .UPDATE-INFORMATION {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--white);
+    }
+  
+}

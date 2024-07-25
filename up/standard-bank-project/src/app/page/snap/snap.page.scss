@@ -1,0 +1,122 @@
+ion-content {
+    --background: var(--ion-color-light);
+    --padding-start: 0;
+    --padding-end: 0;
+    --background: transparent;
+}
+
+.body {
+    position: relative;
+    top: 0px;
+    width: 327px;
+    background-color: var(--transparent-background);
+    border-radius: var(--border-radius);
+    padding-right: 0px;
+    max-height: 100%;
+    height: 100%;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.wrapper {
+    padding: 15px 10px;
+    position: relative;
+    top: 0;
+    left:0;
+    max-height: 100%;
+    overflow: auto;
+
+    &.hidden {
+        height: 0vh;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .back-button {
+        // position: absolute;
+        // top: 6px;
+        // left: 1px;
+        background-color: transparent;
+        z-index: 2;
+    }
+
+    .content {
+        font-size: 15px;
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin-top: 22px;
+        margin-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    ion-button {
+        margin-bottom: 10px;
+        --padding-start: 0;
+        --padding-end: 0;
+        text-transform: capitalize;
+        font-weight: bolder;
+        font-size: 15px;
+        letter-spacing: 0.1px;
+        &.incomplete {
+            --box-shadow: none;
+        }
+
+        .state-overlay {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: var(--border-radius);
+            background-color: var(--ion-color-secondary);
+            transform: translateX(-100%);
+        }
+        .progress-indication {
+            position: absolute;
+            top: 15px;
+            /* right: 0; */
+            right: 9px;
+            height: 15px;
+            width: auto;
+
+            &.complete {
+                top: 20px;
+                height: 10px;
+                right: 9px;
+            }
+        }
+    }
+
+    .text-button{
+        letter-spacing: 0.1px;
+        font-size: 12px;
+        text-align: start;
+     }
+    .buttons {
+        position: relative;
+        max-height: calc(100% - 125px);
+        overflow-y: scroll;
+        ion-button {
+            margin-top: 10px;
+
+            ion-icon {
+                display: inline-block;
+                z-index: 1;
+            }
+        }
+    }
+
+}
+.header{
+    font-size: 30px;
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    line-height: 30px;
+    text-transform: uppercase;
+}

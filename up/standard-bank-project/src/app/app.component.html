@@ -1,0 +1,108 @@
+<ion-header class="ion-no-border" *ngIf="showNavHeader">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="4">
+        <ion-buttons class="menudiv">
+          <ion-button fill="clear" color="white" class="menubtn" *ngIf="!isMenuOpen">
+            <ion-menu-button auto-hide="false" class="style-remove-1" ion-button></ion-menu-button>
+          </ion-button>
+          <ion-button fill="clear" color="white" class="menubtn" *ngIf="isMenuOpen">
+            <ion-menu-button auto-hide="false">
+              <ion-split-pane when="false">
+              </ion-split-pane>
+              <!-- <ion-icon name="close-outline" (click)="sideMenuClose()"></ion-icon> -->
+            </ion-menu-button>
+          </ion-button>
+
+
+        </ion-buttons>
+      </ion-col>
+      <ion-col size="4">
+        <ion-img src="assets/logo.png"></ion-img>
+      </ion-col>
+      <ion-col size="4">
+
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+<ion-app>
+  <!-- <ion-split-pane contentId="main-content"> -->
+
+  <ion-menu (ionDidOpen)="menuOpen()" (ionDidClose)="menuClose()" contentId="main-content" type="overlay">
+    <div class="box-size">
+      <!-- <ion-content style="--background: none;width: 81%;"> -->
+      <div class="cross">
+        <ion-icon (click)="close_menu()" class="ion-text-end icon-cross-1" name="close"></ion-icon>
+      </div>
+      <ion-list id="inbox-list" style="background: #0034a9; color: white;">
+
+        <!-- <ion-menu-toggle auto-hide="false"> -->
+        <ion-item lines="none" class="ion-no-padding" [routerLink]="['/persnal-info-two']" (click)="sideMenuClose()">
+          <ion-avatar slot="start" class="camera-icon" *ngIf="!showImage">
+            <ion-icon name="camera"></ion-icon>
+            <div class="add-icon-div">
+              <ion-icon name="add-circle-outline" class="add-icon"></ion-icon>
+            </div>
+          </ion-avatar>
+          <ion-avatar slot="start" style="width: 80px; height: 75px; display: flex" *ngIf="showImage">
+            <img [hidden]="loading" (load)="onLoad()" class="sidebar-profile-img" src="{{ profileImage }}" />
+            <img *ngIf="loading" alt="loading" style="width: 53px" class="sidebar-profile-img" src="assets/load.gif" />
+            <div class="add-icon-div">
+              <ion-icon name="add-circle-outline" class="add-icon"></ion-icon>
+            </div>
+          </ion-avatar>
+          <ion-label class="fullname">{{ fullName }}<br />
+            <span class="pacakge-d">{{subscriptionType}}</span>
+          </ion-label>
+          <!-- <ion-label class="fullname">User Name<br /> -->
+          <!-- <span style="font-size: 12px">Premium package</span> -->
+          <!-- </ion-label> -->
+          <!-- <ion-note ></ion-note>  -->
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label [routerLink]="['/my-details']" (click)="sideMenuClose()">My Details</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label [routerLink]="['/my-vehicles']" (click)="sideMenuClose()" >My Vehicles</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label (click)="mydeivce()">My Devices</ion-label>
+        </ion-item>
+
+        <ion-item (click)="sideMenuClose()"  lines="none">
+          <ion-label  (click)="sub()"> My Subscription</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label>Shake to Activate</ion-label>
+          <div style="text-align: end">
+            <ion-toggle (ionChange)="shakeChanged($event)" (click)="toggleEnable()" #toggle checked="false" slot="start"
+              name="apple" mode="md" color="secondary" [disabled]="!doesSupportShake"></ion-toggle>
+          </div>
+        </ion-item>
+        <!-- </ion-menu-toggle> -->
+      </ion-list>
+
+      <div id="labels-list">
+      <div class="linecss"></div>
+
+        <!-- <ion-item lines="none">
+            <ion-label>Settings</ion-label>
+          </ion-item> -->
+        <a href="https://www.247bluassist.co.za/">
+          <ion-item lines="none">
+            <ion-label>Contact Us</ion-label>
+          </ion-item>
+        </a>
+      </div>
+      <div class="button-1">
+        <ion-button fill="outline" color="light" (click)="signout()">
+          <span> SIGN OUT </span>
+        </ion-button>
+      </div>
+    </div>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+  <!-- </ion-split-pane> -->
+</ion-app>

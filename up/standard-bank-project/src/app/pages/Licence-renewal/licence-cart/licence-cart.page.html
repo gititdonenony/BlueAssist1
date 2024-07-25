@@ -1,0 +1,70 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-img src="assets/logo.png"></ion-img>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <h2> Licence information </h2>
+
+    <div class="Path-6243" (click)="login()">
+        <ion-row>
+            <ion-col size="6">
+                <span class="RGP123-GP"> 410 DSF GP </span>
+            </ion-col>
+            <ion-col size="6" style="text-align: end">
+                <span class="Total-Due-R121000"> Total Due: R600.00 </span>
+            </ion-col>
+
+            <ion-col size="7"><span class="Notice-No-0112002392030293029">
+          Expiry date : 30 -08-2022
+        </span></ion-col>
+            <ion-col size="5" style="text-align: end;"><span class="Discount-R000 Roboto---12pt"> Discount: </span>
+                <span class="Discount-R000 Roboto---12pt" style="padding-left: 15px">
+          R0.00
+        </span></ion-col>
+        </ion-row>
+    </div>
+    <div class="Group-3739">
+        <div>
+            <ion-input style="--padding-start: 0;" type="text " placeholder="410 DSF GP"></ion-input>
+           <ion-row class="ionrow">
+            <ion-col size="5" style=" border-bottom: 0.5px solid rgba(128, 128, 128, 0.479);">
+                Car
+            </ion-col>
+            <ion-col size="2"></ion-col>
+            <ion-col size="5" style="border-bottom: 0.5px solid rgba(128, 128, 128, 0.479);">
+                1400Kg
+            </ion-col>
+           </ion-row>
+              <ion-input style="--padding-start: 0;" type="text " placeholder="Unit 18, Airdlin Place, Sunninghill "></ion-input>
+              <ion-row class="ionrow">
+                <ion-col size="5" style=" border-bottom: 0.5px solid rgba(128, 128, 128, 0.479);">
+                    Gauteng
+                </ion-col>
+                <ion-col size="2"></ion-col>
+                <ion-col size="5" style="border-bottom: 0.5px solid rgba(128, 128, 128, 0.479);">
+                    2198
+                </ion-col>
+               </ion-row>
+               <ion-input style="--padding-start: 0;" type="text " placeholder="0824394485"></ion-input>
+            <ion-input style="--padding-start: 0;" type="text " placeholder="Carlos.c@standard bank.co.za"></ion-input>
+        </div>
+
+    </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+    <ion-toolbar>
+        <div class="Group-3725">
+            <ion-button expand="block" fill="outline" color="primary" (click)=" goBack()">
+                <span> Back </span>
+            </ion-button>
+        </div>
+
+        <div class="Group-3725">
+            <ion-button expand="block" color="primary" [routerLink]="['/vehicle-info']">
+                <span> next </span>
+            </ion-button>
+        </div>
+    </ion-toolbar>
+</ion-footer>

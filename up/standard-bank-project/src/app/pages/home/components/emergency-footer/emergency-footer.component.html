@@ -1,0 +1,30 @@
+<div class="footer"
+    (pandown)="footerPanned($event)"
+    [ngClass]="{ 'ios-transition': isIPhone }"
+    [@footer]="isEmergencyContactsOpen ? (isIPhone ? 'open-ios' : 'open') : isIPhone ? 'closed-ios' : 'closed'">
+  <div class="footer-top-border">
+    <div class="part"></div>
+    <div class="part"></div>
+    <div class="part"></div>
+    <div class="part"></div>
+  </div>
+  <div class="wrapper ion-text-center" text-center>
+    <ion-label class="heading">Require emergency services?</ion-label>
+    <ion-button color="danger"
+                (click)="toggle()"
+                iconOnly
+                class="small-button">
+      <img src="assets/icons/emergency.svg" />
+    </ion-button>
+  </div>
+  <div class="contacts">
+    <ion-list>
+      <ion-item button="true"
+                *ngFor="let emergencyContact of emergencies"
+                transparent
+                (click)="placeEmergencyCall(emergencyContact)">
+        <ion-label>{{emergencyContact.Name}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</div>

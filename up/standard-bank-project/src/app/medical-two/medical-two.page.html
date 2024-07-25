@@ -1,0 +1,128 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2>Medical Information</h2>
+  <div class="bg">
+    <span class="description">
+      In an emergency this information will help medical<br />
+      teams give you the best medical attention
+    </span>
+  </div>
+  <form [formGroup]="medicalInformationForm" novalidate>
+    <div class="Group-3739">
+
+
+      <!-- <div class="input-text">
+        <ion-label class="label">Full Name</ion-label>
+        <ion-input type="text" placeholder="Full Name" [(ngModel)]="firstname" formControlName="name"  readonly
+          class="text-capitalize datatext"></ion-input> -->
+        <!-- style="--padding-start: 0;" -->
+        <!-- <div *ngIf="medicalInformationForm.controls['fname'].invalid && medicalInformationForm.controls['fname'].touched"
+          class="alert alert-danger">
+          <div class="error-text" *ngIf="medicalInformationForm.controls['fname'].errors.required">
+            Medical Aid is required.
+          </div>
+        </div> -->
+      <!-- </div> -->
+
+      <!-- <div class="input-text">
+        <ion-label class="label">Phone Number</ion-label>
+        <ion-input type="text" placeholder="phone number" [(ngModel)]="phoneNumber" formControlName="phone"  readonly
+          class="text-capitalize datatext"></ion-input> -->
+        <!-- style="--padding-start: 0;" -->
+        <!-- <div *ngIf="medicalInformationForm.controls['fname'].invalid && medicalInformationForm.controls['fname'].touched"
+          class="alert alert-danger">
+          <div class="error-text" *ngIf="medicalInformationForm.controls['fname'].errors.required">
+            Medical Aid is required.
+          </div>
+        </div> -->
+      <!-- </div> -->
+
+
+
+      <div class="input-text">
+        <ion-label class="label">Medical Aid</ion-label>
+        <ion-input type="text" placeholder="Medial aid" formControlName="fname"
+          class="text-capitalize datatext"></ion-input>
+        <!-- style="--padding-start: 0;" -->
+        <div
+          *ngIf="medicalInformationForm.controls['fname'].invalid && medicalInformationForm.controls['fname'].touched"
+          class="alert alert-danger">
+          <div class="error-text" *ngIf="medicalInformationForm.controls['fname'].errors.required">
+            Medical Aid is required.
+          </div>
+        </div>
+      </div>
+    
+      <div class="input-text">
+        <ion-label class="label">Medical Aid No</ion-label>
+        <ion-input type="number" placeholder="Medical aid no." formControlName="cno" 
+          class="text-capitalize datatext"></ion-input>
+        <!-- style="--padding-start: 0;" -->
+        <div *ngIf="medicalInformationForm.controls['cno'].invalid && medicalInformationForm.controls['cno'].touched"
+          class="alert alert-danger">
+          <div class="error-text" *ngIf="medicalInformationForm.controls['cno'].errors.required">
+            Medical Aid No. Contact No. is required.
+          </div>
+        </div>
+      </div>
+      <div class="input-text">
+        <ion-label class="label">Medical Conditions</ion-label>
+        <ion-input type="text" placeholder="Medical Conditions" formControlName="email" [(ngModel)]="medicalCondition"
+          (input)="showEditBtn = false" class="text-capitalize datatext"></ion-input>
+        <!-- style="--padding-start: 0;" -->
+        <div
+          *ngIf="medicalInformationForm.controls['email'].invalid && medicalInformationForm.controls['email'].touched"
+          class="alert alert-danger">
+          <div class="error-text" *ngIf="medicalInformationForm.controls['email'].errors.required">
+            Medical Conditions is required.
+          </div>
+        </div>
+      </div>
+      <div class="input-text">
+        <ion-label class="label">Additional Information</ion-label>
+        <ion-input type="text" placeholder="Additional Information" formControlName="addinfo"
+          [(ngModel)]="additionalInformation" (input)="showEditBtn = false"
+          class="text-capitalize datatext"></ion-input>
+        <!-- style="--padding-start: 0;" -->
+        <div
+          *ngIf="medicalInformationForm.controls['addinfo'].invalid && medicalInformationForm.controls['addinfo'].touched"
+          class="alert alert-danger">
+          <div class="error-text" *ngIf="medicalInformationForm.controls['addinfo'].errors.required">
+            Additional Information is required.
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <!-- <div class="Group-3725">
+    <ion-button expand="block" fill="outline" color="primary" (click)="login()">
+        <span>
+
+        EDIT CONTACT
+
+      </span>
+    </ion-button>
+  </div> -->
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <div class="Group-3725">
+      <div class="Group-3725">
+        <ion-button expand="block" fill="outline" color="primary" (click)="addMedicalInfo()" [disabled]="showEditBtn">
+          <span class="UPGRADE-PACKAGE"> Update Information </span>
+        </ion-button>
+      </div>
+      <div class="Group-3725">
+        <ion-button expand="block" color="primary" [routerLink]="['/my-details']">
+          <span> BACK </span>
+        </ion-button>
+      </div>
+    </div>
+
+  </ion-toolbar>
+</ion-footer>

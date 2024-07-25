@@ -1,0 +1,137 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-img src="assets/logo.png"></ion-img>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <h2>Other Members</h2>
+    <div class="bg">
+        <span class="description">
+            Your subscription allows you to invite {{memberAllowed}} other members.
+            <br>
+            Enter the details below
+        </span>
+    </div>
+
+    <div class="bg" *ngIf="!showGetList">
+        <ion-row class="Rectangle-1914">
+            <div class="home_contents_call_me_back">
+                <img src="assets/personal_info.png" />
+                <span class="You-have-no-emergency-contacts">
+                    You have not invited any Members
+                </span>
+            </div>
+        </ion-row>
+    </div>
+
+    <div *ngIf="getInviteFamilyData">
+        <div class="ion-row-1" *ngFor="let familyData of getInviteFamilyData">
+            <ion-row class="ionrow text-capitalize datatext"
+                (click)="viewDetailsFamily(familyData.user_id, familyData.family_id)">
+                <ion-col size="5" class="start">{{familyData.family_fullname}}</ion-col>
+                <ion-col size="5" class="end">{{familyData.family_phone_number}}</ion-col>
+                <ion-col size="2" class="end">
+                    <div>
+                        <ion-toggle slot="start" style="padding: 4px;" name="apple" mode="md" color="secondary"
+                            checked></ion-toggle>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+
+
+    <form [formGroup]="inviteFamilyForm" novalidate class="i-form">
+        <div>
+            <div class="input-text">
+                <ion-label class="label">Full Name</ion-label>
+                <ion-input type="text" placeholder="Full Name" formControlName="name"></ion-input>
+                <div *ngIf="inviteFamilyForm.controls['name'].invalid && inviteFamilyForm.controls['name'].touched"
+                    class="alert alert-danger">
+                    <div class="error-text" *ngIf="inviteFamilyForm.controls['name'].errors.required">
+                        Full Name is required.
+                    </div>
+                </div>
+            </div>
+            <div class="input-text">
+                <ion-label class="label">Phone Number</ion-label>
+                <!-- <span>+27</span>
+                <ion-input type="number" placeholder="Phone Number" formControlName="cno"
+                    inputmode="numeric"></ion-input> -->
+
+                <ion-row>
+                    <ion-col size="2" class="number-27">
+                        <span>+27</span>
+                    </ion-col>
+                    <ion-col size="10" class="my-profile">
+                        <ion-input type="text" label="+27" placeholder="Phone number" formControlName="cno"
+                            maxlength="9" inputmode="numeric">
+                        </ion-input>
+                    </ion-col>
+                </ion-row>
+
+                <div *ngIf="inviteFamilyForm.controls['cno'].invalid && inviteFamilyForm.controls['cno'].touched"
+                    class="alert alert-danger">
+                    <div class="error-text" *ngIf="inviteFamilyForm.controls['cno'].errors.required">
+                        Phone Number is required.
+                    </div>
+                </div>
+            </div>
+            <div class="input-text">
+                <ion-label class="label">Email</ion-label>
+                <ion-input type="email" placeholder="Email Id" formControlName="email"></ion-input>
+                <div *ngIf="inviteFamilyForm.controls['email'].invalid && inviteFamilyForm.controls['email'].touched"
+                    class="alert alert-danger">
+                    <div class="error-text" *ngIf="inviteFamilyForm.controls['email'].errors.required">
+                        Email is required.
+                    </div>
+                </div>
+            </div>
+            <div class="input-text">
+                <ion-label class="label">Relation</ion-label>
+                <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet"
+                    formControlName="relationship" placeholder="Relationship">
+                    <ion-select-option value="Wife">Wife</ion-select-option>
+                    <ion-select-option value="Father">Father</ion-select-option>
+                    <ion-select-option value="Mother">Mother</ion-select-option>
+                    <ion-select-option value="Brother">Brother</ion-select-option>
+                    <ion-select-option value="Sister">Sister</ion-select-option>
+                    <ion-select-option value="Aunt">Aunt</ion-select-option>
+                    <ion-select-option value="Uncle">Uncle</ion-select-option>
+                    <ion-select-option value="Cousin">Cousin</ion-select-option>
+                    <ion-select-option value="Friend">Friend</ion-select-option>
+                    <ion-select-option value="Son">Son</ion-select-option>
+                    <ion-select-option value="Daughter">Daughter</ion-select-option>
+                    <ion-select-option value="Other">Other</ion-select-option>
+
+
+                </ion-select>
+                <div *ngIf="inviteFamilyForm.controls['relationship'].invalid && inviteFamilyForm.controls['relationship'].touched"
+                    class="alert alert-danger">
+                    <div class="error-text" *ngIf="inviteFamilyForm.controls['relationship'].errors.required">
+                        Relationship is required.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+</ion-content>
+<ion-footer class="ion-no-border">
+    <ion-toolbar>
+        <div class="Group-3725">
+            <ion-button expand="block" fill="outline" color="primary" (click)="addInviteFamily()">
+                <span> INVITE OTHER MEMBER </span>
+            </ion-button>
+        </div>
+        <div class="Group-3725">
+            <ion-button expand="block" color="primary" [routerLink]="['/my-details']">
+                <span> BACK </span>
+            </ion-button>
+
+        </div>
+
+    </ion-toolbar>
+</ion-footer>

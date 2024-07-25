@@ -1,0 +1,35 @@
+<ion-header [style.visibility]="content_visibility">
+  <ion-toolbar color="primary">
+    <ion-title>
+      QR Code
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [style.visibility]="content_visibility">
+
+  <ion-card class="ion-text-center">
+    <ion-card-content>
+      <qrcode [qrdata]="qrCodeString" [width]="256" [errorCorrectionLevel]="'M'">
+      </qrcode>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="block" class="ion-margin" (click)="startScan()">
+    Scan QR Code
+  </ion-button>
+
+  <ion-item *ngIf="scannedResult">
+    <ion-label class="ion-text-wrap">Scanned Result: {{scannedResult}}</ion-label>
+  </ion-item>
+
+</ion-content>
+<div class='scan-box' *ngIf="content_visibility === 'hidden'"></div>
+
+<ion-row>
+  <ion-col>
+    <ion-button class="stop-btn" expand="block" color="primary" (click)="stop()">
+      <span> {{content_visibility === 'hidden' ? "Stop" : "Back"}} </span>
+    </ion-button>
+  </ion-col>
+</ion-row>

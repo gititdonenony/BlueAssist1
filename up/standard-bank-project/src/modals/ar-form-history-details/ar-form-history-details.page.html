@@ -1,0 +1,53 @@
+<ion-header class="ion-no-border">
+  <div class="header-top-border">
+    <div class="part"></div>
+    <div class="part"></div>
+    <div class="part"></div>
+    <div class="part"></div>
+  </div>
+</ion-header>
+
+<ion-content>
+  <ion-label class="header" color="dark">
+    Accident Report Details
+  </ion-label>
+
+  <div class="content">
+    <ion-card>
+      <ion-label class="big-label">Accident Type</ion-label>
+      <ion-label class="small-label">{{accident.AccidentType}}</ion-label>
+
+      <ion-label class="big-label">Involved</ion-label>
+      <ion-label class="small-label">{{accident.OtherDriverFullName}}</ion-label>
+
+      <ion-label class="big-label">Accident Date</ion-label>
+      <ion-label class="small-label">{{accident.AccidentDate}}</ion-label>
+
+      <ion-label class="big-label">Location of Accident</ion-label>
+      <ion-label class="small-label">{{accident.LocationOfAccident}}</ion-label>
+
+      <ion-progress-bar color="primary"
+                        [value]="downloadProgress"
+                        [type]="downloadProgress ? 'determinate' : 'indeterminate'"
+                        *ngIf="buttonsDisabled"
+                        ></ion-progress-bar>
+
+      <div class="buttons-footer">
+        <ion-button color="tertiary" (click)="resendForm()" [disabled]="buttonsDisabled">
+          Resend
+        </ion-button>
+        <ion-button fill="outline" color="dark" (click)="downloadForm()" [disabled]="buttonsDisabled">
+          AR Form
+        </ion-button>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button fill="clear" iconOnly (click)="close()" color="dark">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

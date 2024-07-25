@@ -1,0 +1,128 @@
+ion-toolbar {
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+    ion-img {
+        height: 35px;
+    }
+}
+
+.divicon {
+    padding: 55px 0;
+    .Ellipse-355 {
+        width: 100.5px;
+        border-radius: 50px;
+        border: 2px solid;
+        height: 100.5px;
+        text-align: center;
+        color: #0e8a00;
+        margin: auto;
+        ion-icon {
+            font-size: 50px;
+            padding: 20px;
+        }
+    }
+}
+
+.style-remove-1 {
+    padding-bottom: 15px;
+}
+
+.style-remove-2 {
+    padding-bottom: 10px;
+    border-bottom: 0.1px solid #80808045;
+}
+
+.style-remove-3 {
+    padding-top: 15%;
+}
+
+.center-text {
+    text-align: center;
+    .Welcome-to-247-Assist {
+        font-size: 25px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--greyish-brown);
+    }
+}
+
+.Rectangle-1805 {
+    text-align: center;
+    padding: 19px 0;
+    .You-have-successfully-logged-in {
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        color: var(--greyish-brown);
+    }
+}
+
+.Rectangle-1805 {
+    text-align: center;
+    background-color: var(--white);
+    .You-will-received-confirmation-via-email-Shortly-Please-verify-you-email-address-using-the-link-pr {
+        font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.01px;
+    text-align: center;
+    color: var(--greyish-brown);
+    font-family: Roboto !important;
+    }
+}
+
+.Rectangle-1804 {
+    padding: 10px 0;
+    text-align: center;
+    background-color: var(--white);
+    .Did-you-know-you-could-get-more {
+        font-size: 9px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0px;
+        text-align: center;
+        color: #0033a1;
+    }
+}
+
+.Group-3725 {
+    .UPGRADE-PACKAGE {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: #0089ff;
+    }
+    .UPDATE-INFORMATION {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--white);
+    }
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

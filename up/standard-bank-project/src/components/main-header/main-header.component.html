@@ -1,0 +1,78 @@
+<ion-menu side="start" type="overlay" #mainMenu contentId="mainBody">
+  <ion-content>
+    <ion-toolbar class="menu-toolbar" color="light">
+      <ion-buttons slot="start">
+        <ion-button iconOnly *ngIf="!isPopable" (click)="closeMenu()">
+          <ion-icon name="close" color="primary"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title class="welcome-header"
+        >Welcome {{ userDetails ? userDetails.Name : "" }}</ion-title
+      >
+      <div class="color-border">
+        <div class="part"></div>
+        <div class="part"></div>
+        <div class="part"></div>
+        <div class="part"></div>
+      </div>
+    </ion-toolbar>
+    <ion-list>
+      <ion-item lines="none" button="true" (click)="goToHistory()">
+        <div class="icon">
+          <img src="assets/icons/history-dark.svg" />
+        </div>
+        Accident History
+      </ion-item>
+      <ion-item lines="none" button="true" (click)="contactUs()">
+        <div class="icon">
+          <img src="assets/icons/email-dark.svg" />
+        </div>
+        Contact Us
+      </ion-item>
+      <ion-item lines="none" button="true" (click)="aboutUs()">
+        <div class="icon">
+          <img src="assets/icons/about-us-dark.svg" />
+        </div>
+        About Us
+      </ion-item>
+      <ion-item lines="none" button="true" (click)="privacy()">
+        <div class="icon">
+          <img src="assets/icons/privacy-dark.svg" />
+        </div>
+        Privacy
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer class="ion-no-border">
+    <ion-list>
+      <ion-item lines="none" button="true" (click)="logOut()">
+        <div class="icon">
+          <img src="assets/icons/log-out-dark.svg" />
+        </div>
+        Log Out
+      </ion-item>
+    </ion-list>
+  </ion-footer>
+</ion-menu>
+
+<ion-header>
+  <ion-toolbar color="">
+    <ion-buttons slot="start">
+      <ion-button
+        iconOnly
+        class="menu-navigation-button"
+        (click)="isPopable ? goBack() : openMenu()"
+      >
+        <!-- <img [@poppable]="isPopable ? 'menu-off' : 'menu-on'" src="assets/icons/menu.svg" /> -->
+        <ion-icon name="menu-outline"></ion-icon>
+        <!-- <ion-icon
+          [@poppable]="isPopable ? 'popper-on' : 'popper-off'"
+          name="arrow-back"
+        ></ion-icon> -->
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="assets/logo.png" (click)="goToHome()" class="toolbar-logo" />
+    </ion-title>
+  </ion-toolbar>
+</ion-header>

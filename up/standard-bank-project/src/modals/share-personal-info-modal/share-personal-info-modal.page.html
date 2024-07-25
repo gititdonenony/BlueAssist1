@@ -1,0 +1,22 @@
+<ion-header translucent="true" mode="ios" color="light">
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="dark">Share my informaion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="qr-container">
+    <img [src]="qrCode" />
+  </div>
+
+  <ion-card-subtitle class="ion-text-center">Enter this pin on the other device</ion-card-subtitle>
+  <ion-card-title class="ion-text-center" style="margin-top: 15px;">
+    <ion-label color="primary">{{pin}}</ion-label>
+  </ion-card-title>
+  
+</ion-content>

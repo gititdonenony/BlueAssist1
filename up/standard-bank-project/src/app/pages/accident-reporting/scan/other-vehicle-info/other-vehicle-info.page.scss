@@ -1,0 +1,19 @@
+ion-toolbar {
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+    ion-img {
+        height: 35px;
+    }
+}
+.ion-selct{
+    flex: 1 1 0%;
+    /* min-width: 16px; */
+    font-size: inherit;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: auto;
+    padding: 11px 10px 11px 23px;
+}

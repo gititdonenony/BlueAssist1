@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true" #content>
+  <div class="slider">
+    <ion-slides #slider [options]="slideOpts">
+      <ion-slide>
+        <div class="information-header">Last few questions</div>
+
+        <!-- <ion-datetime displayFormat="DD MMM YYYY" placeholder="Date of accident" [value]="dateTime"></ion-datetime> -->
+        <!-- formControlName="AccidentDate"  -->
+        <form [formGroup]="submissionForm">
+          <ion-label class="instructions">
+            Which date did the accident occur?
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-datetime displayFormat="DD MMM YYYY" presentation="date-time" pickerFormat="DD MMM YYYY"
+              placeholder="Date of accident" formControlName="AccidentDate"></ion-datetime>
+          </ion-card>
+          <ion-label class="instructions">
+            What time did the accident occur?
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-datetime displayFormat="HH:mm" hidden="true" pickerFormat="hH:mm" presentation="time" placeholder="Time of accident"
+              formControlName="AccidentTime" [(ngModel)]="selectedTime" (ionChange)="timeChanged()"></ion-datetime>
+              <!-- <span>{{selectedTime}}</span> -->
+          </ion-card>
+          <ion-label class="instructions"> What email address </ion-label>
+          <ion-card class="input-card">
+            <ion-input placeholder="Email" type="email" formControlName="Email"></ion-input>
+          </ion-card>
+        </form>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
+
+<app-page-footer (back)="backClicked()" (next)="nextClicked()"></app-page-footer>

@@ -1,0 +1,103 @@
+ion-header {
+    .header-top-border {
+        height: 5px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 11;
+
+        .part {
+            width: 25%;
+            height: 100%;
+            float: left;
+
+            &:nth-of-type(1) {
+                background-color: #665EFF;
+                border-top-left-radius: var(--border-radius);
+            }
+            &:nth-of-type(2) {
+                background-color: #5773FF;
+            }
+            &:nth-of-type(3) {
+                background-color: #3497FD;
+            }
+            &:nth-of-type(4) {
+                background-color: #3ACCE1;
+                border-top-right-radius: var(--border-radius);
+            }
+        }
+    }
+}
+
+ion-content {
+    --padding-start: 30px;
+    --padding-end: 30px;
+
+    .header {
+        display: block;
+        text-align: center;
+        margin-top: 40px;
+        font-size: 30px;
+        line-height: 40px;
+    }
+    
+    .content {
+        position: relative;
+        overflow: auto;
+        margin-top: 10px;
+    
+        .title {
+            font-size: 16px;
+            display: block;
+            text-align: center;
+        }
+    
+        .sub-title {
+            font-size: 12px;
+            display: block;
+            text-align: center;
+        }
+
+        ion-item {
+            --padding-start: 0;
+            --padding-end: 0;
+            --inner-padding-end: 0;
+            ion-label {
+                font-size: 10px;
+
+                &:nth-of-type(2) {
+                    width: 40px;
+                    max-width: 40px;
+                    img {
+                        display: block;
+                        margin: auto;
+                        max-height: 24px;
+                    }
+                }
+
+                &:nth-of-type(3) {
+                    text-align: right;
+                    max-width: 70px;
+                }
+            }
+
+            ion-checkbox {
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(57px);
+    } to {
+        transform: translateY(0);
+    }
+}
+ion-footer {
+    animation: slideIn 0.3s forwards;
+    ion-buttons {
+        justify-content: center;
+    }
+}

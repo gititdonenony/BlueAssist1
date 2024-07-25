@@ -1,0 +1,32 @@
+<div class="radio-wrapper">
+  <div class="radio-list-block" *ngFor="let radioOption of radioOptions">
+    <div class="wrapper" (click)="setRadioOption(radioOption)">
+      <div class="title">
+        <ion-label class="extra-small">{{radioOption.Description}}</ion-label>
+      </div>
+      <div class="image" >
+        <ion-img [src]="radioOption.Image"
+                (ionImgWillLoad)="setStyle(lazyImage)"
+                (ionImgDidLoad)="updateHeight()"
+                #lazyImage></ion-img>
+      </div>
+      <div class="selected-box"
+            [@selected]="radioOption.Selected ? 'active' : 'inactive'">
+        <div class="container" *ngIf="evidenceRequired">
+          <ion-label class="small" color="light">Snap Evidence</ion-label>
+          <img src="assets/icons/snap.svg" />
+          <ion-button fill="clear" color="light" iconOnly class="extra-small" (click)="remove($event)">Remove</ion-button>
+        </div>
+  
+        <div class="container" *ngIf="!evidenceRequired">
+          <ion-icon name="checkmark-circle" color="light"></ion-icon>
+          <ion-label class="extra-small" color="light">Selected</ion-label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="!disabled">
+  <br />
+  <br />
+</div>

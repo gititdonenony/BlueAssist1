@@ -1,0 +1,109 @@
+ion-toolbar {
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+    ion-img {
+        height: 35px;
+    }
+}
+
+.divicon {
+    text-align: center !important;
+    padding: 55px 0;
+    .Ellipse-355 {
+        color: #0e8a00;
+        ion-icon {
+            font-size: 84px;
+            padding: 12px;
+            border: 2px solid;
+            border-radius: 50%;
+        }
+    }
+}
+
+.center-text {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+    margin-left: 20px;
+    margin-right: 20px;
+    .Welcome-to-247-Assist {
+        font-size: 24px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--greyish-brown);
+    }
+}
+
+.Rectangle-1805 {
+    text-align: center;
+    padding: 25px 0;
+    .You-have-successfully-logged-in {
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        color: var(--greyish-brown);
+    }
+}
+
+.Rectangle-1805 {
+    text-align: center;
+    padding: 25px 0;
+    background-color: var(--white);
+    .You-will-received-confirmation-via-email-Shortly-Please-verify-you-email-address-using-the-link-pr {
+        font-size: 13px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--greyish-brown);
+    }
+}
+
+.Rectangle-1804 {
+    padding: 10px 0;
+    text-align: center;
+    background-color: var(--white);
+    .Path-4876 {
+        height: 1px;
+        border: solid 1px #dbdbdb;
+    }
+}
+
+.Group-3725 {
+    bottom: 30px;
+    width: 100%;
+    .UPGRADE-PACKAGE {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: #0089ff;
+    }
+    .UPDATE-INFORMATION {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--white);
+    }
+    ion-button {
+        height: 40px;
+    }
+}

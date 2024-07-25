@@ -1,0 +1,97 @@
+ion-toolbar {
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+    ion-img {
+        height: 35px;
+    }
+}
+
+.name {
+    text-align: center;
+    padding: 70px 0 18px;
+    .Personal-Information {
+        font-size: 32px;
+        font-weight: 550;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.62;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--cobalt-blue);
+    }
+}
+
+.Processed-by {
+    margin: auto;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.01px;
+    text-align: center;
+    color: #444;
+}
+
+.style-remove-1 {
+    text-align: center;
+}
+
+.Rectangle-1805 {
+    text-align: center;
+    font-size: 13px;
+    padding: 19px 0;
+    color: gray;
+    .imgsize {
+        height: 35px;
+        margin-top: 31px;
+    }
+    .You-have-successfully-logged-in {
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        color: var(--greyish-brown);
+    }
+}
+
+.Road-Accident-Fund-300x300 {
+    width: 76px;
+    height: 76px;
+    margin: 86px 4px 75px 72px;
+}
+
+.RoadCover-Logo-letterbox-option-scaled {
+    width: 191px;
+    height: 40px;
+    margin: 15px 71px 86px 4px;
+}
+
+.Group-3725 {
+    padding: 0 30px 20px;
+    text-align: center;
+    .UPGRADE-PACKAGE {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: (--cobalt-blue);
+    }
+    .UPDATE-INFORMATION {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--white);
+    }
+    ion-button {
+        height: 35px;
+    }
+}

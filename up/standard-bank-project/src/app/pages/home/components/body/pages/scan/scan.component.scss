@@ -1,0 +1,155 @@
+
+ion-content {
+    --padding-bottom: 0px;
+    --background: var(--ion-color-light);
+    --padding-start: 20px;
+    --padding-end: 20px;
+}
+.div-content-upper{
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+.body {
+    
+    width: 100%;
+    background-color: var(--transparent-background);
+    border-radius: var(--border-radius);
+    padding-right: 0px;
+    max-height: 100%;
+    height: 100%;
+    margin: 0;
+
+}
+
+.wrapper {
+ 
+  
+
+    &.hidden {
+        height: 0vh;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .back-button {
+
+        top: 10px;
+        left: 1px;
+        background-color: transparent;
+        z-index: 2;
+    
+    }
+
+    .scroll-collapse {
+        background-color: var(--ion-color-light);
+        position: relative;
+     
+        left: 0;
+        right: 0;
+       
+        text-align: center;
+        //  padding-top: 29px;
+
+    
+            .header{
+                font-size: 25px;
+                width: 100%;
+                font-weight: 500;
+                text-align: center;
+                display: block;
+                line-height: 30px;
+                text-transform: uppercase;
+                padding-top: 15px;
+            
+        }
+    
+        .content {
+            font-size: 12px;
+            width: 100%;
+            text-align: center;
+            display: block;
+            margin-top: 15px;
+         
+            padding-left: 10px;
+            padding-right: 10px;
+            font-weight: 600;
+            line-height: 19px;
+        }
+    }
+ .text-button{
+    letter-spacing: 0.1px;
+    font-size: 11px;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+ }
+
+        ion-button {
+            
+            margin-bottom: 10px;
+            --padding-start: 0;
+            --padding-end: 0;
+            text-transform: capitalize;
+            font-weight: bolder;
+            font-size: 15px;
+            letter-spacing: 0.1px;
+    
+            &.incomplete {
+                --box-shadow: none;
+            }
+    
+            .state-overlay {
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: var(--border-radius);
+                
+            }
+    
+            .progress-indication {
+                position: absolute;
+
+        right: 9px;
+        height: 15px;
+        width: auto;
+    
+                &.complete {
+                    height: 10px;
+                    right: 9px;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    .buttons {
+     
+        position: relative;
+        height: 100%;}
+
+
+
+        .scan-box{
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 100vmax rgba(0,0,0,0.5);
+            content: '';
+            display: block;
+            left: 50%;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+          }
+          
+          .stop-btn{
+              position: absolute;
+              bottom: 66px;
+              z-index: 11;
+              width: 81%;
+              margin-left: 29px;
+          }

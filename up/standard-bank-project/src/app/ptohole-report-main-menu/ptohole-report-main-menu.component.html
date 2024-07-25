@@ -1,0 +1,32 @@
+<ion-content>
+<div class="modal-color style-remove-1 ">
+    <div class="top-section ">
+        <div>
+            <ion-icon name="close-outline" (click)="close() "></ion-icon>
+        </div>
+        <div class=" style-remove-2 ">
+            <span class="Start-Your-Pothole-Claim" style="text-align:center;"> Start Your Pothole Claim </span>
+        </div>
+    </div>
+    <div class="center-section ">
+        <ion-card (click)="incidentphotos() ">
+            <ion-item lines="none ">
+                <ion-img src="assets/claims_upload d.png " class=" style-remove-3 "></ion-img>
+                <ion-label><span class="Photo-of-Damages "> Photo of Damages </span></ion-label>
+            </ion-item>
+        </ion-card>
+        <ion-card>
+            <ion-item (click)="incidentdetails() " lines="none ">
+                <ion-img src="assets/claims_instruct.png " class=" style-remove-3 "></ion-img>
+                <ion-label><span class="Photo-of-Damages "> Incident Details </span></ion-label>
+            </ion-item>
+        </ion-card>
+        <div class="Group-3725 ">
+            <ion-button expand="block " color="primary " (click)="lockshop() ">
+                <span> SUBMIT CLAIM </span>
+            </ion-button>
+        </div>
+    </div>
+   
+</div>
+</ion-content>

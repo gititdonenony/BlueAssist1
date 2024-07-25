@@ -1,0 +1,69 @@
+<ion-content class="scroll-content">
+  <!-- <ion-icon name="arrow-back-circle-outline"  style="font-size: 40px;"></ion-icon> -->
+
+  <div class="top-center">
+    <ion-row class="login-div">
+      <ion-img class="logo-image" src="assets/logo.png">
+      </ion-img>
+    </ion-row>
+  </div>
+  <!-- <ion-label style="color: white;">
+    {{data}}
+  </ion-label> -->
+
+  <div class="white-div">
+    <div class="form">
+      <div class="recover-enter">
+
+
+        <div class="signup"> Please enter the verification sent to </div>
+      </div>
+      <!-- <div class="otp-input">
+        <input type="text" class="inputotp" [(ngModel)]="otp1" maxlength="1" pattern="[0-9]" required>
+        <input type="text" [(ngModel)]="otp2" maxlength="1" pattern="[0-9]" required>
+        <input type="text" [(ngModel)]="otp3" maxlength="1" pattern="[0-9]" required>
+        <input type="text" [(ngModel)]="otp4" maxlength="1" pattern="[0-9]" required>
+      </div> -->
+
+      <div class="otp-input">
+        <!-- <ion-input type="text" class="inputotp" [(ngModel)]="otp1" maxlength="1" pattern="[0-9]" required> </ion-input>
+        <ion-input type="text" class="inputotp" [(ngModel)]="otp2" maxlength="1" pattern="[0-9]" required></ion-input>
+        <ion-input type="text" class="inputotp" [(ngModel)]="otp3" maxlength="1" pattern="[0-9]" required></ion-input>
+        <ion-input type="text" class="inputotp" [(ngModel)]="otp4" maxlength="1" pattern="[0-9]" required></ion-input> -->
+
+        <ion-input id="filed1" type="text" class="inputotp" [(ngModel)]="otp1" maxlength="1" inputmode="numeric"
+          pattern="[0-9]" (ionChange)="jumpToNext($event, 'filed2')" required></ion-input>
+        <ion-input id="filed2" type="text" class="inputotp" [(ngModel)]="otp2" maxlength="1" inputmode="numeric"
+          pattern="[0-9]" (ionChange)="jumpToNext($event, 'filed3')" required></ion-input>
+        <ion-input id="filed3" type="text" class="inputotp" [(ngModel)]="otp3" maxlength="1" inputmode="numeric"
+          pattern="[0-9]" (ionChange)="jumpToNext($event, 'filed4')" required></ion-input>
+        <ion-input id="filed4" type="text" class="inputotp" [(ngModel)]="otp4" maxlength="1" inputmode="numeric"
+          pattern="[0-9]" required></ion-input>
+      </div>
+      <div>
+        <u class="resend">resend code </u>
+      </div>
+
+      <div class="button-div-new">
+        <div class="Group-3725">
+          <ion-button expand="block" fill="outline" color="primary" (click)="verifyOTP()">
+              <span>
+                SUBMIT
+              </span>
+          </ion-button>
+      </div>
+      <div class="Group-3725">
+          <!-- <ion-button expand="block"  color="primary" (click)="updateInfo()">
+          <span> </span>
+      </ion-button> -->
+          <ion-button expand="block" color="primary"(click)="pop()">
+              <span> BACK</span>
+          </ion-button>
+      </div>
+      
+      <ion-button id="close-button" (click)="onCloseWebView()" hidden="true"></ion-button>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

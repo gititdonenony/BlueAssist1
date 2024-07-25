@@ -1,0 +1,169 @@
+.EMERGENCY {
+    font-size: 30px;
+  
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    text-transform: capitalize;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--cobalt-blue);
+}
+.upgrde{
+display: flex;
+padding: 10px;
+}
+.car-image{
+    margin: auto;
+    height: 100px;
+    width: 100%;
+}
+ion-checkbox {
+    height: 17px;
+    width: 17px;
+}
+
+ion-img{
+    height: 100px;
+    width: 100px;
+    margin: 20px 0px 25px 129px;
+}
+.Group {
+    margin-top: 20px;
+
+    .We-will-call-you-shortly {
+        font-size: 18px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #444;
+    }
+}
+
+.Group-2714 {
+    padding: 10px;
+
+    .Please-be-sure-to-answer-your-phone-And-do-your-best-to-ensure-your-safety {
+        font-size: 12.3px;
+        font-weight: 500;
+        color: #444;
+    }
+}
+
+.Group-3725 {
+    padding: 0 0px 5px;
+    text-transform: uppercase;
+
+    .UPGRADE-PACKAGE {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: (--cobalt-blue);
+    }
+
+    .UPDATE-INFORMATION {
+    
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--white);
+    }
+}
+
+ion-card {
+    margin: 0;
+    padding: 5px;
+    font-size: 10px;
+    width: 100%;
+}
+
+ion-row {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.style-remove-1 {
+    padding: 10px 0;
+}
+
+ion-radio {
+    border: 1px solid rgba(128, 128, 128, 0.3803921569);
+    border-radius: 50%;
+    width: 16px;
+    padding-left: 1px;
+    padding-bottom: 1px;
+    height: 16px;
+    margin: 0px 0px 0px auto;
+
+    // input[type="radio"]:checked:before {
+    //     content: "";
+    //     display: block;
+    //     position: relative;
+    //     top: 3px;
+    //     left: 3px;
+    //     width: 6px;
+    //     height: 6px;
+    //     border-radius: 50%;
+    //     background: red;
+    // }
+    // --input[type="radio"]{
+    //     accent-color:green;
+    //   }
+    // input[type="radio"]:checked + label {
+    //     background-color: yellow;
+    //   }
+    //   ion-radio ,input [type="radio"]:checked{
+    //     background-color: yellow;
+    //   }
+
+    // background: #52cd52;
+}
+
+ion-radio:focus {
+    background-color: rgb(115, 223, 88);
+}
+
+.style-remove-2 {
+    text-align: end;
+}
+
+.style-remove-3 {
+    height: 40px;
+    padding: 0 0 8px;
+}
+
+.radio-btn {
+    margin-left: auto;
+    margin-bottom: auto;
+}
+
+ion-item {
+    border-radius: 8px;
+    height: 100%;
+    box-shadow: rgb(0 0 0 / 12%) 0px 4px 16px;
+    margin: 0;
+    padding: 0px;
+    font-size: 10px;
+    --inner-border-width: 0px 0px 0px 0px;
+    --inner-padding-end: 0px !important;
+    --padding-start: 0px !important;
+}
+
+.card-item {
+    box-shadow: none !important;
+    --inner-border: none !important;
+}
+
+.NEED-FUEL {
+    text-align: center;
+}

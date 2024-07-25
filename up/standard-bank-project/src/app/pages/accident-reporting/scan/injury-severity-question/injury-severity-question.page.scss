@@ -1,0 +1,31 @@
+ion-toolbar {
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+    ion-img {
+        height: 35px;
+    }
+}
+
+.scan-box{
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 100vmax rgba(0,0,0,0.5);
+    content: '';
+    display: block;
+    left: 50%;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+  }
+  
+  .stop-btn{
+      position: absolute;
+      bottom: 66px;
+      z-index: 11;
+      width: 81%;
+      margin-left: 29px;
+  }
+

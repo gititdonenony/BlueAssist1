@@ -1,0 +1,42 @@
+
+<ion-header>
+  <ion-toolbar>
+      <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true" #content>
+  <app-custom-slides-pager [slider]="slider" [content]="content">
+  </app-custom-slides-pager>
+
+  <div class="slider">
+    <ion-slides #slider [options]="slideOpts">
+      <ion-slide>
+        <div class="information-header">
+          Was anyone <br><strong>trapped </strong>in or <strong>fallen<br> out of the vehicle?</strong>
+        </div>
+
+        <div class="information-subheader">
+          Please tap the options best suited
+        </div>
+
+        <app-icon-radio-list-component [options]="trappedOptions"
+          (selectionChanged)="saveSelection($event, 'Trapped')"></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          Suspected <strong>using a handheld device</strong> whilst <strong>driving</strong>
+        </div>
+
+        <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label>
+
+        <app-icon-radio-list-component [options]="useOfCellphoneOptions"
+          (selectionChanged)="saveSelection($event, 'UseOfCellphone')"></app-icon-radio-list-component>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
+
+<app-page-footer (back)="backClicked()" (next)="nextClicked()"></app-page-footer>

@@ -1,0 +1,181 @@
+
+<ion-header>
+  <ion-toolbar>
+      <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true" #content>
+  <app-custom-slides-pager
+    [slider]="slider"
+    [content]="content"
+    (slideIndexChange)="sliderChanged($event)"
+  ></app-custom-slides-pager>
+
+  <div class="slider">
+    <ion-slides #slider [options]="slideOpts">
+      <ion-slide>
+        <div class="information-header">
+          {{type == 'cyclist' ? 'Cyclist' : type == 'pedestrian' ? 'Pedestrian'
+          : 'Passenger'}} Information
+        </div>
+
+        <form [formGroup]="personalInfoform" *ngIf="!minimalOptions">
+          <ion-label class="instructions"> Surname </ion-label>
+          <ion-card class="input-card">
+            <ion-input
+              placeholder="Surname"
+              formControlName="Surname"
+            ></ion-input>
+          </ion-card>
+          <ion-label class="instructions"> Initials </ion-label>
+          <ion-card class="input-card">
+            <ion-input
+              placeholder="Initials"
+              formControlName="Initials"
+            ></ion-input>
+          </ion-card>
+          <ion-label class="instructions"> Age </ion-label>
+          <ion-card class="input-card">
+            <ion-input
+              placeholder="Age"
+              formControlName="Age"
+              type="number"
+            ></ion-input>
+          </ion-card>
+          <ion-label class="instructions"> Cell Number </ion-label>
+          <ion-card class="input-card">
+            <ion-input
+              placeholder="Cell Number"
+              type="tel"
+              formControlName="CellNumber"
+            ></ion-input>
+          </ion-card>
+        </form>
+
+        <form [formGroup]="personalInfoform" *ngIf="minimalOptions">
+          <ion-label class="instructions"> Surname and Initials </ion-label>
+          <ion-card class="input-card">
+            <ion-input
+              placeholder="Surname and Initials"
+              formControlName="Surname"
+            ></ion-input>
+          </ion-card>
+          <ion-label class="instructions"> Cell Number </ion-label>
+          <ion-card class="input-card">
+            <ion-input
+              placeholder="Cell Number"
+              type="tel"
+              formControlName="CellNumber"
+            ></ion-input>
+          </ion-card>
+        </form>
+        <form [formGroup]="generalInfoform" *ngIf="minimalOptions">
+          <ion-label class="instructions"> ID Number </ion-label>
+          <ion-card class="input-card">
+            <ion-input
+              placeholder="ID Number"
+              type="tel"
+              formControlName="IDNumber"
+            ></ion-input>
+          </ion-card>
+        </form>
+      </ion-slide>
+      <ion-slide *ngIf="!minimalOptions">
+        <div class="information-header">
+          {{type == 'cyclist' ? 'Cyclist' : type == 'pedestrian' ? 'Pedestrian'
+          : 'Passenger'}} Information
+        </div>
+
+        <form [formGroup]="generalInfoform">
+          <ion-label class="instructions"> Home Address </ion-label>
+          <ion-card class="input-card">
+            <ion-input
+              placeholder="Home Address"
+              formControlName="HomeAddress"
+            ></ion-input>
+          </ion-card>
+          <ion-label class="instructions"> ID Number </ion-label>
+          <ion-card class="input-card">
+            <ion-input
+              placeholder="ID Number"
+              type="tel"
+              formControlName="IDNumber"
+            ></ion-input>
+          </ion-card>
+          <ion-label class="instructions"> Country Of Origin </ion-label>
+          <ion-card class="input-card">
+            <ion-input
+              placeholder="Country Of Origin"
+              formControlName="CountryOfOrigin"
+            ></ion-input>
+          </ion-card>
+          <ion-label class="instructions"> Gender </ion-label>
+          <ion-card class="input-card">
+            <ion-select
+              placeholder="Gender"
+              formControlName="Gender"
+              
+              class="ion-selct"
+              [interfaceOptions]="selectPopoverOptions"
+            >
+              <ion-select-option value="1">Male</ion-select-option>
+              <ion-select-option value="2">Female</ion-select-option>
+              <ion-select-option value="3">Other</ion-select-option>
+            </ion-select>
+          </ion-card>
+          <ion-label class="instructions"> Describe the {{type}} </ion-label>
+          <ion-card class="input-card">
+            <ion-select
+              [placeholder]="'Describe the ' + type"
+              formControlName="Race"
+              
+              class="ion-selct"
+              [interfaceOptions]="selectPopoverOptions"
+            >
+              <ion-select-option value="1">Asian</ion-select-option>
+              <ion-select-option value="2">Black</ion-select-option>
+              <ion-select-option value="3">Coloured</ion-select-option>
+              <ion-select-option value="4">White</ion-select-option>
+              <ion-select-option value="5">Other</ion-select-option>
+              <ion-select-option value="6">Unknown</ion-select-option>
+            </ion-select>
+          </ion-card>
+        </form>
+      </ion-slide>
+      <ion-slide *ngIf="!minimalOptions">
+        <div class="information-header">
+          Was their <strong>seatbelts / helmets used?</strong>
+        </div>
+
+        <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label>
+
+        <app-icon-radio-list-component
+          [options]="seatbeltOptions"
+          (selectionChanged)="saveSelection($event, 'Seatbelt')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide *ngIf="!minimalOptions">
+        <div class="information-header">
+          Were they <strong>tested for liquor / drug use?</strong>
+        </div>
+
+        <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label>
+
+        <app-icon-radio-list-component
+          [options]="liquorDrugUseOptions"
+          (selectionChanged)="saveSelection($event, 'Liquor')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
+
+<app-page-footer
+  (back)="backClicked()"
+  (next)="nextClicked()"
+></app-page-footer>

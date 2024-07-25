@@ -1,0 +1,90 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-img src="assets/logo.png"></ion-img>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <h2> Cart </h2>
+    <div>
+        <span class="Total-Due-R121000"> Vehicle Licences </span>
+    </div>
+    <div class="Path-6243" (click)="login()">
+        <ion-row>
+            <ion-col size="5">
+                <span class="RGP123-GP"> 410 DSF GP </span>
+            </ion-col>
+            <ion-col class="Path-6242" size="7">
+                Fines Outstanding - Click here to pay now
+            </ion-col>
+            <ion-col size="4"><span class="Notice-No-0112002392030293029">HONDA 130i                
+        </span></ion-col>
+            <ion-col size="8" class="style-remove"><span class="Discount-R000">Department fees: </span>
+                <span class="Discount-R000 style-remove-1">R390.00
+        </span></ion-col>
+            <ion-col size="4"><span class="Notice-No-0112002392030293029">1999 1400KG                                
+        </span></ion-col>
+            <ion-col size="8" class="style-remove"><span class="Discount-R000 ">Service fees:</span>
+                <span class="Discount-R000 style-remove-1"> R190.00
+        </span></ion-col>
+            <ion-col class="Total-Due-R60000 ">Total Due: R600.00</ion-col>
+        </ion-row>
+    </div>
+    <div class="Path-6243" (click)="login()">
+        <ion-row>
+            <ion-col size="11">
+                <span class="RGP123-GP"> 410 DSF GP </span>
+            </ion-col>
+            <ion-col size="1" class="end">
+                <ion-checkbox color="success" checked="true" mode="ios"></ion-checkbox>
+            </ion-col>
+            <ion-col size="4"><span class="Notice-No-0112002392030293029">HONDA 130i                
+        </span></ion-col>
+            <ion-col size="8" class="style-remove"><span class="Discount-R000">Department fees: </span>
+                <span class="Discount-R000 style-remove-1"> R390.00
+        </span></ion-col>
+            <ion-col size="4"><span class="Notice-No-0112002392030293029">1999 1400KG                                
+        </span></ion-col>
+            <ion-col size="8" class="style-remove"><span class="Discount-R000">Service fees:</span>
+                <span class="Discount-R000 style-remove-1">R190.00
+        </span></ion-col>
+            <ion-col class="Total-Due-R60000 ">Total Due: R600.00</ion-col>
+        </ion-row>
+    </div>
+    <div class="Group-3739">
+        <div>
+            <span class="Total-Due-R121000"> Delivery Details </span>
+            <ion-row class="ionrow">
+                <ion-col size="11" class="ioncol text-capitalize">Unit 18, Airdlin Place, Sunninghill, Johannesburg, Gauteng, 2198</ion-col>
+                <ion-col size="1" class="end">
+                    <ion-checkbox color="success" checked="true" mode="ios"></ion-checkbox>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+    <ion-toolbar>
+        <ion-row class="ionrow">
+            <ion-col size="6 " class=" style-remove-5 ">
+                Total Amount Due
+            </ion-col>
+            <ion-col size="6 " class="style-remove-3 ">
+                R600.00
+            </ion-col>
+        </ion-row>
+        <div class="Please-not">
+            Please note: should you continue to renew your licence without first paying for outstanding fines, the department will not issue the licence disc.
+        </div>
+        <div class="Group-3725 ">
+            <ion-button expand="block " fill="outline " color="primary " (click)=" goBack() ">
+                <span> Back </span>
+            </ion-button>
+        </div>
+
+        <div class="Group-3725 ">
+            <ion-button expand="block " color="primary " [routerLink]="[ '/paid-licence'] ">
+                <span> next </span>
+            </ion-button>
+        </div>
+    </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,173 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <h2>Vehicle Details</h2>
+
+    <p class="description">Please update your vehicle information below</p>
+    <form [formGroup]="addVehiclesTwoForm" novalidate class="style-remove-1">
+      <div class="Group-3725">
+        <div class="input-text">
+          <ion-label class="label">Vehicle Make</ion-label>
+          <ion-input
+            type="text"
+            placeholder="Vehicle Make "
+            formControlName="vmake"
+            [(ngModel)]="vehicleMake"
+                (input)="showEditBtn = false"
+          ></ion-input>
+          <div
+            *ngIf="addVehiclesTwoForm.controls['vmake'].invalid && addVehiclesTwoForm.controls['vmake'].touched"
+            class="alert alert-danger"
+          >
+            <div
+              class="error-text"
+              *ngIf="addVehiclesTwoForm.controls['vmake'].errors.required"
+            >
+              Vehicle Make is required.
+            </div>
+          </div>
+        </div>
+        <ion-row>
+          <ion-col size="6" class="style-remove-2">
+            <div class="input-text">
+              <ion-label class="label">Vehicle Type</ion-label>
+              <ion-input
+                type="text"
+                placeholder="Vehicle Type"
+                formControlName="model"
+                [(ngModel)]="vehicle_model"
+                    (input)="showEditBtn = false"
+              ></ion-input>
+              <div
+                *ngIf="addVehiclesTwoForm.controls['model'].invalid && addVehiclesTwoForm.controls['model'].touched"
+                class="alert alert-danger"
+              >
+                <div
+                  class="error-text"
+                  *ngIf="addVehiclesTwoForm.controls['model'].errors.required"
+                >
+                  Vehicle Model is required.
+                </div>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col size="6" class="style-remove-3">
+            <div class="input-text">
+              <ion-label class="label">Tare</ion-label>
+              <ion-input
+                type="number"
+                placeholder="Tare"
+                formControlName="year"
+                [(ngModel)]="vehicle_year"
+                    (input)="showEditBtn = false"
+              ></ion-input>
+              <div
+                *ngIf="addVehiclesTwoForm.controls['year'].invalid && addVehiclesTwoForm.controls['year'].touched"
+                class="alert alert-danger"
+              >
+                <div
+                  class="error-text"
+                  *ngIf="addVehiclesTwoForm.controls['year'].errors.required"
+                >
+                  Vehicle Year is required.
+                </div>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+        <div class="input-text">
+          <ion-label class="label">Registration</ion-label>
+          <ion-input
+            type="text"
+            placeholder="Registration"
+            formControlName="registration"
+            class="registration-number"
+            [(ngModel)]="vehicle_registration"
+                (input)="showEditBtn = false"
+          ></ion-input>
+          <div
+            *ngIf="addVehiclesTwoForm.controls['registration'].invalid && addVehiclesTwoForm.controls['registration'].touched"
+            class="alert alert-danger"
+          >
+            <div
+              class="error-text"
+              *ngIf="addVehiclesTwoForm.controls['registration'].errors.required"
+            >
+              Vehicle Registration is required.
+            </div>
+          </div>
+        </div>
+        <div class="input-text">
+          <ion-label class="label">Licence Expiry Date</ion-label>
+          <ion-input
+            type="date"
+            placeholder="Licence Expiry Date(yyyy-mm-dd)"
+            formControlName="date"
+            [(ngModel)]="vehicle_expiry_date"
+                (input)="showEditBtn = false"
+          ></ion-input>
+
+          <!-- <ion-datetime value="2022-04-21T00:00:00" min="1990-01-01T00:00:00" max="2050-12-31T23:59:59" placeholder="Licence Expiry Date" formControlName="date"></ion-datetime>
+     -->
+          <div
+            *ngIf="addVehiclesTwoForm.controls['date'].invalid && addVehiclesTwoForm.controls['date'].touched"
+            class="alert alert-danger"
+          >
+            <div
+              class="error-text"
+              *ngIf="addVehiclesTwoForm.controls['date'].errors.required"
+            >
+              Licence Expiry Date is required.
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button
+          expand="block"
+          fill="outline"
+          color="primary"
+          (click)="deleteVehicleInfoById()"
+        >
+          <span class="UPDATE-INFORMATION"> Delete </span>
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button
+          expand="block"
+          fill="outline"
+          color="primary"
+          (click)="updatevehicle()"
+        [disabled]="showEditBtn"
+        >
+          <span class="UPDATE-INFORMATION"> Save Changes </span>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <div class="Group-3725">
+      <ion-button
+        expand="block"
+        color="primary"
+        [routerLink]="['/add-vehicle']"
+      >
+        <span class="UPGRADE-PACKAGE"> BACK </span>
+      </ion-button>
+    </div>
+    <div class="bg-text">
+      <span [routerLink]="['/finish-home']" class="Not-Right-Now">
+        Not Right Now
+      </span>
+    </div>
+  </ion-toolbar>
+</ion-footer>

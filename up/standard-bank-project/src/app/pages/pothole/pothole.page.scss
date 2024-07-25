@@ -1,0 +1,77 @@
+ion-toolbar {
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+    ion-img {
+        height: 35px;
+    }
+}
+ion-content{
+    .sub-text{
+        font-size: 13px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #4a4a4a;
+    }
+    .instruction-text{
+        margin: 40px auto 40px auto;
+        text-align: center;
+        font-size: 16px;
+
+    }
+    .pod-img{
+        padding: 17px;
+    }
+   
+ }
+ ion-footer{
+    .back-btn{
+        margin-bottom: 13px;
+    }
+ }
+ .Rectangle-1766 {
+    border-radius: 4px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 3px 6px 0 rgb(26 25 25 / 13%);
+    background-color: var(--white);
+    .Personal-Details {
+        font-size: 15px;
+        font-weight: normal;
+        letter-spacing: 0.01px;
+        text-align: start;
+        color: #0033a1;
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+    
+    }
+}
+.bg {
+    text-align: center;
+    padding: 0 30px 0;
+    .Your-list-should-include-anyone-who-needs-to-be-notified-of-an-emergency-This-list-shouldnt-be-li {
+        font-size: 12px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0px;
+        text-align: center;
+        color: var(--greyish-brown);
+    }
+}
+.green-check-box{
+    padding: 0px;
+}
+ion-checkbox{
+    height: 17px;
+    width: 17px;
+}

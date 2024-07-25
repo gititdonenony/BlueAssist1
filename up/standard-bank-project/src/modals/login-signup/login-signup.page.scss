@@ -1,0 +1,134 @@
+
+
+ion-header {
+    height: 40px;
+    ion-toolbar {
+        height: 40px;
+    }
+
+   .header-top-border {
+        height: 0px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 11;
+
+        .part {
+            width: 25%;
+            height: 100%;
+            float: left;
+
+            &:nth-of-type(1) {
+                background-color: #665EFF;
+                border-top-left-radius: var(--border-radius);
+            }
+            &:nth-of-type(2) {
+                background-color: #5773FF;
+            }
+            &:nth-of-type(3) {
+                background-color: #3497FD;
+            }
+            &:nth-of-type(4) {
+                background-color: #3ACCE1;
+                border-top-right-radius: var(--border-radius);
+            }
+        }
+    }
+}
+
+.header {
+    display: block;
+    text-align: center;
+    font-size: 32px;
+    line-height: 40px;
+    color: #1789a0;
+}
+
+.content {
+    position: relative;
+    overflow: auto;
+    margin-top: 10px;
+    padding-left: 5%;
+    width: 95%;
+
+    .title {
+        font-size: 15px;
+        display: block;
+        text-align: center;
+    }
+
+    .buttons-footer {
+      margin-top: 28px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+
+        ion-button {
+            height: 36px;
+            margin-right: 10px;
+        }
+    }
+}
+ion-input{
+  text-align: center;
+}
+ ion-item{
+       margin-top: 13px;
+ }
+.login-form{
+  margin-top: -10px;
+  .form-input{
+    position: relative;
+    margin-bottom: 10px;
+    ion-item::part(native){
+      padding-left:0;
+    }
+    ion-icon{
+      position: absolute;
+      top:20px;
+      z-index: 2;
+      font-size:1.2rem;
+      left:5px;
+    }
+    ion-lable{
+      position: absolute;
+       margin-left: 130px;
+      font-weight: bolder;
+      font-size:1.8rem;
+      top:20px;
+    }
+    ion-input{
+      text-align: center;
+      font-size:1.1rem;
+      --padding-start:36px;
+      --padding-start:36px;
+       color: #080000;
+    }
+  }
+}
+.action-buttons{
+  text-align: center;
+  margin-top: 25px;
+  .login-button{
+    --background:#FFC300;
+    width: 100%;
+    border-radius: 30px;
+    font-weight: bold;
+  }
+  p{
+    margin-top:40px;
+  font-size: 18px;
+    color: #7b7b7b;
+  }
+  a{
+    color: #333;
+    font-weight: 700;
+  }
+  .signup-button{
+    --border-color:#b4b4b4;
+    -color:#000000;
+    font-weight: bold;
+    margin-top: 30px;
+    width: 100%;
+  }
+}

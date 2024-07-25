@@ -1,0 +1,92 @@
+ion-toolbar {
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+    ion-img {
+        height: 35px;
+    }
+}
+
+.Group-3739 {
+    padding: 0 px 20px;
+    ion-input {
+       margin-bottom: 20px;
+    }
+}
+
+.name {
+    text-align: center;
+    padding: 35px 0 18px;
+    .Personal-Information {
+        font-size: 28px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.62;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--cobalt-blue);
+    }
+}
+
+.Group-3725 {
+    padding: 0 30px 15px;
+    .UPGRADE-PACKAGE {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: (--cobalt-blue);
+    }
+    .UPDATE-INFORMATION {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--white);
+    }
+    ion-button {
+        height: 40px;
+    }
+}
+
+.bg {
+    text-align: center;
+    padding: 0 30px 0;
+    .Your-list-should-include-anyone-who-needs-to-be-notified-of-an-emergency-This-list-shouldnt-be-li {
+        font-size: 9px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0px;
+        text-align: center;
+        color: var(--greyish-brown);
+    }
+}
+
+.Path-6243 {
+    height: 35px;
+    border-radius: 6px;
+    margin: 14px 1px 0px 0px;
+    border: solid 1px #dbdbdb;
+    background-color: var(--white);
+}
+
+.Simon-Stone {
+    font-size: 10px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.01px;
+    text-align: center;
+    color: var(--greyish-brown);
+}

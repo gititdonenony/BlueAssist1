@@ -1,0 +1,47 @@
+export interface Policy {
+    name: string;
+    claim_id: string;
+    claim_created_at: string;
+    claimStatusArray: any;
+    userdata_id: number;
+    userdata_status_name: string;
+    userdata_dealer_code: string;
+    userdata_dealer: string;
+    userdata_id_number: string;
+    userdata_client_name: string;
+    userdata_group: string;
+    userdata_product: string;
+    userdata_premium: number;
+    userdata_premiumtype: string;
+    userdata_poolmth: string;
+    userdata_term: number;
+    userdata_covertype: string;
+    userdata_inceptiondate: string;
+    userdata_expirydate: string;
+    userdata_fcanceldate: string;
+    userdata_freportdate: string;
+    userdata_fcgaccn: string;
+    userdata_vehiclemake: string;
+    userdata_vehicle: string;
+    userdata_registration_number: string;
+    userdata_cellphone: string;
+    userdata_homenumber: string;
+    userdata_businessnumber: string;
+    userdata_email: string;
+    userdata_engine_no: string;
+    userdata_chassis_no: string;
+    userdata_firstreg_date: string;
+    userdata_sale_type: string;
+    userdata_assetpurchase_price: number;
+    userdata_postal_address: string;
+    userdata_postal_addresscode: string;
+    userdata_physical_address: string;
+    userdata_physical_address_code: string;
+    userdata_mmcgcode: string;
+    userdata_mm_make: string;
+    userdata_mm_model: string;
+    userdata_sum_assured: number;
+    userdata_created_at: string;
+    userdata_updated_at: string;
+  }
+  

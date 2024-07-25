@@ -1,0 +1,63 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header> -->
+<ion-content fullscreen>
+  <div class="body">
+
+    <div class="wrapper">
+      <!-- <ion-button iconOnly
+                  fill="clear"
+                  class="back-button"
+                  (click)="goBack()">
+        <img src="assets/icons/chevron-left.svg" />
+      </ion-button> -->
+      <ion-label class="header">
+        Accident Report Form
+      </ion-label>
+      <ion-label class="content">Our 3 step process will help quickly collect<br> all
+        required information, start this process on <br>the accident scene.</ion-label>
+
+      <ion-button classexpand="block" (click)="changeBodyPage('snap')">
+        <ion-label class="text">
+          <!-- <img src="assets/icons/snap.svg" /> -->
+          DAMAGES AND SCENE
+        </ion-label>
+        <!-- <img class="icon snap" src="assets/imgs/snap.png" /> -->
+        <!-- <p>1</p> -->
+      </ion-button>
+      <ion-button expand="block" (click)="changeBodyPage('scan')">
+        <ion-label class="text">
+          <!-- <img src="assets/icons/scan.svg" /> -->
+          PEOPLE AND VEHICLES
+        </ion-label>
+        <div class="icon scan">
+          <!-- <img src="assets/icons/scanner.svg" />&emsp; -->
+          <!-- <img src="assets/icons/vehicle-disk-black.svg" /> -->
+        </div>
+        <!-- <p>2</p> -->
+      </ion-button>
+      <ion-button expand="block" (click)="changeBodyPage('submit')">
+        <ion-label class="text">
+          <!-- <img src="assets/icons/submit.svg" /> -->
+          GENERATE REPORT
+        </ion-label>
+        <!-- <img class="icon submit" src="assets/imgs/submit1.svg" />
+        <p>3</p> -->
+      </ion-button>
+
+
+    </div>
+    <div class="button">
+      <div class="Group-3721">
+        <ion-button expand="block" fill="outline" color="primary" (click)="dashboard()">
+          <span> Back </span>
+        </ion-button>
+      </div>
+
+    </div>
+
+
+  </div>
+</ion-content>

@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <div class="slider">
+    <ion-slides #slider [options]="slideOpts">
+      <ion-slide>
+        <div class="information-header">
+          Add
+          <strong
+            >{{type == 'cyclist' ? 'Cyclists' : type == 'pedestrian' ?
+            'Pedestrians' : 'Passengers'}} info</strong
+          >
+        </div>
+
+        <form *ngIf="passengers.length > 0">
+          <ion-label class="instructions">
+            {{type == 'cyclist' ? 'Cyclists' : type == 'pedestrian' ?
+            'Pedestrians' : 'Passengers'}}
+          </ion-label>
+          <ion-card
+            class="input-card ion-activatable"
+            *ngFor="let passenger of passengers"
+            (click)="editPassenger(passenger)"
+          >
+            <ion-button
+              iconOnly
+              fill="clear"
+              class="close-button"
+              size="small"
+              (click)="removePassenger($event, passenger)"
+            >
+              <img src="assets/icons/close.svg" />
+            </ion-button>
+            <img
+              [src]="passenger.InjuryType == 1 ? 'assets/icons/tap/severity_of_injury/killed.svg' :
+                        passenger.InjuryType == 2 ? 'assets/icons/tap/severity_of_injury/serious.svg' :
+                        passenger.InjuryType == 3 ? 'assets/icons/tap/severity_of_injury/slight.svg' :
+                        'assets/icons/tap/severity_of_injury/no_injury.svg'"
+              class="center-image"
+            />
+            <ion-label>{{passenger.Name}}</ion-label>
+
+            <ion-ripple-effect></ion-ripple-effect>
+          </ion-card>
+        </form>
+        <form>
+          <ion-label class="instructions">
+            Add {{type == 'cyclist' ? 'Cyclist' : type == 'pedestrian' ?
+            'Pedestrian' : 'Passenger'}}
+          </ion-label>
+          <ion-card class="input-card ion-activatable" (click)="addPassenger()">
+            <ion-label>
+              Add
+              <img src="assets/icons/add-circle.svg" />
+            </ion-label>
+
+            <ion-ripple-effect></ion-ripple-effect>
+          </ion-card>
+        </form>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
+
+<app-page-footer
+  (back)="backClicked()"
+  (next)="nextClicked()"
+></app-page-footer>

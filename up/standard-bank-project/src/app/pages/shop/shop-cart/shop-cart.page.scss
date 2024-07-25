@@ -1,0 +1,136 @@
+ion-toolbar {
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+    ion-img {
+        height: 35px;
+    }
+}
+ion-content {
+    --padding-bottom: 35px;
+    --padding-end: 20px;
+    --padding-start: 20px;
+    --padding-top: 35px;
+  }
+.TitleDesp {
+    text-align: center;
+    // padding: 50% 0 15px;
+    .The-Right-Address-For-Your-Online-Shopping {
+   
+        font-size: 28px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.31;
+        letter-spacing: normal;
+        text-align: center;
+        color: var(--black);
+      }
+  }
+  .It-is-now-very-easy-to-reach-the-best-quality-among-all-the-products-on-the-internet {
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: center;
+    color: #666;
+  }
+  .textcenter{
+    text-align: center;
+    padding: 0 0 45%;
+    
+  }
+  
+.Group-3725 {
+    padding: 0px 0px 15px;
+    text-align: center;
+    .UPGRADE-PACKAGE {
+        font-size: 12px;
+        font-weight: 700;
+        /* font-stretch: normal; */
+        /* font-style: normal; */
+        /* line-height: normal; */
+        /* letter-spacing: 0.01px; */
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .UPDATE-INFORMATION {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--white);
+    }
+  
+}
+
+  .Plus {
+    width: 20px;
+    height: 20px;
+    padding-left: 6px;
+    border-radius: 5px;
+    color: #fff;
+    margin: 12px 8px 2px 0;
+    background-color: #0032a8;
+  }
+  .R1600 {
+
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 3.64;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--black);
+  }
+  .bg{
+    // margin-left: -20px;
+    font-size: 14px;
+    ion-icon{
+        font-size: 25px;
+    }
+  }
+  .My-Cart {
+  
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.82;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--black);
+  }
+  .R1600 {
+
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 3.64;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--black);
+  }
+  .Special-19614045 {
+    font-size: 12px;
+    text-align: left;
+    color: var(--black);
+  }
+  .test-text{
+    border-top: 1px solid gray;
+    margin-top: 18px;
+    padding: 0px;
+  }
+  .footer {
+    position: absolute;
+    bottom: 30px;
+    width: 87%;
+  }

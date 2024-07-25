@@ -1,0 +1,138 @@
+.wrapper {
+    max-height: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    --padding-start: 0;
+    --padding-end: 0;
+}
+
+ion-card {
+    padding: 10px;
+    ion-card-header {
+        padding: 0;
+    }
+    ion-card-content {
+        padding: 0;
+        position: relative;
+
+    }
+    .history-count {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 20px;
+        color: var(--ion-color-light);
+    }
+}
+.header {
+    ion-label {
+        display: block;
+        text-align: center;
+    }
+    .title {
+        margin-top: 50px;
+    font-size: 30px;
+    line-height: 38px;
+    margin-left: 9px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    }
+    .sub-title {
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: bold;
+    }
+    .content {
+        font-size: 18px;
+    margin: 30px;
+    line-height: 18px;
+    }
+}
+
+.card-slides {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+
+    .wrapper {
+        white-space: nowrap;
+        overflow-x: scroll;
+        padding-left: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    
+        .card-slide {
+            position: relative;
+            width: 275px;
+            display: inline-flex;
+            margin-right: 15px;
+            min-height: 160px;
+            flex-direction: column;
+    
+            ion-card-header {
+                img {
+                    display: block;
+                    margin: auto;
+                    margin-top: 5px;
+                    margin-bottom: 10px;
+                }
+            }
+    
+            ion-label {
+                color: var(--ion-color-light);
+                &.dark {
+                    color: var(--ion-color-dark);
+                }
+                white-space: normal;
+            }
+    
+            .delete {
+                position: absolute;
+                top: -8px;
+                right: -8px;
+            }
+    
+            .heading {
+                font-size: 20px;
+                display: block;
+                text-align: center;
+    
+                ion-icon {
+                    position: relative;
+                    top: 3px;
+                }
+    
+                img {
+                    position: relative;
+                    top: 3px;
+                }
+            }
+    
+            .description {
+                font-size: 10px;
+                line-height: 16px;
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+
+}
+
+ion-footer {
+    padding-bottom: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    ion-label {
+        font-size: 16px;
+        line-height: 25px;
+        display: block;
+        text-align: center;
+    }
+}

@@ -1,0 +1,198 @@
+ion-toolbar {
+  --background: #0034a9;
+  text-align: center;
+  color: #fff;
+  ion-img {
+    height: 35px;
+  }
+}
+
+ion-content {
+  --padding-bottom: 10px;
+  --padding-end: 20px;
+  --padding-start: 20px;
+  --padding-top: 0px;
+}
+
+.Group-3739 {
+  padding: 0 0px 20px;
+  ion-input {
+    // color: gray;
+    // margin-bottom: 10px;
+    // border-bottom: 1.5px solid #e9e4e4;
+    // --padding-top: 20px;
+    // --padding-end: 0;
+    // --padding-bottom: 5px;
+    // --padding-start: 0px;
+    // font-size: 13px;
+    // font-weight: 600;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.01px;
+    color: #444;
+  }
+}
+
+.name {
+  text-align: center;
+  padding: 35px 0 18px;
+  .Personal-Information {
+    font-size: 32px;
+    font-weight: 550;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.62;
+    letter-spacing: 0.01px;
+    text-align: center;
+    color: var(--cobalt-blue);
+  }
+}
+
+.bg {
+  text-align: center;
+  padding: 0 10px 0;
+  .Your-list-should-include-anyone-who-needs-to-be-notified-of-an-emergency-This-list-shouldnt-be-li {
+    font-size: 12px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    color: var(--greyish-brown);
+  }
+}
+
+.Path-6243 {
+  padding: 5px;
+
+  border-radius: 8px;
+  border-radius: 6px;
+  margin-top: 10px;
+  background: #EDEDED;
+  padding: 4px;
+  ion-row {
+    ion-col {
+      padding: 5px;
+      text-align: start;
+    }
+    ion-icon {
+      margin: 0;
+    }
+  }
+  .RGP123-GP {
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.01px;
+    text-align: center;
+    color: #0033a1;
+  }
+  .Total-Due-R121000 {
+    font-size: 14px;
+    padding: 5px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.01px;
+    text-align: center;
+    color: var(--greyish-brown);
+  }
+  .Notice-No-0112002392030293029 {
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #444;
+  }
+  .Discount-R000 {
+    font-size: 11px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    color: var(--greyish-brown);
+  }
+}
+
+ion-checkbox {
+  height: 15px;
+  width: 15px;
+  pointer-events: none;
+  --border-radius: 18px;
+}
+
+.style-remove-2 {
+  text-align: end;
+  /* margin: auto -3px auto auto; */
+  border: 1px solid #0089ff;
+  border-radius: 4px;
+  font-size: 10px;
+  padding: 0px 5px;
+  /* height: 16px; */
+  display: inline-block;
+  white-space: nowrap;
+  color: #0089ff;
+  text-transform: capitalize;
+}
+
+.Required {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+  color: var(--greyish-brown);
+}
+
+.Required2 {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--greyish-brown);
+  text-align: end !important;
+}
+.label {
+  font-size: 14px;
+  text-align: left;
+  color: #444;
+}
+.mat-expansion-panel-header-description {
+  justify-content: flex-end;
+}
+.mat-expansion-panel-header {
+  padding: 0 8px !important;
+}
+.mat-expansion-panel:not([class*="mat-elevation-z"]) {
+  box-shadow: none !important;
+  margin-top: 11px;
+}
+.outer_wrapper {
+  position: relative;
+  height: 76px;
+  display: flex;
+  align-items: flex-start;
+}
+.remove {
+  position: absolute;
+  right: 2px;
+  top: -2px;
+  font-size: 20px;
+  z-index: 100;
+}
+.img_name_wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

@@ -1,0 +1,138 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="name">
+    <span class="Personal-Information"> Licence Information</span>
+  </div>
+  <mat-expansion-panel class="Path-6243" *ngFor="let data of baskets">
+    <mat-expansion-panel-header style="display: flex; justify-content: space-between; position: relative">
+      <ion-icon name="close-circle-outline" color="danger" class="remove" (click)="presentActionSheet(data)"></ion-icon>
+      <mat-panel-title>
+        <div style="
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 180px;
+          ">
+          <div>
+            <span class="RGP123-GP">{{data.vehicle_registration}} </span>
+          </div>
+          <div>
+            <span class="Notice-No-0112002392030293029">
+              Expiry date : {{data.vehicle_expiry_date}}
+            </span>
+          </div>
+        </div>
+      </mat-panel-title>
+      <mat-panel-description>
+        <div class="style-remove-2">about to expire</div>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div style="margin-top: 40px" class="Group-3739">
+      <div>
+        <ion-label class="label">Registration No </ion-label>
+        <ion-input type="text" value="{{data.vehicle_registration}}" placeholder="Registration No" readonly></ion-input>
+        <div *ngIf="licenceFrom.controls['registration'].invalid && licenceFrom.controls['registration'].touched"
+          class="alert alert-danger">
+          <div class="error-text" *ngIf="licenceFrom.controls['registration'].errors.required">
+            This is required.
+          </div>
+        </div>
+        <ion-row>
+          <ion-col size="5">
+            <ion-label class="label">Vehicle Type</ion-label>
+            <ion-input type="text" [value]="data.vehicle_model" placeholder="Vehicle Type" readonly></ion-input>
+            <div *ngIf="licenceFrom.controls['registration'].invalid && licenceFrom.controls['registration'].touched"
+              class="alert alert-danger">
+              <div class="error-text" *ngIf="licenceFrom.controls['registration'].errors.required">
+                This is required.
+              </div>
+            </div>
+          </ion-col>
+          <ion-col size="2"></ion-col>
+          <ion-col size="5">
+            <ion-label class="label">Tare</ion-label>
+            <ion-input [value]="data.vehicle_year" type="number" placeholder="Tare" readonly>
+            </ion-input>
+            <div *ngIf="licenceFrom.controls['tare'].invalid && licenceFrom.controls['tare'].touched"
+              class="alert alert-danger">
+              <div class="error-text" *ngIf="licenceFrom.controls['tare'].errors.required">
+                This is required.
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-label class="label">Expiry Date</ion-label>
+        <ion-input type="text" readonly [value]="data.vehicle_expiry_date" placeholder="Expiry Date"></ion-input>
+        <div *ngIf="licenceFrom.controls['dAddress'].invalid && licenceFrom.controls['dAddress'].touched"
+          class="alert alert-danger">
+          <div class="error-text" *ngIf="licenceFrom.controls['dAddress'].errors.required">
+            This is required.
+          </div>
+        </div>
+        <div class="Path-6251"></div>
+      </div>
+    </div>
+
+    <ion-label class="label">Proof of Residence</ion-label>
+    <div class="Path-6243" (click)="uploadImg('ProofOfResidence',data)">
+      <ion-row *ngIf="!data.item_proof_of_residence">
+        <ion-col size="8">
+          <span class="Required">Upload - Proof of Residence</span>
+        </ion-col>
+        <ion-col size="4" class="style-remove Required2">(Required)</ion-col>
+      </ion-row>
+      <div class="img_name_wrapper" *ngIf="data.item_proof_of_residence">
+        <p>{{data.item_proof_of_residence}}</p>
+        <ion-checkbox color="success" checked="true"></ion-checkbox>
+      </div>
+    </div>
+    <ion-label class="label">ID Copy</ion-label>
+    <div class="Path-6243" (click)="uploadImg('CopyOfID',data)">
+      <ion-row *ngIf="!data.item_copy_id">
+        <ion-col size="8">
+          <span class="Required">Upload - ID Copy</span>
+        </ion-col>
+        <ion-col size="4" class="style-remove Required2">(Required)</ion-col>
+      </ion-row>
+      <div class="img_name_wrapper" *ngIf="data.item_copy_id">
+        <p>{{data.item_copy_id}}</p>
+        <ion-checkbox color="success" checked="true"></ion-checkbox>
+      </div>
+    </div>
+    <ion-label class="label">Current Disc</ion-label>
+    <div class="Path-6243" (click)="uploadImg('CurrentDisc',data)">
+      <ion-row *ngIf="!data.item_current_disc">
+        <ion-col size="8">
+          <span class="Required">Upload - Current Disc</span>
+        </ion-col>
+        <ion-col size="4" class="style-remove Required2">(Required)</ion-col>
+      </ion-row>
+      <div class="img_name_wrapper" *ngIf="data.item_current_disc">
+        <p>{{data.item_current_disc}}</p>
+        <ion-checkbox color="success" checked="true" readonly></ion-checkbox>
+      </div>
+    </div>
+  </mat-expansion-panel>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+
+    <div class="Group-3725">
+      <ion-button [disabled]="!isAllFilled" expand="block" color="primary" (click)="delivery()">
+        <span> NEXT </span>
+      </ion-button>
+    </div>
+    <div class="Group-3725">
+      <ion-button expand="block" fill="outline" color="primary" (click)="goBack()">
+        <span> Back </span>
+      </ion-button>
+    </div>
+
+
+  </ion-toolbar>
+</ion-footer>

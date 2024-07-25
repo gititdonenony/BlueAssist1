@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-img src="assets/logo.png"></ion-img>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <h2> Fine Details </h2>
+    <div class="Group-3739">
+        <form [formGroup]="finesDetailFrom" novalidate>
+        <ion-label class="label">Licence Plate No</ion-label>
+        <ion-input style="--padding-start: 0;" type="text" placeholder="Licence Plate No" formControlName="licencePlateNo" ></ion-input>
+        <ion-label class="label">Notice No</ion-label>
+        <ion-input style="--padding-start: 0;" type="text" placeholder="Notice No" formControlName="noticeNo"></ion-input>
+        <ion-label class="label">Amount Due</ion-label>
+        <ion-input style="--padding-start: 0;" type="number" placeholder="Amount Due" formControlName="amtDue"></ion-input>
+        <ion-label class="label">Date of offence</ion-label>
+        <ion-input style="--padding-start: 0;" type="email" placeholder="Date of offence" formControlName="doo"></ion-input>
+        <ion-label class="label">AARTO Early bird discount</ion-label>
+        <ion-input style="--padding-start: 0;" type="text" placeholder="AARTO Early bird discount" formControlName="aarto"></ion-input>
+    </form>
+    </div>
+
+
+</ion-content>
+<ion-footer class="ion-no-border">
+    <ion-toolbar>
+        <div class="Group-3725">
+            <ion-button expand="block" color="primary" (click)=" goBack()">
+                <span> Back </span>
+            </ion-button>
+        </div>
+    </ion-toolbar>
+</ion-footer>

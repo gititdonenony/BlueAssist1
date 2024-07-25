@@ -1,0 +1,53 @@
+ion-toolbar{
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+
+    ion-img{
+      height: 35px;
+    }
+  }
+
+  .name {
+    text-align: center;
+    padding: 35px 0;
+    .Personal-Information {
+   
+     font-size: 28px;
+     font-weight: 500;
+     font-stretch: normal;
+     font-style: normal;
+     line-height: 0.62;
+     letter-spacing: 0.01px;
+     text-align: center;
+     color: var(--cobalt-blue);
+   }
+   }
+
+   .Rectangle-1766 {
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 3px 6px 0 rgb(26 25 25 / 13%);
+    background-color: var(--white);
+    .Personal-Details {
+    
+      font-size: 12px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.01px;
+      text-align: center;
+      color: #444;
+    }
+  }
+  .Group-3725{
+    margin-top: 35%;
+    .UPDATE-INFORMATION{
+      font-size: 10px;
+    }
+  }
+ 

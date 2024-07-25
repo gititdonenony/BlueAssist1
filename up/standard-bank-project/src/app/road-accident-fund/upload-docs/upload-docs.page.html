@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2>Upload documents</h2>
+  <div class="bg">
+    <span class="description">
+      Upload any receipts and/or supporting information
+    </span>
+  </div>
+  <div class="Group-3739">
+    <ion-row (click)="captureImage('one')">
+      <ion-col *ngIf="!imageOne" size="8" class="Upload-Medical-Records">
+        Upload - Medical Records
+      </ion-col>
+      <ion-col *ngIf="!imageOne" size="4" class="Upload-Medical-Records end">
+        <span>(Optional)</span>
+      </ion-col>
+      <img *ngIf="imageOne" [src]="imageOne.url" alt="medical" />
+    </ion-row>
+    <ion-row (click)="captureImage('two')">
+      <ion-col *ngIf="!imageTwo" size="8" class="Upload-Medical-Records">
+        Upload - Medical Records
+      </ion-col>
+      <ion-col *ngIf="!imageTwo" size="4" class="Upload-Medical-Records end">
+        <span>(Optional)</span>
+      </ion-col>
+      <img *ngIf="imageTwo" [src]="imageTwo.url" alt="medical" />
+    </ion-row>
+    <ion-row (click)="captureImage('three')">
+      <ion-col *ngIf="!imageThree" size="8" class="Upload-Medical-Records">
+        Upload - Medical Records
+      </ion-col>
+      <ion-col *ngIf="!imageThree" size="4" class="Upload-Medical-Records end">
+        <span>(Optional)</span>
+      </ion-col>
+      <img *ngIf="imageThree" [src]="imageThree.url" alt="medical" />
+    </ion-row>
+  </div>
+
+  <ion-row class="style-remove-1">
+    <ion-col size="1" class="style-remove-2">
+      <ion-checkbox (click)="addValue($event)" [(ngModel)]="checked"></ion-checkbox>
+    </ion-col>
+    <ion-col size="11" class="I-declare style-remove-3">I, declare that to the best of my knowledge, the information
+      provided in
+      this Claim Form is true and correct in every respect.
+    </ion-col>
+  </ion-row>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+
+    <div class="Group-3725">
+      <ion-button expand="block" color="primary"  [attr.disabled]="!checked"
+        (click)="submit()">
+        <span> Next </span>
+      </ion-button>
+    </div>
+    <div class="Group-3725">
+      <ion-button expand="block" fill="outline" color="primary" [routerLink]="['/accident-details']">
+        <span> back </span>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>

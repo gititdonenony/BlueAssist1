@@ -1,0 +1,101 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <div class="login-logo">
+      <ion-img src="assets/logo.png"></ion-img>
+    </div>
+    <ion-label class="page-text">Signup</ion-label>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="scroll-content">
+
+  <div class="top-center">
+    <ion-row class="login-div">
+      <ion-img class="logo-image" src="assets/logo.png">
+      </ion-img>
+    </ion-row>
+  </div>
+  <div class="white-div">
+    <div class="form">
+      <form [formGroup]="loginForm" novalidate>
+        <div class="recover-enter">
+          <h2 class="recover">
+            SIGN UP
+          </h2>
+          <div class="signup"> Please enter the details below to</div>
+        </div>
+        <div class="Group-3739">
+          <div class="input-css">
+            <ion-input type="text" placeholder="Full name" formControlName="name"></ion-input>
+            <div *ngIf="loginForm.controls['name'].invalid && loginForm.controls['name'].touched"
+              class="alert alert-danger">
+              <div class="error-text-1" *ngIf="loginForm.controls['name'].errors.required">
+                Full name is required.
+              </div>
+            </div>
+          </div>
+          
+          <div class="input-css">
+            <div class="emailfield">
+              <ion-input type="email" placeholder="Email address" formControlName="email"></ion-input>
+            </div>
+            <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched"
+              class="alert alert-danger">
+              <div class="error-text-1" *ngIf="loginForm.controls['email'].errors.required">
+                Email is required.
+              </div>
+            </div>
+          </div>
+          <div class="input-css">
+            <div class="paswordfield">
+              <!-- <span>+27</span> -->
+              <!-- <ion-input type="text" label="+27" placeholder="Phone number" formControlName="phone" maxlength="9"
+                inputmode="numeric"></ion-input> -->
+                <ion-row>
+                  <ion-col size="2" class="number-27">
+                    <span>+27</span>
+                  </ion-col>
+                  <ion-col size="10" class="my-profile">      
+                      <ion-input type="text" label="+27" placeholder="Phone number" formControlName="phone"
+                      maxlength="9" inputmode="numeric">
+                  </ion-input>
+                  </ion-col>
+                </ion-row>
+            </div>
+            <div *ngIf="loginForm.controls['phone'].invalid && loginForm.controls['phone'].touched"
+              class="alert alert-danger">
+              <div class="error-text" *ngIf="loginForm.controls['phone'].errors.required">
+                Phone number is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+        <div class="Group-3725">
+
+          <ion-button expand="block" color="primary" (click)="signup()">
+            <span>SIGN UP </span>
+          </ion-button>
+        </div>
+      </form>
+      <!-- <div class="Group-3725">
+    <ion-button expand="block" color="primary" >
+      <span> Signup  </span>
+    </ion-button>
+  </div> -->
+      <!-- <div class="Group-3725">
+    <ion-button
+      expand="block"
+      fill="outline"
+      color="primary"
+    >
+      <span> BACK </span>
+    </ion-button>
+  </div> -->
+      <div class="no-id" (click)="login()">
+        <span>Already have an account? <a>Sign in now</a></span>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

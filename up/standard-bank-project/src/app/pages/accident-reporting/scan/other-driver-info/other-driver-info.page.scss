@@ -1,0 +1,99 @@
+ion-toolbar {
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+    ion-img {
+        height: 35px;
+    }
+}
+.ion-selct{
+    flex: 1 1 0%;
+    /* min-width: 16px; */
+    font-size: inherit;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: auto;
+    padding: 11px 10px 11px 23px;
+}
+.slider {
+    min-height: 100%;
+
+    ion-slide {
+        flex-direction: column;
+
+        .information-header {
+            display: block;
+            text-align: center;
+            margin-top: 57px;
+            margin-bottom: 24px;
+            font-size: 30px;
+            line-height: 30px;
+        }
+
+        .information-subheader {
+            font-size: 11px;
+            line-height: 30px;
+            display: block;
+            text-align: center;
+            margin-bottom: 5px;
+            position: relative;
+        }
+    }
+}
+
+form {
+    width: 95%;
+
+
+    .instructions {
+        display: block;
+        // margin-bottom: 8px;
+        width: 100%;
+        margin: auto;
+        color: #333;
+        text-align: left;
+        position: relative;
+        overflow: hidden;
+        font-size: 16px;
+        
+    }
+    .input-card {
+        margin: 0;
+        --border-radius: 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        text-align: left;
+        margin-bottom: 20px;
+        color: black;
+
+        ion-input, ion-select, ion-datetime {
+            --padding-start: 24px;
+            --padding-end:24px;
+            --padding-top:15px;
+            --padding-bottom: 15px;
+        }
+    }
+}
+
+.scan-box{
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 100vmax rgba(0,0,0,0.5);
+    content: '';
+    display: block;
+    left: 50%;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+  }
+  
+  .stop-btn{
+      position: absolute;
+      bottom: 66px;
+      z-index: 11;
+      width: 81%;
+      margin-left: 29px;
+  }

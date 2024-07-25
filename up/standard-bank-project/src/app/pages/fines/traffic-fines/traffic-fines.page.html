@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="name">
+    <span class="Personal-Information"> Traffic Fines </span>
+  </div>
+  <div *ngFor="let fines of finesData">
+    <div class="Path-6243" *ngIf="fines.statusDescription !== 'Paid'" (click)="detail(fines)">
+      <ion-row>
+        <ion-col size="4">
+          <span class="RGP123-GP"> {{fines.vehicleRegistration}} </span>
+        </ion-col>
+        <ion-col size="7" class="colend">
+          <span class="Total-Due-R121000">
+            Total Due: {{fines.amountDue}}
+          </span>
+        </ion-col>
+        <ion-col size="1" class="colend">
+          <ion-checkbox
+            color="success"
+            [checked]="fines.statusDescription !== 'Paid'"
+            [disabled]="fines.statusDescription === 'Paid'"
+            mode="ios"
+            (click)="checkboxClick(fines, $event)"
+          ></ion-checkbox>
+        </ion-col>
+        <ion-col size="7"
+          ><span class="Notice-No-0112002392030293029">
+            Notice No: {{fines.noticeNumber}}
+          </span></ion-col
+        >
+        <ion-col size="4"
+          ><span class="Discount-R000 Roboto---12pt"> Discount: </span>
+          <span class="Discount-R000 Roboto---12pt style-remove-1">
+            R{{fines.discount}}
+          </span>
+        </ion-col>
+        <ion-col size="1" class="colend">
+          <ion-icon name="alert-circle-outline"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <div class="bg">
+      <ion-row>
+        <ion-col size="6" class="colstart">
+          <span class="Total-Amount-Due-R220000"> Total Amount Due </span>
+        </ion-col>
+        <ion-col size="6" class="colend">
+          <span class="Total-Amount-Due-R220000"> R {{totalAmt}}</span>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="Group-3725">
+      <ion-button expand="block" color="primary" (click)="checkout()">
+        <span> CHECKOUT </span>
+      </ion-button>
+    </div>
+    <div class="Group-3725">
+      <ion-button
+        expand="block"
+        fill="outline"
+        color="primary"
+        [routerLink]="['/tabs/profile']"
+      >
+        <span> BACK </span>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>

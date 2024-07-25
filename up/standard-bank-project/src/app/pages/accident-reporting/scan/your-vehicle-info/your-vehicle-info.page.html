@@ -1,0 +1,85 @@
+
+<ion-header>
+  <ion-toolbar>
+      <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen="true" #content>
+  <app-custom-slides-pager [slider]="slider"
+                          [content]="content"></app-custom-slides-pager>
+
+  <div class="slider">
+    <ion-slides #slider [options]="slideOpts">
+      <ion-slide>
+        <div class="information-header">
+          Their <strong>vehicle<br> license information</strong>
+        </div>
+
+        <form [formGroup]="vehicleInfoForm">
+          <ion-label class="instructions">
+            Number Plate Number
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-input placeholder="Number Plate Number"
+                        formControlName="NumberPlateNumber"></ion-input>
+          </ion-card>
+          <ion-label class="instructions">
+            Licence Disk Number
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-input placeholder="Licence Disk Number"
+                        formControlName="LicenceDiskNumber"></ion-input>
+          </ion-card>
+          <ion-label class="instructions">
+            Vehicle Colour
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-input placeholder="Vehicle Colour"
+                        formControlName="Color"></ion-input>
+          </ion-card>
+          <ion-label class="instructions">
+            Vehicle Make
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-input placeholder="Vehicle Make"
+                        formControlName="Make"></ion-input>
+          </ion-card>
+          <ion-label class="instructions">
+            Vehicle Model
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-input placeholder="Vehicle Model"
+                        formControlName="Model"></ion-input>
+          </ion-card>
+        </form>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          Did <strong>your tyres<br> burst?</strong>
+        </div>
+
+        <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label>
+
+        <app-icon-radio-list-component [options]="tyresBurstOptions"
+                                        (selectionChanged)="saveSelection($event, 'TyresBurst')"></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          did <strong>you use a chevron? </strong>was it visible
+        </div>
+
+        <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label>
+
+        <app-icon-radio-list-component [options]="chevronOptions"
+                                        (selectionChanged)="saveSelection($event, 'Chevron')"></app-icon-radio-list-component>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
+
+<app-page-footer (back)="backClicked()"
+                  (next)="nextClicked()"></app-page-footer>

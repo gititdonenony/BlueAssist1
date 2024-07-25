@@ -1,0 +1,36 @@
+.slider-pager {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    margin-top: 15px;
+    transform: translateX(-50%);
+
+    .sliding-background {
+        position: absolute;
+        height: 10px;
+        width: 10px;
+        border-radius: 100%;
+        margin-left: 3px;
+        margin-right: 3px;
+        left: 0;
+        top: calc(50% + 1px);
+        transform: translateY(-50%);
+        background-color:#131211;
+        z-index: 2;
+
+        transition: all 0.15s ease-in-out;
+    }
+
+    .slider-page {
+        display: inline-block;
+        height: 8px;
+        width: 8px;
+        border-radius: 100%;
+        background-color: #9e9ea0;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+}

@@ -1,0 +1,36 @@
+.input-card {
+    padding: 15px 24px;
+    position: relative;
+    overflow: hidden;
+    text-align: start;
+
+    ion-label {
+        img {
+            position: relative;
+            top: 5px;
+            margin-left: 90px;
+        }
+    }
+
+    .center-image {
+        display: block;
+        margin: auto;
+        max-height: 30px;
+    }
+
+    .close-button {
+        position: absolute;
+        top:-8px;
+        right: 0;
+    }
+}
+ion-toolbar {
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+    ion-img {
+        height: 35px;
+    }
+}
+

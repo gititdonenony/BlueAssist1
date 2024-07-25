@@ -1,0 +1,78 @@
+<ion-content class="scroll-content">
+    <div class="top-center">
+        <ion-row class="login-div">
+            <ion-img class="logo-image" src="assets/logo.png">
+            </ion-img>
+        </ion-row>
+    </div>
+    <div class="white-div">
+        <div class="form">
+
+<!-- <button (click)="onClick()">click</button> -->
+            <form class='form' [formGroup]="loginForm" novalidate>
+                <div class="recover-enter">
+                    <h2 class="recover">
+                        SIGN IN
+                    </h2>
+                    <div class="signup"> Please enter the phone number <br> to login your account</div>
+                </div>
+                <div class="Group-3739">
+                    <div class="input-text">
+                       
+                        <ion-row>
+                            <ion-col size="2" class="number-27">
+                              <span>+27</span>
+                            </ion-col>
+                            <ion-col size="10" class="my-profile">      
+                                <ion-input type="text" label="+27" placeholder="Phone number" formControlName="phone"
+                                maxlength="9" inputmode="numeric">
+                            </ion-input>
+                            </ion-col>
+                          </ion-row>
+
+
+                        <div *ngIf="loginForm.controls['phone'].invalid && loginForm.controls['phone'].touched"
+                            class="alert alert-danger">
+                            <div class="error-text" *ngIf="loginForm.controls['phone'].errors.required">
+                                Enter your phone number
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div>
+                        <div class="paswordfield">
+                            <ion-input type="password" placeholder="Password" formControlName="password"
+                                [type]="showPassword ? 'text':'password'"></ion-input>
+                            <p (click)="toggleNewPassword()" name="passwordToggleIcon">{{passwordToggleIcon}}</p>
+                        </div>
+                        <div *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched"
+                            class="alert alert-danger">
+                            <div class="error-text" *ngIf="loginForm.controls['password'].errors.required">
+                                Password is required.
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+
+                <div class="button-div">
+
+                    <ion-button style="width: 100%" class="butoon-div-sec" (click)="loginByNumber()">
+                        <span> SIGN IN </span>
+                    </ion-button>
+                </div>
+            </form>
+
+            <div class="bottom-div">
+                <div class="no-id" (click)="signup()">
+                    <span>Don't have an account? <a>Sign Up here</a></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</ion-content>
+
+<!-- <ion-content>
+  <div class="path-5022">
+    <ion-button expand="block" fill="outline" color="light" (click)="login()">Login</ion-button>
+    </div>
+</ion-content> -->

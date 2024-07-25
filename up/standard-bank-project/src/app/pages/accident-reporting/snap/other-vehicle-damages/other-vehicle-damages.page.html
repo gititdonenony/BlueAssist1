@@ -1,0 +1,177 @@
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true" #content>
+  <app-custom-slides-pager
+    [slider]="slider"
+    [content]="content"
+    (slideIndexChange)="sliderChanged($event)"
+  ></app-custom-slides-pager>
+
+  <div class="slider">
+    <ion-slides #slider [options]="slideOpts">
+      <ion-slide>
+        <div class="information-header">
+          Their <strong>vehicle type?</strong>
+        </div>
+
+        <div class="information-subheader">
+          Please tap the options best suited
+        </div>
+
+        <app-icon-radio-list-component
+          [options]="vehicleTypeOptions"
+          (selectionChanged)="saveSelection($event, 'VehicleType')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          What was your <strong>vehicle position before accident?</strong>
+        </div>
+
+        <!-- <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label> -->
+
+        <app-icon-radio-list-component
+          [options]="positionBeforeAccident"
+          (selectionChanged)="saveSelection($event, 'VehiclePosition')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          What were <strong>you doing?</strong>
+        </div>
+
+        <!-- <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label> -->
+
+        <app-icon-radio-list-component
+          [options]="whatDriverWasDoingOptions"
+          (selectionChanged)="saveSelection($event, 'BusyDoing')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          What <strong>direction</strong> was your
+          <strong>vehicle travelling?</strong>
+        </div>
+
+        <!-- <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label> -->
+
+        <app-icon-radio-list-component
+          [options]="directionVehicleWasTravellingOptions"
+          (selectionChanged)="saveSelection($event, 'TravelDirection')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          What was the
+          <strong><b>condition of your vehicle's reflectors?</b></strong>
+        </div>
+
+        <!-- <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label> -->
+
+        <app-icon-radio-list-component
+          [options]="conditionOfVehicleLights"
+          (selectionChanged)="saveSelection($event, 'VehicleLights')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          What was the <strong>condition of their vehicle's reflectors?</strong>
+        </div>
+
+        <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label>
+
+        <app-icon-radio-list-component
+          [options]="conditionOfReflectorsOptions"
+          (selectionChanged)="saveSelection($event, 'VehicleReflectors')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          What Was the <strong>road flat or sloped?</strong>
+        </div>
+
+        <!-- <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label> -->
+
+        <app-icon-radio-list-component
+          [options]="flatOrSlopedRoadOptions"
+          (selectionChanged)="saveSelection($event, 'FlatOrSloped')"
+        ></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">Snap their vehicle damages</div>
+
+        <ion-label class="information-subheader">
+          Please turn their phone sideways and snap the damages
+        </ion-label>
+
+        <div class="image-captures">
+          <div class="image-capture" *ngFor="let capture of damageCaptures">
+            <ion-label
+              class="instructions ion-activatable"
+              (click)="capture.Collapsed = !capture.Collapsed"
+            >
+              {{capture.Title}}
+              <img
+                [@inverse]="capture.Collapsed ? 'inverse' : 'normal'"
+                src="assets/icons/chevron-up.svg"
+              />
+              <ion-ripple-effect></ion-ripple-effect>
+            </ion-label>
+            <div
+              class="image-capture-block ion-activatable"
+              (click)="!capture.Collapsed ? captureImage(capture) : false"
+              [@collapse]="capture.Collapsed ? 'closed' : 'open'"
+            >
+              <div [@zoom]="capture.Base64 ? 'closed' : 'open'">
+                <img
+                  class="image-action"
+                  src="assets/icons/add-circle-medium.svg"
+                />
+                <ion-label class="image-name">{{capture.Title}}</ion-label>
+                <img
+                  class="image-action"
+                  [src]="'assets/icons/vehicle-damages/' + capture.Icon + '.svg'"
+                />
+                <ion-label class="image-details"
+                  >{{capture.Description}}</ion-label
+                >
+              </div>
+
+              <img
+                decoding="async"
+                class="background-image"
+                [@zoom]="capture.Base64 ? 'open' : 'closed'"
+                [src]="capture.Base64"
+              />
+
+              <ion-ripple-effect></ion-ripple-effect>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
+
+<app-page-footer
+  (back)="backClicked()"
+  (next)="nextClicked()"
+></app-page-footer>

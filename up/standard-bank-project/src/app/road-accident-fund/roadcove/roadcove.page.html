@@ -1,0 +1,70 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-img src="assets/logo.png"></ion-img>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="name"><span class="Personal-Information">
+    Claim for road injuries
+  </span>
+    </div>
+
+    <div class="Rectangle-1805">
+        <span class="Processed-by">
+      Processed by
+    </span>
+    </div>
+
+    <div class="Rectangle-1805">
+        <div>
+            <ion-row style="text-align: center;">
+                <ion-col size="5" style="text-align: end;">
+                    <img src="assets/Road-Accident-Fund-300x300.jpg" style=" height: 65px;">
+                </ion-col>
+                <ion-col size="7" style="text-align: start;">
+                    <img src="assets/RoadCover-Logo-letterbox-option-scaled.jpg" class="imgsize">
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+
+    <div class="Rectangle-1805">
+        <span class="You-will-received-confirmation-via-email-Shortly-Please-verify-you-email-address-using-the-link-pr">
+        In order to Speed up the claim process,<br>
+        we suggest using the accident reporting tool, or <br>
+        alternatively select from one of your previous <br>
+        reports
+    </span>
+    </div>
+
+    <div class="Group-3725">
+        <ion-button fill="outline" color="secondary" (click)="upgrade()">
+            <span>
+          REPORT ACCIDENT
+    </span>
+        </ion-button>
+    </div>
+
+
+</ion-content>
+<ion-footer class="ion-no-border">
+    <ion-toolbar>
+        <div class="Group-3725">
+            <ion-button expand="block" fill="outline" color="primary" [routerLink]="['/tabs/profile']">
+                <span>   
+      Back  
+</span>
+            </ion-button>
+        </div>
+
+        <div class="Group-3725">
+            <ion-button expand="block" color="primary" [routerLink]="['/accident-details']">
+                <span>
+      GET STARTED
+      </span>
+            </ion-button>
+        </div>
+    </ion-toolbar>
+</ion-footer>

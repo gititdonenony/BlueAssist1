@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <h2>Licence Renewal</h2>
+  <div class="bg style-remove-1">
+    <span class="description">
+      Renew your licence directly in the app and get it safely<br />
+      couriered to your home or work address. Safe and convenient.
+    </span>
+  </div>
+  <div *ngIf="getVehicleData">
+    <div
+      *ngFor="let vehicleData of getVehicleData"
+      (click)="vehicleData.isChecked = !vehicleData.isChecked"
+    >
+      <ion-row class="ionrow text-capitalize">
+        <ion-col size="6" class="vreg"
+          >{{vehicleData.vehicle_registration}}
+          <ion-row>
+            <ion-col size="12" class="vexpiry"
+              >expiry date {{vehicleData.vehicle_expiry_date}}</ion-col
+            >
+          </ion-row>
+        </ion-col>
+        <ion-col size="6" class="colend">
+          <!-- <div *ngIf="currentDate" -->
+            <div   class="style-remove-2">
+              {{vehicleData.licence_status}}
+
+            </div>
+          <ion-checkbox
+            class="checkBox-vehicle"
+            color="success"
+            mode="ios"
+            [checked]="vehicleData.isChecked"
+          ></ion-checkbox>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+  
+    <div class="Group-3725">
+      <ion-button expand="block" [disabled]="!showGetList" (click)="addToBasket()" color="primary">
+        <span> GET STARTED </span>
+      </ion-button>
+    </div>
+    <div class="Group-3725">
+      <ion-button
+        expand="block"
+        fill="outline"
+        color="primary"
+        (click)=" goBack()"
+      >
+        <span> Back </span>
+      </ion-button>
+    </div>
+
+  </ion-toolbar>
+</ion-footer>

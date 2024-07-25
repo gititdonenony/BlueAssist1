@@ -1,0 +1,80 @@
+                ion-toolbar {
+                    // height: 35px;
+                    --background: #0034A9;
+                    text-align: center;
+                    color: #fff;
+                    ion-img {
+                        height: 35px;
+                    }
+                }
+                
+                ion-content {
+                    --padding: 20px;
+                }
+                
+                .name {
+                    text-align: center;
+                    padding: 35px 0 18px;
+                    .Personal-Information {
+                        font-size: 28px;
+                        font-weight: 500;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 0.62;
+                        letter-spacing: 0.01px;
+                        text-align: center;
+                        color: var(--cobalt-blue);
+                    }
+                }
+                
+                .TitleDesp {
+                    text-align: center;
+                    padding: 15%;
+                    .check {
+                        position: absolute;
+                        top: 27%;
+                        left: 40%;
+                        width: 20%;
+                        color: #6c77ff;
+                    }
+                }
+                
+                .textcenter {
+                    position: absolute;
+                }
+                
+                .products {
+                    text-align: center;
+                    padding: 0 0 55%;
+                    .products-on-the-internet {
+                        font-family: Roboto;
+                        font-size: 15px;
+                        text-align: center;
+                        color: #444;
+                    }
+                }
+                
+                .Group-3725 {
+                    padding: 0px 0px 15px;
+                    text-align: center;
+                    .UPGRADE-PACKAGE {
+                        font-size: 10px;
+                        font-weight: 700;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: 0.01px;
+                        text-align: center;
+                        color: (--cobalt-blue);
+                    }
+                    .UPDATE-INFORMATION {
+                        font-size: 10px;
+                        font-weight: 700;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: 0.01px;
+                        text-align: center;
+                        color: var(--white);
+                    }
+                }

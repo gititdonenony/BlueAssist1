@@ -1,0 +1,142 @@
+ion-content {
+  --background: transparent;
+  --padding-bottom: 0px !important;
+  --padding-end: 0px !important;
+  --padding-start: 0px !important;
+  --padding-top: 0px !important;
+}
+.modal-border {
+  display: flex;
+  height: 100%;
+  --background: transparent;
+}
+.ion-coli {
+  text-align: center;
+}
+.top-section {
+  padding: 15px 5px 15px;
+  // background: linear-gradient(#0033aa, #0089ff);
+  background: white;
+  text-align: end;
+  height: 18%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  ion-icon {
+    color: black;
+    font-size: 30px;
+  }
+
+  .Start-Your-Pothole-Claim {
+    color: black;
+    font-size: 30px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    text-transform: capitalize;
+    letter-spacing: normal;
+    text-align: left;
+    margin-left: 70px;
+    // color: var(--white);
+  }
+}
+
+.center-section {
+  padding: 5px;
+
+  .Photo-of-Damages {
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #0033a1;
+  }
+}
+
+.Group-3725 {
+  padding: 0 15px 15px;
+
+  .UPGRADE-PACKAGE {
+    font-size: 10px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.01px;
+    text-align: center;
+    color: (--cobalt-blue);
+  }
+
+  .UPDATE-INFORMATION {
+    font-size: 10px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.01px;
+    text-align: center;
+    color: var(--white);
+  }
+}
+
+ion-card {
+  padding: 5px;
+  margin: 0;
+  // margin-bottom: 15px;
+}
+
+.style-remove-1 {
+  padding: 0px;
+  // height: 62%;
+}
+
+.style-remove-2 {
+  text-align: center;
+}
+
+.style-remove-3 {
+  padding: 10px 0;
+}
+
+.style-remove-4 {
+  font-size: 12.3px;
+  font-weight: 500;
+  color: #444;
+  font-size: 12.3px;
+
+  margin-top: 25px;
+}
+.size {
+  text-align: center;
+}
+.coming-soon {
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  text-transform: capitalize;
+  letter-spacing: normal;
+  margin-top: 30px;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.style-remove-5 {
+  height: 65px;
+  padding: 8px;
+}
+
+.imgg-border {
+  display: flex;
+}
+
+.car-image {
+  width: 50%;
+  /* height: 71%; */
+  padding-top: 22px;
+  margin: auto;
+}
+.imgg {
+  margin: auto;
+}

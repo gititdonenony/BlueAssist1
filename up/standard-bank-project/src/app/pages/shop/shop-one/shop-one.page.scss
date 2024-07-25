@@ -1,0 +1,159 @@
+ion-toolbar {
+    // height: 35px;
+    --background: #0034A9;
+    text-align: center;
+    color: #fff;
+    ion-img {
+        height: 35px;
+    }
+}
+
+.top-text {
+    text-align: center;
+    .Best-Deals {
+        font-size: 20px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.82;
+        letter-spacing: normal;
+        text-align: left;
+        color: var(--black);
+    }
+}
+
+.Category {
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.83;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--black);
+}
+
+.Search-Now {
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.64;
+    letter-spacing: normal;
+    text-align: left;
+    color: #97aabd;
+}
+
+ion-slides {
+    height: 20%;
+}
+
+.swiper-slide {
+    display: block;
+}
+
+.text-second {
+    width: 40% !important;
+    background: antiquewhite;
+    padding: 5px;
+    margin: 10px 0px 15px 15px;
+}
+
+.swiper-slide h2 {
+    margin-top: 2.8rem;
+}
+
+.swiper-slide img {
+    // max-height: 50%;
+    // max-width: 80%;
+    // margin: 60px 0 40px;
+    // pointer-events: none;
+}
+
+b {
+    font-weight: 500;
+}
+
+span {
+    font-size: 10px;
+    padding: 5px;
+}
+
+p {
+    padding: 0 40px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ion-color-step-600, #60646b);
+}
+
+p b {
+    color: var(--ion-text-color, #000000);
+}
+
+.Group-3725 {
+    padding: 15px 7px 15px 1px;
+    // text-align: center;
+    text-align: center;
+    .UPGRADE-PACKAGE {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: (--cobalt-blue);
+    }
+    .UPDATE-INFORMATION {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: var(--white);
+    }
+}
+
+ion-row {
+    background: #f1e6e6;
+    margin: 15px;
+}
+
+.box {
+    ion-row {
+        margin: 0;
+        ion-col {
+            padding: 10px 0 10px 10px;
+            ion-card {
+                margin: 0;
+                padding: 10px;
+                background: white;
+                ion-img {
+                    padding: 0px;
+                    height: 70px;
+                }
+                ion-row {
+                    background: none;
+                    .end-text {
+                        text-align: end;
+                    }
+                    ion-col {
+                        padding: 0;
+                        span {
+                            font-size: 9px;
+                            color: black;
+                            font-weight: 700;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.text-gray {
+    color: gray;
+}

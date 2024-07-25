@@ -1,0 +1,196 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen="true" #content>
+  <app-custom-slides-pager [slider]="slider" [content]="content"
+    (slideIndexChange)="sliderChanged($event)"></app-custom-slides-pager>
+
+  <div class="slider">
+    <ion-slides #slider [options]="slideOpts">
+      <ion-slide>
+        <div class="information-header">
+          Your Drivers<br> Information
+        </div>
+
+        <form [formGroup]="personalInfoform">
+          <ion-label class="instructions">
+            Full Name
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-input placeholder="Name" formControlName="FullName" (ionBlur)="setInitials()"></ion-input>
+          </ion-card>
+          <ion-label class="instructions">
+            Surname
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-input placeholder="Surname" formControlName="Surname"></ion-input>
+          </ion-card>
+          <ion-label class="instructions">
+            Initials
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-input placeholder="Initials" formControlName="Initials"></ion-input>
+          </ion-card>
+          <ion-label class="instructions">
+            Cell Number
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-input placeholder="Cell Number" type="tel" formControlName="CellNumber"></ion-input>
+          </ion-card>
+        </form>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          Your Drivers <br> Information
+        </div>
+
+        <form [formGroup]="generalInfoform">
+          <ion-label class="instructions">
+            Home Address
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-input placeholder="Home Address" formControlName="HomeAddress"></ion-input>
+          </ion-card>
+          <ion-label class="instructions">
+            ID Number
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-input placeholder="ID Number" type="tel" formControlName="IDNumber"></ion-input>
+          </ion-card>
+          <ion-label class="instructions">
+            Country Of Origin
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-input placeholder="Country Of Origin" formControlName="CountryOfOrigin"></ion-input>
+          </ion-card>
+          <ion-label class="instructions">
+            Gender
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-select placeholder="Gender" formControlName="Gender" class="ion-selct"
+              [interfaceOptions]="selectPopoverOptions">
+              <ion-select-option value="1">Male</ion-select-option>
+              <ion-select-option value="2">Female</ion-select-option>
+              <ion-select-option value="3">Other</ion-select-option>
+            </ion-select>
+          </ion-card>
+          <ion-label class="instructions">
+            Describe yourself
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-select placeholder="Describe yourself" formControlName="Race" class="ion-selct"
+              [interfaceOptions]="selectPopoverOptions">
+              <ion-select-option value="1">Asian</ion-select-option>
+              <ion-select-option value="2">Black</ion-select-option>
+              <ion-select-option value="3">Coloured</ion-select-option>
+              <ion-select-option value="4">White</ion-select-option>
+              <ion-select-option value="5">Other</ion-select-option>
+              <ion-select-option value="6">Unknown</ion-select-option>
+            </ion-select>
+          </ion-card>
+        </form>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          Your Drivers <strong> License <br> Information</strong>
+        </div>
+
+        <form [formGroup]="licenseInfoform">
+          <ion-label class="instructions">
+            License Type
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-select placeholder="License Type" formControlName="LicenseType" class="ion-selct"
+              [interfaceOptions]="selectPopoverOptions">
+              <ion-select-option value="1">Drivers licence</ion-select-option>
+              <ion-select-option value="2">Learners licence</ion-select-option>
+              <ion-select-option value="3">None</ion-select-option>
+            </ion-select>
+          </ion-card>
+          <ion-label class="instructions">
+            License Number
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-input placeholder="License Number" formControlName="LicenseNumber"></ion-input>
+          </ion-card>
+          <ion-label class="instructions">
+            License Date of Issue
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-datetime displayFormat="DD MMM YYYY" presentation="date-time" pickerFormat="DD MMM YYYY" placeholder="License Date of Issue"
+              formControlName="DateOfIssue"></ion-datetime>
+          </ion-card>
+          <ion-label class="instructions">
+            License Code
+          </ion-label>
+          <ion-card class="input-card">
+            <ion-select placeholder="License Code" formControlName="LicenseCode" class="ion-selct"
+              [interfaceOptions]="selectPopoverOptions">
+              <ion-select-option value="1">A1</ion-select-option>
+              <ion-select-option value="2">A</ion-select-option>
+              <ion-select-option value="3">B</ion-select-option>
+              <ion-select-option value="4">C1</ion-select-option>
+              <ion-select-option value="5">C</ion-select-option>
+              <ion-select-option value="6">EB</ion-select-option>
+              <ion-select-option value="7">EC1</ion-select-option>
+              <ion-select-option value="8">EC</ion-select-option>
+              <ion-select-option value="9">Other</ion-select-option>
+            </ion-select>
+          </ion-card>
+        </form>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          Was your <br> <strong>seatbelts / helmets</strong>
+        </div>
+
+        <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label>
+
+        <app-icon-radio-list-component [options]="seatbeltOptions"
+          (selectionChanged)="saveSelection($event, 'Seatbelt')"></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          Are you <strong>injured?</strong>
+        </div>
+
+        <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label>
+
+        <app-icon-radio-list-component [options]="driverInjuredOptions"
+          (selectionChanged)="saveSelection($event, 'DriverInjured')"></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          Did you <strong>carry passengers for reward?</strong>
+        </div>
+
+        <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label>
+
+        <app-icon-radio-list-component [options]="carryForRewardOptions"
+          (selectionChanged)="saveSelection($event, 'CarryForReward')"></app-icon-radio-list-component>
+      </ion-slide>
+      <ion-slide>
+        <div class="information-header">
+          Were you <strong>tested for liquor / drug use?</strong>
+        </div>
+
+        <ion-label class="information-subheader">
+          Please tap the options best suited
+        </ion-label>
+
+        <app-icon-radio-list-component [options]="liquorDrugUseOptions"
+          (selectionChanged)="saveSelection($event, 'Liquor')"></app-icon-radio-list-component>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
+
+<app-page-footer (back)="backClicked()" (next)="nextClicked()"></app-page-footer>
